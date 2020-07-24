@@ -1,0 +1,339 @@
+
+/*new login form start*/
+
+.btn-link{
+    color: blue;
+    }
+    .modal-body{
+        background-color: white;
+    }
+    .psl_banner_registernow {
+        z-index: 9999999;
+
+    background: white;
+    width: 150%;
+
+    }
+    .style-register{
+        margin: 0 auto;
+    }
+    
+    .style-register input[type=email],
+    .style-register input[type=number],
+    .style-register input[type=password],
+    .style-register input[type=tel],
+    .style-register input[type=text],
+    .style-register textarea {
+        border: 0;
+        border-bottom: 1px solid #7b7979;;
+        background: 0 0;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+        font-family: saileclight;
+        color: #182126;
+        border-radius: 0;
+    }
+    
+    .style-register .modal-dialog {
+        max-width: 470px
+    }
+    
+    .style-register .modal-content {
+        
+        border: 0
+    }
+    .login-button{
+        border: none;
+        background-color: #d23436;
+    }
+    .style-register h3 {
+        font-size: 30px;
+        color: #d23436;
+        text-transform: uppercase;
+        font-family: sailecbold;
+        text-align: center;
+        margin: 30px 0
+    }
+    
+    .style-register.close:focus,
+    .style-register .close:hover {
+        outline: 0
+    }
+    
+    .style-register form {
+        padding: 0 30px
+    }
+    
+    .style-register .form-group {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .style-register .login_btn {
+        background-color: #16253c;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        letter-spacing: 2px;
+        color: #fff;
+        font-size: 20px;
+        font-family: sailecmedium;
+        text-transform: uppercase;
+        /*margin: 20px auto;*/
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 5px 30px;
+        
+    }
+    
+    .forgotpwd_txt {
+        text-align: left;
+    }
+    
+    .forgotpwd_txt a {
+        color: #d23436;
+        font-size: 15px
+    }
+    
+    .style-register h4 {
+        color: #616567;
+        font-size: 15px;
+        margin: 30px 0;
+        padding: 30px 0 0 0;
+        text-align: center;
+        font-family: saileclight;
+        line-height: 26px;
+        position: relative
+    }
+    
+    .style-login h4 a,
+    .style-login h4 a:hover {
+        text-transform: uppercase;
+        font-family: sailecbold;
+        display: inline-block;
+        color: #616567;
+        width: 100%
+    }
+    
+    .style-register h4 a:hover {
+        color: #16253c
+    }
+    
+    .style-register h4:before {
+        width: 70px;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 40%;
+        content: "";
+        display: block;
+        background: #b9bcbd;
+        right: auto;
+        text-align: center
+    }
+    
+    .fade {
+        opacity: 0;
+        transition: opacity .15s linear
+    }
+    
+    .fade.show {
+        opacity: 1
+    }
+    
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5
+    }
+    
+    .close:focus,
+    .close:hover {
+        color: #000;
+        text-decoration: none;
+        opacity: .75
+    }
+    
+    .close:not(:disabled):not(.disabled) {
+        cursor: pointer
+    }
+    
+    button.close {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none
+    }
+    .social-btn{
+        padding: 0 30px;
+    }
+    .login-button-container {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        text-align: center;
+          
+    }
+    .login-button {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 162px;
+        padding-left: 16%;
+        position: relative;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        color: #696B79;
+        height: 50px;
+        
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        text-align: left;
+        cursor: pointer;
+        
+    }
+    @media  only screen and (min-width: 360px){
+        .login-facebook {
+            margin-right: 15px;
+            margin-bottom: 0px;
+        }
+    }
+    
+    @media  only screen and (min-width: 360px){
+        .login-button {
+            width: 70%;
+           
+            border: none;
+        }
+    }
+    
+    .login-facebook {
+        margin-bottom: 20px;
+    }
+    
+    .login-fb-logo {
+        position: absolute;
+        top: 11px;
+        left: 25px;
+        color: #4460a0;
+    }
+    .login-gplus-logo {
+        position: absolute;
+        top: 12px;
+        left: 27px;
+        color: #ea4335;
+    }
+    .login_reg
+    {
+        float:right;
+    }
+    /*responsive*/
+    @media  only screen and (max-width:767px) {
+        .style-register form {
+            padding: 0
+        }
+        .style-register h3 {
+            font-size: 26px;
+            margin: 10px 0 20px 0
+        }
+        .style-register .form-group {
+            margin-bottom: 20px
+        }
+        .style-register.login_btn {
+            font-size: 20px;
+            margin: 15px auto;
+            padding: 12px 36px
+        }
+        .style-register h4 {
+            margin: 20px 0 0 0;
+            padding: 20px 0 0 0
+        }
+    }
+    
+    @media  only screen and (max-width:500px) {
+        .style-register .login_btn {
+            font-size: 18px;
+            margin: 10px auto;
+            padding: 10px 30px
+        }
+        .style-register h4 {
+            margin: 15px 0 0 0;
+            padding: 15px 0 0 0
+        }
+    }
+    @media  only screen and (max-width:351px) {
+        .login_reg
+        {
+            float:left;
+        }
+    }
+    @media  only screen and (max-width:360px) {
+        
+        
+        .login-button{
+            width: 62%;
+            padding-left: 23%;
+        }
+        .login-gplus-logo
+        {
+            left: 10px;
+        }
+        .login-fb-logo{
+            left: 11px;
+        }
+    }
+    @media  only screen and (max-width:440px) {
+        .login-button{
+            width: 70%;
+        }
+        .login-gplus-logo
+        {
+            left: 20px;
+        }
+        .login-fb-logo{
+            left: 22px;
+        }
+        .login-fb-text{
+           /* display: none;*/
+        }
+        .login-google-text{
+            display: none;
+        }
+        .login-button-container .login-button {
+            width: 65px;
+        }
+    }
+    
+    @media  only screen and (max-width:822px) and (min-width: 768px) {
+        .login_reg
+        {
+            float:left;
+        }
+    }
+    @media  only screen and (max-width:880px) and (min-width: 768px) {
+        
+        .login-gplus-logo
+        {
+            left: 17px;
+        }
+        .login-fb-logo{
+            left: 15px;
+        }
+        .login-fb-text
+        {
+            font-size: 11px;
+        }
+        .login-google-text{
+        
+            font-size: 11px;
+        }
+    }
+    /*new login form end*/
+    
+    

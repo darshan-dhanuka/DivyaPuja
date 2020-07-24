@@ -28,7 +28,19 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/']);
       }
   }
+  toggleclose() {
+    //console.log();
+    window.location.reload();
+    this.router.navigate(["/home"]);
+    //document.getElementById('divshow2').style.display = 'none';
 
+  }
+  togglereg() {
+   // window.location.reload();
+     document.getElementById('divshow2').style.display = 'none';
+    document.getElementById('divreg').style.display = 'block';
+    
+  }
   ngOnInit() {
       this.loginForm = this.formBuilder.group({
           username: ['', Validators.required],
@@ -55,7 +67,7 @@ export class LoginComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
-                  this.router.navigate([this.returnUrl]);
+                  //this.router.navigate([this.returnUrl]);
               },
               error => {
                   
