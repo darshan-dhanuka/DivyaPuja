@@ -30,15 +30,15 @@ export class LoginComponent implements OnInit {
   }
   toggleclose() {
     //console.log();
-    window.location.reload();
-    this.router.navigate(["/home"]);
-    //document.getElementById('divshow2').style.display = 'none';
+    //window.location.reload();
+    //this.router.navigate(["/home"]);
+    document.getElementById('divshow2').style.display = 'none';
 
   }
   togglereg() {
    // window.location.reload();
-     document.getElementById('divshow2').style.display = 'none';
-    document.getElementById('divreg').style.display = 'block';
+     document.getElementById('login_div').style.display = 'none';
+     document.getElementById('divreg').style.display = 'block';
     
   }
   ngOnInit() {
