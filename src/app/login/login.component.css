@@ -5,12 +5,19 @@
 color: blue;
 }
 .modal-body{
-    background-color: white;
+    background-color: #33343f;
+}
+label{
+	display: block !important;
+	color: white;
 }
 .loginpopup_modal {
 	z-index: 9999999
 }
-
+.style-login label{
+display: block !important;
+	color: black;
+}
 .style-login input[type=email],
 .style-login input[type=number],
 .style-login input[type=password],

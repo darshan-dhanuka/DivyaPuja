@@ -24,14 +24,9 @@ export class AuthenticationService {
   public get currentUserValue(): User {
       return this.currentUserSubject.value;
   }
-  public register(user: any): Observable<any> {
-    //console.log(user);
-    return this.http.post(`https://www.pokersportsleague.com/api/register`, user, {
-      headers: {'Content-Type': 'application/json'}
-    })
-}
+  
   login(username: string, password: string) {
-      return this.http.post<any>(`http://localhost:3000/register`, { username, password })
+      return this.http.post<any>(`http://localhost:3000/login`, { username, password })
           .pipe(map(user => {
               // login successful if there's a jwt token in the response
               if (user && user.token) {

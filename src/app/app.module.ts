@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { from } from 'rxjs';
 import { AlertComponent } from './alert/alert.component';
+import { PanditFormComponent } from './pandit-form/pandit-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AlertComponent } from './alert/alert.component';
     PanditComponent,
   
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PanditFormComponent
   ],
   imports: [
     BrowserModule,

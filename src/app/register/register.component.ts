@@ -30,12 +30,12 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(['/']);
       }
   }
-  
+
   toggleclose() {
     //console.log();
     window.location.reload();
-    this.router.navigate(["/home"]);
-    //document.getElementById('divshow2').style.display = 'none';
+    // this.router.navigate(["/home"]);
+    document.getElementById('divshow2').style.display = 'none';
 
   }
   ngOnInit() {
@@ -65,7 +65,10 @@ export class RegisterComponent implements OnInit {
           .subscribe(
               data => {
                   this.alertService.success('Registration successful', true);
-                  this.router.navigate(['/login']);
+                  window.location.reload();
+                    // this.router.navigate(["/home"]);
+                  document.getElementById('divshow2').style.display = 'none';
+
               },
               error => {
                   //this.alertService.error(error);

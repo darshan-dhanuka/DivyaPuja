@@ -20,6 +20,16 @@
                 </div>
             </div>
         </div>
+        <!-- <div *ngIf="authenticationService.userData as user" class="head_username">
+            <div class="psl_login">
+                Hi {{(user.displayName) ? user.displayName : 'User'}}&nbsp;&nbsp;
+            </div>
+        </div>
+        <div *ngIf="authenticationService.userData" class="head_username">
+            <div class="psl_login">
+                <a href="javascript:void(0);" (click)="authenticationService.logout() ">Logout</a>
+            </div>
+        </div> -->
     </section>
     <!--eof topline-->
 

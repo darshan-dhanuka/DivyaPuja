@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   onSubmit() {
+     
       this.submitted = true;
 
       // stop here if form is invalid
@@ -67,11 +68,18 @@ export class LoginComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
-                  //this.router.navigate([this.returnUrl]);
+                window.location.reload();
+                  this.router.navigate(["/home"]);
               },
-              error => {
-                  
-                  this.loading = false;
-              });
-  }
-}
+               error => {
+                //document.getElementById('loader_show').style.display = 'none';
+                //console.log(error, "Incorrect code entered?");
+                      if(error['message'])
+                      {
+                        alert(error['message']);
+                      }
+               });
+           
+            
+            }
+        }
