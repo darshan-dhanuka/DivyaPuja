@@ -13,7 +13,7 @@ import { User } from '../model/user';
 })
 export class AuthenticationService {
 
-  private currentUserSubject: BehaviorSubject<User>;
+  public currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
   constructor(private http: HttpClient) {
@@ -28,8 +28,9 @@ export class AuthenticationService {
   login(username: string, password: string) {
       return this.http.post<any>(`http://localhost:3000/login`, { username, password })
           .pipe(map(user => {
+            console.log(user);
               // login successful if there's a jwt token in the response
-              if (user && user.token) {
+              if (user && user.access_token) {
                   // store user details and jwt token in local storage to keep user logged in between page refreshes
                   localStorage.setItem('currentUser', JSON.stringify(user));
                   this.currentUserSubject.next(user);

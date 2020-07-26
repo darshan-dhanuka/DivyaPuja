@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
   ) {
       this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
           this.currentUser = user;
+          console.log(this.currentUser);
       });
   }
 
@@ -48,6 +49,9 @@ export class NavbarComponent implements OnInit {
 
   toggle() {
     document.getElementById('divshow2').style.display = 'block';
+  }
+  logout() {
+    this.authenticationService.logout();
   }
   
 }

@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
           .subscribe(
               data => {
                 window.location.reload();
-                  this.router.navigate(["/home"]);
+                  this.router.navigateByUrl("home");
               },
                error => {
                 //document.getElementById('loader_show').style.display = 'none';
