@@ -1,49 +1,237 @@
-<div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h4 class="color-main2 mb-4">Registration</h4>
-                            <form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="email" required aria-required="true">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="password" name="confirmPassword" class="form-control" placeholder="password" required aria-required="true">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="checkbox" id="agreed" name="agreed" value="agreed" required aria-required="true"><label for="agreed">I agree to the rules</label>
-                                        </div>
+<section class="ds bs s-py-90 s-py-xl-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 animate" data-animation="scaleAppear">
+                <div class="inner-wrap ds bordered box-shadow p-30 p-xl-40">
+                    <form class="contact-form c-mb-10 c-gutter-10" method="post" [formGroup]="panditForm" (ngSubmit)="Submit()">
+                        <div class="divider-20"></div>
+                        <div class="row c-mb-30">
+                            <div class="col-12">
+                                <ul class = "header-bar">
+                                    <h5 class="color-main2">Pandit Registration Form</h5>
+                                  </ul>
+                            </div>
+                            <div class="line" style="margin: 0 auto;"></div>
+                        </div>
+                        <div class="row">  
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="name">Enter Your Name<span class="required">*</span></label>
+                                    <input type="text" formControlName="pandit_name"  class="form-control" placeholder="Enter Your Name*"  
+                                        [ngClass]="{ 'is-invalid': submitted && f.pandit_name.errors }" >
+                                    <div *ngIf="submitted && f.pandit_name.errors" class="invalid-feedback">
+                                        <div *ngIf="f.pandit_name.errors.required">Name is required</div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
-                            </form>
+                            </div>
+                
+    
+                                <div class="col-sm-6">
+                                    <div class="form-group has-placeholder">
+                                        <label for="email">Email Id<span class="required">*</span></label>
+                                        <input type="text" formControlName="email_id"  class="form-control" placeholder="Email Id *" maxlength="10" minlength="10" 
+                                            [ngClass]="{ 'is-invalid': submitted && f.email_id.errors }" >
+                                        <div *ngIf="submitted && f.email_id.errors" class="invalid-feedback">
+                                            <div *ngIf="f.email_id.errors.required">Email Id is required</div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+    
+                             
+                               
+                                
+                                <div class="col-sm-6">
+                                    <div class = "upload-image">
+                                    <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+                                        <ul>
+                                            <li>
+                                        Select image to upload:
+                                        <input type="file" name="fileToUpload" id="fileToUpload"></li>
+                                        <li><input type="submit" value="Upload Image" name="submit"></li> 
+                                    </ul>
+                                      </form> -->
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="row">  
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="adhar_num">Enter Name as on Adhar Card<span class="required">*</span></label>
+                                <input type="text" formControlName="adhar_num"  class="form-control" placeholder="Adhar No. *" maxlength="12" minlength="12" 
+                                    [ngClass]="{ 'is-invalid': submitted && f.adhar_num.errors }" />
+                                <div *ngIf="submitted && f.adhar_num.errors" class="invalid-feedback">
+                                    <div *ngIf="f.adhar_num.errors.required">Adhar Number is required</div>
+                                </div>
+                            </div>
+                        </div>
+            
+
+                            <div class="col-sm-6">
+                                <div class="form-group has-placeholder">
+                                    <label for="mobile_num">Enter Mobile No.<span class="required">*</span></label>
+                                    <input type="tel" formControlName="mobile_num"  class="form-control" placeholder="Mobile No. *" maxlength="10" minlength="10" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.mobile_num.errors }" />
+                                    <div *ngIf="submitted && f.mobile_num.errors" class="invalid-feedback">
+                                        <div *ngIf="f.mobile_num.errors.required">Mobile Number is required</div>
+                                    </div>
+                                </div>
+                              
+                            </div>
+
+                            <div class="col-sm-6">
+                               
+                                <div class="form-group has-placeholder">
+                                    <label for="city">Preffered City<span class="required">*</span></label>
+                                    <input type="text" formControlName="city"  class="form-control" placeholder="Preffered City *"  
+                                        [ngClass]="{ 'is-invalid': submitted && f.city.errors }" >
+                                    <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                        <div *ngIf="f.city.errors.required">City is required</div>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                   
+                                <div class="form-group has-placeholder">
+                                    <label for="email">Language Known<span class="required">*</span></label>
+                                    <input type="text" formControlName="languages_known"  class="form-control" placeholder="Language Known*"  
+                                        [ngClass]="{ 'is-invalid': submitted && f.languages_known.errors }" >
+                                    <div *ngIf="submitted && f.languages_known.errors" class="invalid-feedback">
+                                        <div *ngIf="f.languages_known.errors.required">languages known is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-sm-6">
+                                <div class="form-group has-placeholder">
+                                    <label for="pandit_cat">Select Pandit Catagory <span class="required">*</span></label>
+                                    <input type="text" formControlName="pandit_cat"  class="form-control" placeholder="Select Pandit Catagory *"  
+                                        [ngClass]="{ 'is-invalid': submitted && f.pandit_cat.errors }" >
+                                    <div *ngIf="submitted && f.pandit_cat.errors" class="invalid-feedback">
+                                        <div *ngIf="f.pandit_cat.errors.required">Pandit Catagory  is required</div>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="gender">
+                                            <option disabled="disabled" selected="selected">GENDER</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="image-upload-container btn btn-bwm">
+                                    <span>Select Image</span>
+                                    <input #imageInput
+                                           type="file"
+                                           accept="image/*"
+                                           (change)="processFile(imageInput)">
+                                  </label>
+                                  
+                                  
+                                  <div *ngIf="selectedFile" class="img-preview-container">
+                                  
+                                    <div class="img-preview{{selectedFile.status === 'fail' ? '-error' : ''}}"
+                                         [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
+                                    </div>
+                                  
+                                    <div *ngIf="selectedFile.pending" class="img-loading-overlay">
+                                      <div class="img-spinning-circle"></div>
+                                    </div>
+                                  
+                                    <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfuly!</div>
+                                    <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
+                                  </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <div class="form-group has-placeholder">
+                                <label for="pathshala_name">Pathshala/Gurukul & Location<span class="required">*</span></label>
+                                <input type="text" formControlName="pathshala_name"  class="form-control" placeholder="Pathshala/Gurukul & Location *"  
+                                    [ngClass]="{ 'is-invalid': submitted && f.pathshala_name.errors }" >
+                                <div *ngIf="submitted && f.pathshala_name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.pathshala_name.errors.required">Pathshala/Gurukul  is required</div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group has-placeholder">
+                                    <label for="dob">Date of Birth<span class="required">*</span></label>
+                                    <input type="text" formControlName="dob"  class="form-control" placeholder="Date of Birth in DD/MM/YYYY *" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" >
+                                    <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                                        <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group has-placeholder">
+                                    <label for="experience">Experience<span class="required">*</span></label>
+                                    <input type="text" formControlName="experience"  class="form-control" placeholder="Experience *" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.experience.errors }" >
+                                    <div *ngIf="submitted && f.experience.errors" class="invalid-feedback">
+                                        <div *ngIf="f.experience.errors.required">Experience is required</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group has-placeholder">
+                                    <label for="address">Full Address<span class="required">*</span></label>
+                                    <input type="text" formControlName="experience"  class="form-control" placeholder="Full Address *" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.address.errors }" >
+                                    <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                        <div *ngIf="f.address.errors.required">Address is required</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group has-placeholder">
+                                    <label for="about">Tell Us Something About You<span class="required">*</span></label>
+                                    <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Tell Us Something About You"
+                                    [ngClass]="{ 'is-invalid': submitted && f.about.errors }" 
+                                    ></textarea>
+
+                                       
+                                    <div *ngIf="submitted && f.about.errors" class="invalid-feedback">
+                                        <div *ngIf="f.about.errors.required">About you is required</div>
+                                    </div>
+                                </div>
+
+                            
+                            </div>
 
                         </div>
-                    </div>
+
+
+                        <div class="row">
+                           
+                            <div class="col-sm-12 mt-xl-30 mt-20">
+                                <div class="form-group">
+                                    <button [disabled]="loading" type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor btn-medium">Send
+                                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider-20"></div>
+                    </form>
                 </div>
             </div>
+            <!--.col-* -->
         </div>
     </div>
-</div>
+</section>
+
