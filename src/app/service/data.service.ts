@@ -7,6 +7,7 @@ import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Pandit } from 'src/app/model/pandit-user';
 import { stringify } from 'querystring';
+import { pandit_catagory } from '../model/pandit_cat';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class DataService {
 
   public currentUserSubject: BehaviorSubject<Pandit>;
   public currentUser: Observable<Pandit>;
-
+  public pCat: Observable<pandit_catagory[]>;
+public : any;
   constructor(private http: HttpClient) {
       this.currentUserSubject = new BehaviorSubject<Pandit>(JSON.parse(localStorage.getItem('currentUser')));
       this.currentUser = this.currentUserSubject.asObservable();
@@ -23,9 +25,8 @@ export class DataService {
   panditRegister(user: Pandit) {
     return this.http.post(`http://localhost:3000/pandit_register`, Pandit);
 }
-uploadFIle(Upload: any) {
-  return this.http.post(`http://localhost:3000/file_upload`,Upload);
+
+public getPanditCat(){
+  return this.http.get(`http://localhost:3000/pandit_cat`);
 }
-
-
 }

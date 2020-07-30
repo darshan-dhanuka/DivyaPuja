@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.loadAllUsers();
+     
   }
 
   ngOnDestroy() {
@@ -35,18 +35,7 @@ export class NavbarComponent implements OnInit {
       this.currentUserSubscription.unsubscribe();
   }
 
-  deleteUser(id: number) {
-      this.userService.delete(id).pipe(first()).subscribe(() => {
-          this.loadAllUsers()
-      });
-  }
-
-  private loadAllUsers() {
-     // this.userService.getAll().pipe(first()).subscribe(users => {
-          //this.users = users;
-     // });
-  }
-
+ 
   toggle() {
     document.getElementById('divshow2').style.display = 'block';
   }

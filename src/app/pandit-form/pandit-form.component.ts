@@ -2,17 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
+import { pandit_catagory } from '../model/pandit_cat';
 
 import { DataService } from '../service/data.service';
 import { User } from '../model/user';
 import {AlertService} from '../service/alert.service';
-import { UserService } from '../service/user.service';
-import { ImageServiceService } from '../service/image-service.service';
 
+import { ImageServiceService } from '../service/image-service.service';
+import { HttpClient } from '@angular/common/http';
 class ImageSnippet {
   pending: boolean = false;
   status: string = 'init';
-
+  
   constructor(public src: string, public file: File) {}
 }
 @Component({
@@ -21,18 +22,25 @@ class ImageSnippet {
   styleUrls: ['./pandit-form.component.css']
 })
 export class PanditFormComponent implements OnInit {
+  public panditCat: any[];
   panditForm: FormGroup;
   loading = false;
   submitted = false;
   selectedFile: ImageSnippet;
- 
+  
   constructor(
     private formBuilder: FormBuilder,
       private router: Router,
       private dataService: DataService,
       private alertService: AlertService,
       private imageService: ImageServiceService,
-  ) { }
+      private http: HttpClient
+  ) { 
+   
+  }
+
+
+  
 // pandit_name, email_id, mobile_num ,address ,city,dob ,languages_known ,experience, , pathshala_name, pandit_cat, about ,photo_url
   ngOnInit() {
     this.panditForm = this.formBuilder.group({
@@ -46,13 +54,18 @@ export class PanditFormComponent implements OnInit {
       experience: ['', Validators.required],
       adhar_num: ['', Validators.required],
       pathshala_name: ['', Validators.required],
-      pandit_cat: ['', Validators.required],
+      pandit_cat: ['', Validators.required]  ,
       about: ['', Validators.required],
       photo_url: ['', Validators.required],
       
     });
+    this.dataService.getPanditCat().subscribe((data)=>{
+      console.log(data);
+      this.panditCat = data["data"];
   
+    });
 }
+
 private onSuccess() {
   this.selectedFile.pending = false;
   this.selectedFile.status = 'ok';
@@ -63,6 +76,8 @@ private onError() {
   this.selectedFile.status = 'fail';
   this.selectedFile.src = '';
 }
+
+
 processFile(imageInput: any) {
   const file: File = imageInput.files[0];
   const reader = new FileReader();
@@ -84,6 +99,8 @@ processFile(imageInput: any) {
 
   reader.readAsDataURL(file);
 }
+
+
 
 
  // convenience getter for easy access to form fields
@@ -115,6 +132,8 @@ processFile(imageInput: any) {
               this.loading = false;
           });
 }
+
+
 
 }
 

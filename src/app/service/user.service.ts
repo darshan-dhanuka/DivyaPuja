@@ -7,9 +7,7 @@ import { User } from '../model/user';
 export class UserService {
     constructor(private http: HttpClient) { }
 
-    getAll() {
-        return this.http.post(`http://localhost:3000/user`,User);
-    }
+
 
     register(user: User) {
         return this.http.post(`http://localhost:3000/register`, user);
