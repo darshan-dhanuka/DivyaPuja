@@ -27,6 +27,7 @@ export class PanditFormComponent implements OnInit {
   loading = false;
   submitted = false;
   selectedFile: ImageSnippet;
+  photo_url : any = "";
   
   constructor(
     private formBuilder: FormBuilder,
@@ -56,8 +57,7 @@ export class PanditFormComponent implements OnInit {
       pathshala_name: ['', Validators.required],
       pandit_cat: ['', Validators.required]  ,
       about: ['', Validators.required],
-      photo_url: ['', Validators.required],
-      
+      photo_url:[''],
     });
     this.dataService.getPanditCat().subscribe((data)=>{
       console.log(data);
@@ -66,9 +66,10 @@ export class PanditFormComponent implements OnInit {
     });
 }
 
-private onSuccess() {
+private onSuccess(id) {
   this.selectedFile.pending = false;
   this.selectedFile.status = 'ok';
+  this.photo_url = id;
 }
 
 private onError() {
@@ -89,11 +90,12 @@ processFile(imageInput: any) {
     this.imageService.uploadImage(this.selectedFile.file).subscribe(
       (res) => {
         console.log(res)
+        this.onSuccess(res.data.id);
       //  this.photo_url = res.id
       
       },
       (err) => {
-      
+        this.onError();
       })
   });
 
@@ -112,9 +114,13 @@ processFile(imageInput: any) {
 
   // stop here if form is invalid
   if (this.panditForm.invalid) {
+      alert("Something wrong");
       return;
   }
-
+  if (this.photo_url == "") {
+    alert("No photo found . Please upload again");
+    return false;
+  }
   this.loading = true;
   
   this.dataService.panditRegister(this.panditForm.value)

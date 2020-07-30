@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 animate" data-animation="scaleAppear">
                 <div class="inner-wrap ds bordered box-shadow p-30 p-xl-40">
-                    <form class="contact-form c-mb-10 c-gutter-10" method="post" [formGroup]="panditForm" (ngSubmit)="Submit()">
+                    <form class="c-mb-10 c-gutter-10" method="post" [formGroup]="panditForm" (ngSubmit)="Submit()">
                         <div class="divider-20"></div>
                         <div class="row c-mb-30">
                             <div class="col-12">
@@ -29,7 +29,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group has-placeholder">
                                         <label for="email">Email Id<span class="required">*</span></label>
-                                        <input type="text" formControlName="email_id"  class="form-control" placeholder="Email Id *" maxlength="10" minlength="10" 
+                                        <input type="text" formControlName="email_id"  class="form-control" placeholder="Email Id *"
                                             [ngClass]="{ 'is-invalid': submitted && f.email_id.errors }" >
                                         <div *ngIf="submitted && f.email_id.errors" class="invalid-feedback">
                                             <div *ngIf="f.email_id.errors.required">Email Id is required</div>
@@ -106,13 +106,15 @@
                                 <div>  
                                   
                                     <label>Select Pandit Catagory</label>  
-                                    <select formControlName="pandit_cat" id="pandit_cat">
+                                    <select formControlName="pandit_cat" id="pandit_cat" [ngClass]="{ 'is-invalid': submitted && f.pandit_cat.errors }" >
                                         <option *ngFor="let order of panditCat; let i = index" [value]="panditCat[i].id" style="z-index: 90000;">
                        
                                           {{panditCat[i].cat_name}}
                                         </option>
                                       </select>
-                                        
+                                      <div *ngIf="submitted && f.pandit_cat.errors" class="invalid-feedback">
+                                        <div *ngIf="f.pandit_cat.errors.required">pandit category is required</div>
+                                    </div>
                                     </div>
                            
                             </div>
@@ -137,9 +139,10 @@
                                       <div class="img-spinning-circle"></div>
                                     </div>
                                   
-                                    <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfuly!</div>
+                                    <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfully!</div>
                                     <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
                                   </div>
+                                  <input type="hidden" formControlName="photo_url"  class="form-control"  [ngModel]="photo_url" >
                             </div>
                         </div>
                         
@@ -179,7 +182,7 @@
                             <div class="col-sm-6">
                                 <div class="form-group has-placeholder">
                                     <label for="address">Full Address<span class="required">*</span></label>
-                                    <input type="text" formControlName="experience"  class="form-control" placeholder="Full Address *" 
+                                    <input type="text" formControlName="address"  class="form-control" placeholder="Full Address *" 
                                         [ngClass]="{ 'is-invalid': submitted && f.address.errors }" >
                                     <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
                                         <div *ngIf="f.address.errors.required">Address is required</div>
@@ -190,7 +193,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group has-placeholder">
                                     <label for="about">Tell Us Something About You<span class="required">*</span></label>
-                                    <textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Tell Us Something About You"
+                                    <textarea formControlName="about"  aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Tell Us Something About You"
                                     [ngClass]="{ 'is-invalid': submitted && f.about.errors }" 
                                     ></textarea>
 
