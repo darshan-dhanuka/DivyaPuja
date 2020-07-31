@@ -34,9 +34,9 @@ export class RegisterComponent implements OnInit {
   toggleclose() {
     //console.log();
     window.location.reload();
-    // this.router.navigate(["/home"]);
+    
     document.getElementById('divshow2').style.display = 'none';
-
+    this.router.navigate(["/home"]);
   }
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
