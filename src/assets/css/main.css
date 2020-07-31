@@ -1064,7 +1064,7 @@ select,
 	padding-right: 20px;
 	padding-top: 9px;
 	width: 100%;
-	margin: 15px;
+	margin: 15px 0px;
 }
 
 .ds input[type="text"],
@@ -1150,8 +1150,8 @@ select {
 
 select option,
 .form-control option {
-	background-color: #fff;
-	color: #0c1023;
+	background-color: #b4b0b5;
+	color: #ffffff;
 }
 
 .form-control-unstyled {

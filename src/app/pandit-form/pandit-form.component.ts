@@ -58,6 +58,11 @@ export class PanditFormComponent implements OnInit {
       pandit_cat: ['', Validators.required]  ,
       about: ['', Validators.required],
       photo_url:[''],
+      whatsapp:['', Validators.required],
+      franchise:['', Validators.required],
+      reseller:['', Validators.required],
+      retailer:['', Validators.required],
+      seller:['', Validators.required],
     });
     this.dataService.getPanditCat().subscribe((data)=>{
       console.log(data);
