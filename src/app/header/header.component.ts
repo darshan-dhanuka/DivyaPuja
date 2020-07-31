@@ -11,5 +11,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  togglereg() {
+    // window.location.reload();
+      
+      document.getElementById('divreg').style.display = 'block';
+     
+   }
 }

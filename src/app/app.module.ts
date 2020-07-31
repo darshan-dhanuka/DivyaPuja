@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 import { from } from 'rxjs';
 import { AlertComponent } from './alert/alert.component';
 import { PanditFormComponent } from './pandit-form/pandit-form.component';
+import { AstroFormComponent } from './astro-form/astro-form.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PanditFormComponent } from './pandit-form/pandit-form.component';
   
     LoginComponent,
     RegisterComponent,
-    PanditFormComponent
+    PanditFormComponent,
+    AstroFormComponent
   ],
   imports: [
     BrowserModule,
