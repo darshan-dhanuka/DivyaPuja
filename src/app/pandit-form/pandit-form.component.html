@@ -194,8 +194,8 @@
                                 <div class="form-group has-placeholder">
                                     <label for="whatsapp">WhatsApp No.<span class="required">*</span></label>
                                     <input type="text" formControlName="whatsapp"  class="form-control" placeholder="WhatsApp No *"
-                                        [ngClass]="{ 'is-invalid': submitted && f.whatsapp }" >
-                                    <div *ngIf="submitted && f.whatsapp" class="invalid-feedback">
+                                        [ngClass]="{ 'is-invalid': submitted && f.whatsapp.errors }" >
+                                    <div *ngIf="submitted && f.whatsapp.errors" class="invalid-feedback">
                                         <div *ngIf="f.whatsapp.errors.required">WhatsApp no. is required</div>
                                     </div>
                                 </div>
