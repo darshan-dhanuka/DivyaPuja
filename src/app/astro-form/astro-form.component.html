@@ -8,7 +8,7 @@
                         <div class="row c-mb-30">
                             <div class="col-12">
                                 <ul class = "header-bar">
-                                    <h5 class="color-main2">Pandit Registration Form</h5>
+                                    <h5 class="color-main2">Astrologer Registration Form</h5>
                                   </ul>
                             </div>
                             <div class="line" style="margin: 0 auto;"></div>
@@ -105,42 +105,25 @@
                             <div class="col-sm-6">
                                 <div>  
                                   
-                                    <label>Select Pandit Catagory</label>  
-                                    <select formControlName="pandit_cat" id="pandit_cat" [ngClass]="{ 'is-invalid': submitted && f.pandit_cat.errors }" >
-                                        <option style="z-index: 90000;">
+                                    <label class="label">Select Astrologer Catagory</label>  
+                                    <select formControlName="pandit_cat" id="pandit_cat" [ngClass]="{ 'is-invalid': submitted && f.pandit_cat.errors }">
+                                        <option *ngFor="let order of panditCat; let i = index" [value]="panditCat[i].id" style="z-index: 90000;">
                        
-                                            24 hours
+                                          {{panditCat[i].cat_name}}
                                         </option>
-                                        <option>astrologersArchaka</option>
-                                    <option>poojariAstro</option>
-                                    <option>expertAstro</option>
-                                    <option>numerologistsAura</option>
-                                    <option>astrologerBhrigu</option>
-                                    <option>nadi</option>
-                                    <option>astrologerBusiness</option>
-                                    <option>astrologerChinese</option>
-                                    <option>astrologersChinese</option>
-                                    <option>astrologerFinancial</option>
-                                    <option>astrologerJapanese</option>
-                                    <option>astrologerMatrimonial</option>
-                                    <option>astrologerMedical</option>
-                                    <option>astrologerPurohitSmarta</option>
-                                    <option>panditVastu</option>
-                                    <option>expertVeda</option>
-                                    <option>panditEsoteric</option>
                                       </select>
                                       <div *ngIf="submitted && f.pandit_cat.errors" class="invalid-feedback">
                                         <div *ngIf="f.pandit_cat.errors.required">pandit category is required</div>
                                     </div>
                                     </div>
-                           
                             </div>
                          
                             <div class="col-sm-6">
-                                <label class="image-upload-container btn btn-bwm">
-                                    <span>Select Image</span>
+                                <label style="padding: 0;" class="image-upload-container btn btn-bwm">
+                                    <label class="label">Select Image</label>
                                     <input #imageInput
                                            type="file"
+                                           class="form-control"
                                            accept="image/*"
                                            (change)="processFile(imageInput)">
                                   </label>
@@ -205,8 +188,86 @@
                                         <div *ngIf="f.address.errors.required">Address is required</div>
                                     </div>
                                 </div>
-                                
                             </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group has-placeholder">
+                                    <label for="whatsapp">WhatsApp No.<span class="required">*</span></label>
+                                    <input type="text" formControlName="whatsapp"  class="form-control" placeholder="WhatsApp No *"
+                                        [ngClass]="{ 'is-invalid': submitted && f.whatsapp }" >
+                                    <div *ngIf="submitted && f.whatsapp" class="invalid-feedback">
+                                        <div *ngIf="f.whatsapp.errors.required">WhatsApp no. is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div>
+                                    <select formControlName="franchise" id="franchise" [ngClass]="{ 'is-invalid': submitted && f.franchise.errors }">
+                                        <option value="" style="z-index: 90000;">
+                                            Yes
+                                        </option>
+                                        <option value="" style="z-index: 90000;">
+                                            No
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.franchise.errors" class="invalid-feedback">
+                                    <div *ngIf="f.franchise.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div> 
+                                    <select formControlName="reseller" id="reseller" [ngClass]="{ 'is-invalid': submitted && f.reseller.errors }">
+                                        <option value="" disabled selected>Join as Reseller</option>
+                                        <option value="" style="z-index: 90000;">
+                                            Yes
+                                        </option>
+                                        <option value="" style="z-index: 90000;">
+                                            No
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.reseller.errors" class="invalid-feedback">
+                                    <div *ngIf="f.reseller.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div>  
+                                    <select formControlName="retailer" id="retailer" [ngClass]="{ 'is-invalid': submitted && f.retailer.errors }">
+                                        <option value="" disabled selected>Join as Retailer</option>
+                                        <option value="" style="z-index: 90000;">
+                                            Yes
+                                        </option>
+                                        <option value="" style="z-index: 90000;">
+                                            No
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.retailer.errors" class="invalid-feedback">
+                                    <div *ngIf="f.retailer.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6" style="margin: 0 auto;">
+                                <div>
+                                    <select formControlName="seller" id="seller" [ngClass]="{ 'is-invalid': submitted && f.seller.errors }">
+                                        <option value="" disabled selected>Join as Seller</option>
+                                        <option value="" style="z-index: 90000;">
+                                            Yes
+                                        </option>
+                                        <option value="" style="z-index: 90000;">
+                                            No
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.seller.errors" class="invalid-feedback">
+                                    <div *ngIf="f.seller.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col-sm-12">
                                 <div class="form-group has-placeholder">
                                     <label for="about">Tell Us Something About You<span class="required">*</span></label>
@@ -222,6 +283,8 @@
 
                             
                             </div>
+
+                            
 
                         </div>
 
