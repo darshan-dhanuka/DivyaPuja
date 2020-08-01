@@ -1,0 +1,9 @@
+.psl_login{position: absolute;
+right: 0;
+top: 35%;
+}
+.psl_logout{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}

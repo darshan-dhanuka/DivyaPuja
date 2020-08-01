@@ -106,7 +106,7 @@
                                 <div>  
                                   
                                     <label class="label">Select Astrologer Catagory</label>  
-                                    <select formControlName="pandit_cat" id="pandit_cat" [ngClass]="{ 'is-invalid': submitted && f.pandit_cat.errors }">
+                                    <select (click)="getCat()" formControlName="pandit_cat" id="pandit_cat" [ngClass]="{ 'is-invalid': submitted && f.pandit_cat.errors }">
                                         <option *ngFor="let order of panditCat; let i = index" [value]="panditCat[i].id" style="z-index: 90000;">
                        
                                           {{panditCat[i].cat_name}}
