@@ -23,10 +23,10 @@ public : any;
       this.currentUser = this.currentUserSubject.asObservable();
   }
   panditRegister(user: Pandit) {
-    return this.http.post(`http://15.206.122.255:3000/pandit_register`, user);
+    return this.http.post(`https://15.206.122.255:3000/pandit_register`, user);
   }
 
   public getPanditCat(){
-    return this.http.get(`http://15.206.122.255:3000/pandit_cat`);
+    return this.http.get(`https://15.206.122.255:3000/pandit_cat`);
   }
 }
