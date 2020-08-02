@@ -16,6 +16,6 @@ export class ImageServiceService {
 
     formData.append('file', image);  
 
-    return this.http.post(`https://15.206.122.255:3000/file_upload`, formData);
+    return this.http.post(`https://service.divyapuja.com:3000/file_upload`, formData);
   }
 }
