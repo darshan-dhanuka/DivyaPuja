@@ -30,13 +30,18 @@
              
                 <h3 class="special-heading fw-500 text-white fs-50">
                     <span>To Register Click On</span>
-                </h3>
-                <div class="divider-35 divider-xl-65"></div>
-                <a routerLink="register" class="btn btn-maincolor">Register Now</a>
+                </h3>                  
+                <div  *ngIf="currentUser == null"  class="divider-35 divider-xl-65"></div>
+                <a  (click)="toggle()"  class="btn btn-maincolor">Register Now</a>
+                
             </div>
+            
             <div class="col-lg-6 col-xl-7 order-lg-2 order-1 text-center text-lg-right">
                 <img class="horoscope-image" src="assets/images/horoscope.png" alt="img">
             </div>
         </div>
     </div>
 </section>
+<div style="display:none" id="divshow2">
+    <app-login></app-login>
+</div>

@@ -67,6 +67,7 @@ export class RegisterComponent implements OnInit {
                   this.alertService.success('Registration successful', true);
                   window.location.reload();
                     // this.router.navigate(["/home"]);
+                  alert('Registration successful go to Login');
                   document.getElementById('divshow2').style.display = 'none';
 
               },
