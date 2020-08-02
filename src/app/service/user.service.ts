@@ -10,10 +10,10 @@ export class UserService {
 
 
     register(user: User) {
-        return this.http.post(`https://15.206.122.255:3000/register`, user);
+        return this.http.post(`https://service.divyapuja.com:3000/register`, user);
     }
 
     delete(id: number) {
-        return this.http.delete(`https://15.206.122.255:3000/users/${id}`);
+        return this.http.delete(`https://service.divyapuja.com:3000/users/${id}`);
     }
 }
