@@ -3208,13 +3208,12 @@ html[xmlns] .slides {
 */
 
 .astro-cl-img{
-    border-color: transparent;
-    box-shadow: 0 15px 13px 0px rgba(0, 0, 0, 0.3);
+    /* border-color: transparent;
+    box-shadow: 0 15px 13px 0px rgba(0, 0, 0, 0.3); */
 }
 .astro-cl img {
-	transform-origin: 0 0;
-	transition: transform .25s, visibility .25s ease-in;
-	
+	/* transform-origin: 0 0; */
+	width:80%;
   }
   .store-card{
 
@@ -3223,9 +3222,10 @@ html[xmlns] .slides {
 	
   }
   /* The Transformation */
-  .astro-cl:hover img {
+  .astro-cl:hover {
 	transform: scale(1.1);
   }
+
   .store-card:hover {
 	transform: scale(1.03);
   }
@@ -8560,12 +8560,26 @@ img {
 	}
 }
 
+.horizonFlow{
+	display:flex;
+	color:#219bf1;
+	margin: 0% 10% auto;
+	width:90%;
+}
+
+.horizonFlow:hover{
+	color:red;
+}
+
 /*additional overlay for parallax sections*/
 
 .astro-cl {
 	float: left;
+	border-color: transparent;
+    box-shadow: 0 15px 13px 0px rgba(0, 0, 0, 0.3);
 	
-	padding: 5px;
+	transition: transform .25s, visibility .25s ease-in;
+	padding: 20%;
   }
   
   /* Clearfix (clear floats) */

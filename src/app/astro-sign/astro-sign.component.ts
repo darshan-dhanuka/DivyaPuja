@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-astro-sign',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./astro-sign.component.css']
 })
 export class AstroSignComponent implements OnInit {
+  public sign: string;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.sign = params.get('sign');
+      });
   }
+
 
 }

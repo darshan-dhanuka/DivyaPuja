@@ -204,6 +204,7 @@
                             <div class="col-sm-6">
                                 <div>
                                     <select formControlName="franchise" id="franchise" [ngClass]="{ 'is-invalid': submitted && f.franchise.errors }">
+                                        <option value="" disabled selected>Franchise Inquiry</option>
                                         <option value="" style="z-index: 90000;">
                                             Yes
                                         </option>

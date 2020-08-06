@@ -6,7 +6,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PanditFormComponent } from './pandit-form/pandit-form.component';
 import { AstroFormComponent } from './astro-form/astro-form.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { AstroSignComponent } from './astro-sign/astro-sign.component';
 
 
@@ -17,8 +16,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'pandit-form', component: PanditFormComponent },
   { path: 'astro-form', component: AstroFormComponent },
-  { path: 'registration', component: RegistrationComponent },
-  { path: 'astro-sign', component: AstroSignComponent },
+  { path: 'astro-sign/:sign', component: AstroSignComponent,pathMatch: 'full'},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

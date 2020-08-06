@@ -5,3 +5,13 @@
     padding-top: 14px;
     border-radius: 10px;
 }
+
+.label{
+    margin-bottom: -0.2rem;
+    margin-top: 0.5rem;
+    margin-left: 10%;
+}
+
+.btn{
+    text-align: left;
+}
