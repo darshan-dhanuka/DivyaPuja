@@ -8564,7 +8564,7 @@ img {
 	display:flex;
 	color:#219bf1;
 	margin: 0% 10% auto;
-	width:90%;
+	/* width:90%; */
 }
 
 .horizonFlow:hover{
@@ -8582,6 +8582,11 @@ img {
 	padding: 20%;
   }
   
+
+  .astro-rw{
+	  justify-content: center;
+  }
+
   /* Clearfix (clear floats) */
   .astro-rw::after {
 	content: "";
@@ -19817,6 +19822,7 @@ a img.aligncenter {
 
 .page_header .row {
 	min-height: 60px;
+	width: 100%;
 }
 
 .page_header a {
@@ -22343,7 +22349,7 @@ a:hover > img {
 	}
 
 	.shortcode-post-grid-tilled-1 .post {
-		padding: 60px;
+		/* padding: 60px; */
 	}
 
 	.shortcode-post-grid-tilled-1 .post:last-child {
