@@ -8580,6 +8580,7 @@ img {
 	
 	transition: transform .25s, visibility .25s ease-in;
 	padding: 20%;
+	margin-bottom: 10%;
   }
   
 

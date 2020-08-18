@@ -24,6 +24,9 @@ import { AlertComponent } from './alert/alert.component';
 import { PanditFormComponent } from './pandit-form/pandit-form.component';
 import { AstroFormComponent } from './astro-form/astro-form.component';
 import { AstroSignComponent } from './astro-sign/astro-sign.component';
+import { KundliComponent } from './kundli/kundli.component';
+import { PalmistryComponent } from './palmistry/palmistry.component';
+import { ReikiHealingComponent } from './reiki-healing/reiki-healing.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { AstroSignComponent } from './astro-sign/astro-sign.component';
     RegisterComponent,
     PanditFormComponent,
     AstroFormComponent,
-    AstroSignComponent
+    AstroSignComponent,
+    KundliComponent,
+    PalmistryComponent,
+    ReikiHealingComponent
   ],
   imports: [
     BrowserModule,

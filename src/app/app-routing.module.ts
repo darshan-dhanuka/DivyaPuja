@@ -7,6 +7,9 @@ import { RegisterComponent } from './register/register.component';
 import { PanditFormComponent } from './pandit-form/pandit-form.component';
 import { AstroFormComponent } from './astro-form/astro-form.component';
 import { AstroSignComponent } from './astro-sign/astro-sign.component';
+import { KundliComponent } from './kundli/kundli.component';
+import { PalmistryComponent } from './palmistry/palmistry.component';
+import { ReikiHealingComponent } from './reiki-healing/reiki-healing.component';
 
 
 const routes: Routes = [
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: 'pandit-form', component: PanditFormComponent },
   { path: 'astro-form', component: AstroFormComponent },
   { path: 'astro-sign/:sign', component: AstroSignComponent,pathMatch: 'full'},
+  { path: 'kundli', component: KundliComponent,pathMatch: 'full'},
+  { path: 'palmistry', component: PalmistryComponent,pathMatch: 'full'},
+  { path: 'reikihealing', component: ReikiHealingComponent,pathMatch: 'full'},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
