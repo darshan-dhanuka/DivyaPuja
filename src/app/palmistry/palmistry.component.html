@@ -1,0 +1,290 @@
+<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your birthtime.</div>
+	<![endif]-->
+
+    <div class="preloader">
+        <div class="preloader_image pulse"></div>
+    </div>
+    <app-navbar></app-navbar>
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="widget widget_search">
+            <form method="get" class="searchform search-form" action="/">
+                <div class="form-group">
+                    <input type="text" value="" name="search" class="form-control" placeholder="Search keyword"
+                        id="modal-search-input">
+                </div>
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="fw-messages-wrap ls p-normal">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            <!--
+                <ul class="list-unstyled">
+                    <li>Message To User</li>
+                </ul>
+                -->
+    
+        </div>
+    </div><!-- eof .modal -->
+    
+    <div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="color-main2 mb-3">Log in</h4>
+                                <form class="form-registration c-mb-20 c-gutter-20" action="/">
+                                    <div class="row mb-4">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" required
+                                                    placeholder="login" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control"
+                                                    placeholder="password" aria-required="true" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr"
+                                        data-toggle="modal" href="#">Not a member? Register!</a>
+                                    <button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+                                </form>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="color-main2 mb-4">Registration</h4>
+                                <form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" required
+                                                    placeholder="login" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control"
+                                                    placeholder="password" aria-required="true" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control" placeholder="email"
+                                                    required aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="password" name="confirmPassword" class="form-control"
+                                                    placeholder="password" required aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="checkbox" id="agreed" name="agreed" value="agreed" required
+                                                    aria-required="true"><label for="agreed">I agree to the rules</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+                                </form>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+            <!-- template sections -->
+    
+    
+            <section class="page_title ds s-overlay s-parallax s-pt-130 s-pt-xl-150 s-pb-65">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-md-12">
+                            <h1>Get Your Palmistry</h1>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="./">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">Pages</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    Palmistry
+                                </li>
+                            </ol>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+    
+            <section class="ds s-py-90 s-py-xl-160 c-gutter-60">
+                <div class="container">
+                    
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="divider-30"></div>
+                            <p class="breadcrumb-item">
+                                <b>PALMISTRY</b> - Palmistry is an ancient science and its popular today. . A good palmist can guide you towards your life purpose and path to achieve it. With your personalized Palm Reading we can help & guide you about your Destiny and Future.
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img width="100%" src="assets/images/map.jpg" alt="">
+                            <div class="divider-60"></div>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <div class="divider-60 divider-lg-0"></div>
+                            <div class="vertical-item content-padding padding-big corner-box text-md-left text-center">
+                                <div class="item-content">
+                                    <img src="assets/images/map.jpg" alt="">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group" style="text-align: center;">
+                                <button type="submit" id="contact_form_submit" name="contact_submit"
+                                    class="btn btnn btn-maincolor btn-medium" disabled>Save as PDF
+                                    <span class="spinner-border spinner-border-sm mr-1"></span>
+                                </button>
+                            </div>
+    
+                        </div><!-- .col-* -->
+    
+    
+    
+    
+                        <div class="col-lg-4">
+                            <ul class="list-menu">
+                                <div>
+                                    <h5> &nbsp; Detail for Palmistry</h5>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Enter Your Name<span class="required">*</span></label>
+                                    <input type="text" formControlName="name" class="form-control"
+                                        placeholder="Enter Your Name*"
+                                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                        <div *ngIf="f.name.errors.required">Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <select id="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+                                        <option value="" disabled selected>Gender</option>
+                                        <option value="Yes" style="z-index: 90000;">
+                                            Male
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            Female
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                                        <div *ngIf="f.gender.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Date of Birth<span class="required">*</span></label>
+                                    <input type="date" formControlName="dob" class="form-control"
+                                        placeholder="Date of Birth in DD/MM/YYYY *"
+                                        [ngClass]="{ 'is-invalid': submitted && f.dob.errors }">
+                                    <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                                        <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Birth Time<span class="required">*</span></label>
+                                    <input type="time" formControlName="birthtime" class="form-control"
+                                        placeholder="Birth Time*"
+                                        [ngClass]="{ 'is-invalid': submitted && f.birthtime.errors }">
+                                    <div *ngIf="submitted && f.birthtime.errors" class="invalid-feedback">
+                                        <div *ngIf="f.birthtime.errors.required">time is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-placeholder">
+                                    <label for="location">Birth Location<span class="required">*</span></label>
+                                    <input type="text" formControlName="location" class="form-control"
+                                        placeholder="Birth Location*"
+                                        [ngClass]="{ 'is-invalid': submitted && f.location.errors }">
+    
+    
+                                    <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
+                                        <div *ngIf="f.location.errors.required">Location is required</div>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group">
+                                    <select id="charttype" [ngClass]="{ 'is-invalid': submitted && f.charttype.errors }">
+                                        <option value="" disabled selected>Chart Type</option>
+                                        <option value="Yes" style="z-index: 90000;">
+                                            North Indian
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            South Indian
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            East Indian
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.charttype.errors" class="invalid-feedback">
+                                        <div *ngIf="f.charttype.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group">
+                                    <button type="submit" id="contact_form_submit" name="contact_submit"
+                                        class="btn btn-maincolor btn-medium">Send
+                                        <span class="spinner-border spinner-border-sm mr-1"></span>
+    
+                                    </button>
+                                </div>
+                                <!-- <li class="current-menu-item"> -->
+                            </ul>
+    
+                        </div>
+    
+    
+                    </div>
+                </div>
+            </section>
+            <app-footer></app-footer>
+    
+        </div><!-- eof #box_wrapper -->
+    </div><!-- eof #canvas -->
