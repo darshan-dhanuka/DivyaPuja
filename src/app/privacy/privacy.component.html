@@ -1,0 +1,199 @@
+<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your birthtime.</div>
+	<![endif]-->
+
+    <div class="preloader">
+        <div class="preloader_image pulse"></div>
+    </div>
+    <app-navbar></app-navbar>
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="widget widget_search">
+            <form method="get" class="searchform search-form" action="/">
+                <div class="form-group">
+                    <input type="text" value="" name="search" class="form-control" placeholder="Search keyword"
+                        id="modal-search-input">
+                </div>
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="fw-messages-wrap ls p-normal">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            <!--
+                <ul class="list-unstyled">
+                    <li>Message To User</li>
+                </ul>
+                -->
+    
+        </div>
+    </div><!-- eof .modal -->
+    
+    <div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="color-main2 mb-3">Log in</h4>
+                                <form class="form-registration c-mb-20 c-gutter-20" action="/">
+                                    <div class="row mb-4">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" required
+                                                    placeholder="login" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control"
+                                                    placeholder="password" aria-required="true" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr"
+                                        data-toggle="modal" href="#">Not a member? Register!</a>
+                                    <button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+                                </form>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="color-main2 mb-4">Registration</h4>
+                                <form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" required
+                                                    placeholder="login" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" class="form-control"
+                                                    placeholder="password" aria-required="true" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control" placeholder="email"
+                                                    required aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="password" name="confirmPassword" class="form-control"
+                                                    placeholder="password" required aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <input type="checkbox" id="agreed" name="agreed" value="agreed" required
+                                                    aria-required="true"><label for="agreed">I agree to the rules</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+                                </form>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+            <!-- template sections -->
+    
+    
+            <section class="page_title ds s-overlay s-parallax s-pt-130 s-pt-xl-150 s-pb-65">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-md-12">
+                            <h1>Privacy Notice</h1>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="./">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    Privacy
+                                </li>
+                            </ol>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+    
+            <section class="ds bs features-section s-overlay s-overlay-half-left s-py-90 s-py-xl-150 container-px-xl-30">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-12 col-lg-6 col-xl-5 text-center text-lg-left left section-special-2">
+							<div class="z-index-2">
+								<div>
+									<h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+										<span>Privacy Notice</span>
+									</h3>
+									<div class="divider-60 divider-lg-0"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 section-special-3">
+							<div class="z-index-2 ds opacity">
+								<div>
+									<div class="media">
+										<div class="media-body">
+											<h6 class="mt-1 mb-2 color-main2">
+												Data Security and Possession:
+											</h6>
+											<p>
+												Whatever that has been provided on the portal is been protected by
+                                                copyrights under laws.
+                                                Any change within the mentioned services and other important stuff like
+                                                logos, brandnames etc within the website will be considered as violation of
+                                                copyright laws.
+											</p>
+										</div>
+									</div>
+									<div class="divider-40 divider-xl-60"></div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            <app-footer></app-footer>
+    
+        </div><!-- eof #box_wrapper -->
+    </div><!-- eof #canvas -->

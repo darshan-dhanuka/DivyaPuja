@@ -1,0 +1,284 @@
+<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your birthtime.</div>
+	<![endif]-->
+
+<div class="preloader">
+    <div class="preloader_image pulse"></div>
+</div>
+<app-navbar></app-navbar>
+<!-- search modal -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="widget widget_search">
+        <form method="get" class="searchform search-form" action="/">
+            <div class="form-group">
+                <input type="text" value="" name="search" class="form-control" placeholder="Search keyword"
+                    id="modal-search-input">
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </div>
+</div>
+
+<!-- Unyson messages modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+    <div class="fw-messages-wrap ls p-normal">
+        <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+        <!--
+                    <ul class="list-unstyled">
+                        <li>Message To User</li>
+                    </ul>
+                    -->
+
+    </div>
+</div><!-- eof .modal -->
+
+<div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="color-main2 mb-3">Log in</h4>
+                            <form class="form-registration c-mb-20 c-gutter-20" action="/">
+                                <div class="row mb-4">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" required
+                                                placeholder="login" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control"
+                                                placeholder="password" aria-required="true" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr"
+                                    data-toggle="modal" href="#">Not a member? Register!</a>
+                                <button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="color-main2 mb-4">Registration</h4>
+                            <form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" required
+                                                placeholder="login" aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control"
+                                                placeholder="password" aria-required="true" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="email"
+                                                required aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="password" name="confirmPassword" class="form-control"
+                                                placeholder="password" required aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="agreed" name="agreed" value="agreed" required
+                                                aria-required="true"><label for="agreed">I agree to the rules</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- wrappers for visual page editor and boxed version of template -->
+<div id="canvas">
+    <div id="box_wrapper">
+        <!-- template sections -->
+
+
+
+        <section class="page_title ds s-overlay s-parallax s-pt-130 s-pt-xl-150 s-pb-65">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <h1>About Us</h1>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="./">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                About US
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="ds dark-bs s-overlay s-overlay-three-quarter-left s-pt-90 s-pb-85 s-py-xl-150 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row c-gutter-60 align-items-center">
+
+                            <div class="col-lg-6 col-xl-5">
+                                <img src="assets/images/team/ashu.jpg" alt="img">
+                            </div>
+
+                            <div class="col-lg-6 col-xl-7">
+                                <div class="divider-lg-0 divider-60"></div>
+                                <h4 class="my-0 color-main2">Ashutosh Shukla</h4>
+                                <p class="team-position pb-xl-3 fs-20">
+                                    CEO
+                                </p>
+
+                                <p>
+                                    Our gemstone specialist astrologer Ashutosh Shukla of global approbation suggest wearing of any gemstone after extensive and meticulous observation of the birth chart of his each client. Things considered while making observation and analysis are location and nature of planets in the birth chart, transit of planets, positive and negative effects of planets, good and bad astrology yogas, etc. the most suitable metal for the pedestal ring, and the purifying and energizing mantra and process to be performed well before wearing the gemstone-studded ring.
+                                </p>
+
+                                <blockquote>
+                                    <p>
+                                        Besides suggesting the most curative or beneficial gemstone, he also gives guidance regarding the most auspicious time to wear the suggested gemstone on specific finger.
+                                    </p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ds dark-bs s-overlay s-overlay-three-quarter-left s-pt-90 s-pb-85 s-py-xl-150 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row c-gutter-60 align-items-center">
+
+                            <div class="col-lg-6 col-xl-5">
+                                <img src="assets/images/team/02.jpg" alt="img">
+                            </div>
+
+                            <div class="col-lg-6 col-xl-7">
+                                <div class="divider-lg-0 divider-60"></div>
+                                <h4 class="my-0 color-main2">Kapil Shukla</h4>
+                                <p class="team-position pb-xl-3 fs-20">
+                                    Director
+                                </p>
+
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eligendi id alias sit, minus aspernatur ut architecto deserunt, quibusdam ipsam tempore nisi aut! Molestiae veniam reiciendis, voluptatibus dolore nostrum iste.
+                                </p>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, qui cumque! Perferendis distinctio minus optio non quasi quibusdam adipisci eos molestiae, quidem at quis, qui alias odit facere illum nemo?
+                                </p>
+
+                                <blockquote>
+                                    <p>
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio soluta vero suscipit qui excepturi deleniti, voluptas esse dolore dolorem, veritatis ipsum enim. Cum facilis accusamus impedit eligendi officia ut recusandae.
+                                    </p>
+                                </blockquote>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="ds s-py-90 s-py-xl-150 c-gutter-50">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-lg-6">
+                        <img src="assets/images/logo.png" alt="img">
+                        <figcaption>ईश्वर से प्रार्थना की राह</figcaption>
+        
+                    </div>
+                    <div class="col-lg-6 text-center text-md-left">
+                        <div class="divider-60 divider-lg-0 "></div>
+                        <p class="text-white text-center text-md-left fs-20 line-right mb-0">
+        
+                        </p>
+                        <h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+                            <span>About Us</span>
+                        </h3>
+                        <div class="divider-35"></div>
+                        <p>
+                            Divyapuja is one of the finest and most reliable online portals to carry
+                            out various pujas. We predominantly focus on Devotee’s satisfaction
+                            pertaining to puja which is the core thing of our online portal. We
+                            ensure nuisance free services to our customers starting from puja
+                            booking to the entire puja accomplishment process.
+                        </p>
+                        <p>We have highly
+                            qualified priests who conduct every single step within the puja with
+                            utmost solemnity and dedication. We have 500 plus temples within our
+                            area of accessibility for conduction of puja rituals and customs. Our
+                            dedication towards our work assures our credibility. Everything being
+                            online has made things simpler and trouble-free. We basically avail the
+                            Youth to understand the actual relevance of Puja and all other Hindu
+                            rituals in a deeper sense.
+                        </p>
+                        <div class="shortcode-simple-counter counter-layout-2">
+                            <div class="counter_wrap justify-content-md-start">
+                                <div class="counter-wrap">
+        
+                                </div>
+                                <p class="counter-text ">
+        
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider-30 divider-xl-50"></div>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+                            <app-footer></app-footer>
+
+                        </div><!-- eof #box_wrapper -->
+                    </div><!-- eof #canvas -->
