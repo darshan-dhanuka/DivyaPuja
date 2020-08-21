@@ -27,6 +27,16 @@ import { AstroSignComponent } from './astro-sign/astro-sign.component';
 import { KundliComponent } from './kundli/kundli.component';
 import { PalmistryComponent } from './palmistry/palmistry.component';
 import { ReikiHealingComponent } from './reiki-healing/reiki-healing.component';
+import { AstroExpertComponent } from './astro-expert/astro-expert.component';
+import { TeamComponent } from './team/team.component';
+import { TeamMemberComponent } from './team-member/team-member.component';
+import { PoojanComponent } from './poojan/poojan.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { SaleComponent } from './sale/sale.component';
+import { TcComponent } from './tc/tc.component';
+import { RefundsComponent } from './refunds/refunds.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +63,17 @@ import { ReikiHealingComponent } from './reiki-healing/reiki-healing.component';
     AstroSignComponent,
     KundliComponent,
     PalmistryComponent,
-    ReikiHealingComponent
+    ReikiHealingComponent,
+    AstroExpertComponent,
+    TeamComponent,
+    TeamMemberComponent,
+    PoojanComponent,
+    DeliveryComponent,
+    SaleComponent,
+    TcComponent,
+    RefundsComponent,
+    PrivacyComponent,
+    ShoppingFaqComponent
   ],
   imports: [
     BrowserModule,

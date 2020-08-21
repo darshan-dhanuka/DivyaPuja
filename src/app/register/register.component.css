@@ -66,6 +66,7 @@
     
     .style-register .form-group {
         margin-bottom: 20px;
+        display: flex;
      
     }
     
@@ -178,8 +179,8 @@
           
     }
     .login-button {
-        display: block;
-        margin: 0 auto;
+        flex-direction: row;
+        /* margin: 0 auto; */
         width: 100%;
         max-width: 162px;
         padding-left: 13%;

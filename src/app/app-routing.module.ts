@@ -10,6 +10,15 @@ import { AstroSignComponent } from './astro-sign/astro-sign.component';
 import { KundliComponent } from './kundli/kundli.component';
 import { PalmistryComponent } from './palmistry/palmistry.component';
 import { ReikiHealingComponent } from './reiki-healing/reiki-healing.component';
+import { AstroExpertComponent } from './astro-expert/astro-expert.component';
+import { TeamComponent } from './team/team.component';
+import { PoojanComponent } from './poojan/poojan.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { RefundsComponent } from './refunds/refunds.component';
+import { TcComponent } from './tc/tc.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
+import { SaleComponent } from './sale/sale.component';
 
 
 const routes: Routes = [
@@ -20,9 +29,18 @@ const routes: Routes = [
   { path: 'pandit-form', component: PanditFormComponent },
   { path: 'astro-form', component: AstroFormComponent },
   { path: 'astro-sign/:sign', component: AstroSignComponent,pathMatch: 'full'},
-  { path: 'kundli', component: KundliComponent,pathMatch: 'full'},
-  { path: 'palmistry', component: PalmistryComponent,pathMatch: 'full'},
-  { path: 'reikihealing', component: ReikiHealingComponent,pathMatch: 'full'},
+  { path: 'kundli', component: KundliComponent},
+  { path: 'palmistry', component: PalmistryComponent},
+  { path: 'reikihealing', component: ReikiHealingComponent},
+  { path: 'astro-expert', component: AstroExpertComponent},
+  { path: 'director', component: TeamComponent},
+  { path: 'poojan', component: PoojanComponent},
+  { path: 'delivery', component: DeliveryComponent},
+  { path: 'refunds', component: RefundsComponent},
+  { path: 'terms', component: TcComponent},
+  { path: 'privacy', component: PrivacyComponent},
+  { path: 'sale', component: SaleComponent},
+  { path: 'shoppingFAQs', component: ShoppingFaqComponent},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

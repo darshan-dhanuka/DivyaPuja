@@ -579,7 +579,7 @@
 /*shop pagination*/
 .woocommerce-pagination {
 	margin-top: 40px;
-	text-align: left;
+	text-align: center;
 }
 
 @media (max-width: 1199px) {

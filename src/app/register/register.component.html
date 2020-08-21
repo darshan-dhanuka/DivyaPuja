@@ -53,12 +53,12 @@
                                         <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <button [disabled]="loading" class="c40 btn btn-primary login-button">
-                                        <span *ngIf="loading" class="btn btn-maincolor mt-30 d-block" style="color: white;"></span>
+                                <div class="form-group text-center">
+                                    <button [disabled]="loading" class="c40 btn btn-primary login-button text-left" style="color: white;">
+                                        <span *ngIf="loading" class="btn btn-maincolor mt-30 d-block"></span>
                                         Register
                                     </button>
-                                    <a (click)=" toggleclose()" class="c7 btn btn-link">Cancel</a>
+                                    <a (click)=" toggleclose()" class="c7 btn btn-link text-right">Cancel</a>
                                 </div>
                             </form>
                         </div>
