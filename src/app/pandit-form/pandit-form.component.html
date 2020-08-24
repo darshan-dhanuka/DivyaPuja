@@ -1,3 +1,5 @@
+<app-navbar></app-navbar>
+
 <section class="ds bs s-py-90 s-py-xl-150">
     <div class="container">
         <div class="row">
@@ -160,7 +162,7 @@
                             <div class="col-sm-6">
                                 <div class="form-group has-placeholder">
                                     <label for="dob">Date of Birth<span class="required">*</span></label>
-                                    <input type="text" formControlName="dob"  class="form-control" placeholder="Date of Birth in DD/MM/YYYY *" 
+                                    <input type="date" formControlName="dob"  class="form-control" placeholder="Date of Birth in DD/MM/YYYY *" 
                                         [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" >
                                     <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
                                         <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
@@ -310,3 +312,4 @@
     </div>
 </section>
 
+<app-footer></app-footer>

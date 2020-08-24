@@ -19,6 +19,8 @@ import { TcComponent } from './tc/tc.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
 import { SaleComponent } from './sale/sale.component';
+import { ShopComponent } from './shop/shop.component';
+import { ProductComponent } from './product/product.component';
 
 
 const routes: Routes = [
@@ -41,6 +43,8 @@ const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent},
   { path: 'sale', component: SaleComponent},
   { path: 'shoppingFAQs', component: ShoppingFaqComponent},
+  { path: 'shop', component: ShopComponent},
+  { path: 'shop/product', component: ProductComponent},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

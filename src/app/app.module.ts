@@ -37,6 +37,8 @@ import { TcComponent } from './tc/tc.component';
 import { RefundsComponent } from './refunds/refunds.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
+import { ShopComponent } from './shop/shop.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
     TcComponent,
     RefundsComponent,
     PrivacyComponent,
-    ShoppingFaqComponent
+    ShoppingFaqComponent,
+    ShopComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

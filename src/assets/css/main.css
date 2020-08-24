@@ -22307,6 +22307,9 @@ a:hover > img {
 	.post-shortcode .entry-footer > div {
 		width: 100% !important;
 	}
+	.post{
+		display: block;
+	}
 }
 
 .shortcode-post-grid-tilled-1 {
