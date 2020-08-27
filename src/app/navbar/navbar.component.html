@@ -24,9 +24,16 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="currentUser as user" class="head_username">
-            <div class="psl_login">
+        <div *ngIf="currentUser as user" class="head_username_login ">
+            <div class="dropdown">
+            <a class="psl_login">
                 Hi {{(user.user.name) ? user.user.name : 'User'}}&nbsp;&nbsp;
+            </a>
+            <div class="dropdown-content">
+                <a routerLink="user-profile">My Profile</a>
+                <a  (click)="logout() ">Logout</a>
+               
+              </div>
             </div>
         </div>
         <div *ngIf="currentUser" class="head_username">

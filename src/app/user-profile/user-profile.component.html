@@ -1,0 +1,274 @@
+
+
+	
+	<!--[if IE]>
+\
+
+
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div><!-- eof .modal -->
+
+	<div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main2 mb-3">Log in</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" action="/">
+									<div class="row mb-4">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+									</div>
+									<a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr" data-toggle="modal" href="#">Not a member? Register!</a>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade popupRegistr" id="popupRegistr" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main2 mb-4">Registration</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" method="post" action="/">
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="email" name="email" class="form-control" placeholder="email" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="password" name="confirmPassword" class="form-control" placeholder="password" required aria-required="true">
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group">
+												<input type="checkbox" id="agreed" name="agreed" value="agreed" required aria-required="true"><label for="agreed">I agree to the rules</label>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Registration</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+
+			<div class="header_absolute ">
+
+	
+
+
+			</div>
+
+			<section class="page_title ds s-overlay s-parallax s-pt-130 s-pt-xl-150 s-pb-65">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12">
+							<h1>Shortcodes: Tabs</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Home</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="#">User Profile</a>
+								</li>
+								
+							</ol>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+			<section class="ds s-py-90 s-py-xl-150 c-gutter-60">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							
+
+							<div class = "user">
+								<div *ngIf="currentUser as user" class="head_username">
+									<div class="psl_login">
+                                        <h3>
+										Hi {{(user.user.name) ? user.user.name : 'User'}}&nbsp;&nbsp;
+                                    </h3>
+									</div>
+								</div>
+								
+								
+								</div>
+							
+                                <div class="row">
+                                    <div class="col-3">
+                                      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-userProfile" role="tab" aria-controls="v-pills-userProfile" aria-selected="true">User Profile</a>
+                                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-address" role="tab" aria-controls="v-pills-address" aria-selected="false">Manage Address</a>
+                                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-payment" role="tab" aria-controls="v-pills-payment" aria-selected="false">Payment Methods</a>
+                                        <!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> -->
+                                      </div>
+                                    </div>
+                                    <div class="col-9">
+                                      <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-userProfile" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                            <form action="/action_page.php">
+                                                
+                                                
+                                                <div *ngIf="currentUser as user" class="head_username">
+                                                    <div class = "editUser" id = "divshow2" style="display: block;">
+                                                        <label for="fname" style="display: block !important;">User Name:</label><br>
+                                                    <div class="userName">
+                                                        
+                                                        <p>
+                                                        {{(user.user.name) ? user.user.name : 'User'}}&nbsp;&nbsp;
+                                                    </p>
+                                                    </div>
+                                                    <button class="editBt" onclick="" (click)="toggle()" value="edit"> Edit</button>
+                                                </div> 
+                                                    </div>
+
+                                                <!-- <input type="text" id="fname" name="fname" value="John"><br> -->
+                                                <!-- <label for="lname">Last name:</label><br>
+                                                <input type="text" id="lname" name="lname" value="Doe"><br><br> -->
+                                        
+                                              </form> 
+
+                                              <div style="display:none" id="divshow" *ngIf="currentUser as user" >
+                                                <form action="/action_page.php">
+                                                    <label for="fname">First name:</label><br>
+                                                    <input type="text" id="fname" name="fname" value={{(user.user.name)}}><br>
+                                                    <label for="lname">Last name:</label><br>
+                                                    <input type="text" id="lname" name="lname" value={{(user.user.email)}}><br><br>
+                                                    <label for="lname">Email:</label><br>
+                                                    <input type="text" id="email" name="email" value="abc@agam.com"><br><br>
+                                                    <label for="lname">Mobile No. :</label><br>
+                                                    <input type="text" id="mobno" name="mobno" value=""><br><br>
+                                                    <input class = "editBt" type="submit" value="Submit">
+                                                    <input class = "editBt"  style = "margin: 2%;
+                                                    background: none;"(click)="toogleBack()" type="submit" value="cancel">
+                                                  </form> 
+                                            </div>
+                                            
+
+                                              <!-- <div id = "divShow" style="display: none;">
+
+                                                <h1>Rajat</h1>
+                                                <form action="/action_page.php">
+                                                    <label for="fname">First name:</label><br>
+                                                    <input type="text" id="fname" name="fname" value="John"><br>
+                                                    <label for="lname">Last name:</label><br>
+                                                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                                    <input type="submit" value="Submit">
+                                                  </form> 
+
+                                              </div> -->
+
+
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                        <a>Add New Address</a>
+                                        <img style = "padding: 10px;" src="/src/assets/images/plus.png">    
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                            <a>Add New Payment Method</a>
+                                        <img style = "padding: 10px;" src="/src/assets/images/plus.png">   
+                                        </div>
+                                        <!-- <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div> -->
+                                      </div>
+                                    </div>
+                                  </div> 
+						</div>
+					</div>
+				</div>
+            </section>
+           
+<app-footer></app-footer>
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+
+

@@ -21,6 +21,7 @@ import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
 import { SaleComponent } from './sale/sale.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './product/product.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'sale', component: SaleComponent},
   { path: 'shoppingFAQs', component: ShoppingFaqComponent},
   { path: 'shop', component: ShopComponent},
+  { path: 'user-profile', component: UserProfileComponent},
   { path: 'shop/product', component: ProductComponent},
   // canActivate: [AuthGuard]
   // otherwise redirect to home

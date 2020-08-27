@@ -39,6 +39,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './product/product.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { ProductComponent } from './product/product.component';
     PrivacyComponent,
     ShoppingFaqComponent,
     ShopComponent,
-    ProductComponent
+    ProductComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
