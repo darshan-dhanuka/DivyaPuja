@@ -1,0 +1,17 @@
+
+.imgHover{
+    height: 80vh;
+}
+
+.columns-one-grid {
+	grid-gap: 8px;
+}
+
+/* .col-absolute{
+    position: relative;
+    transform: translate(-200%, -50%);
+} */
+
+.card{
+    background-color:#0c1023;
+}
