@@ -43,11 +43,13 @@ export class PalmistryComponent implements OnInit {
   ngOnInit() {
     this.panditForm = this.formBuilder.group({
       name: ['', Validators.required],
+      email: ['', Validators.required],
       gender: ['', Validators.required],
       dob: ['', Validators.required],
       birthtime: ['', Validators.required],
       location: ['', Validators.required],
-      charttype: ['', Validators.required],
+      state: ['', Validators.required],
+      city: ['', Validators.required],
     });
     this.dataService.getPanditCat().subscribe((data)=>{
       console.log(data);

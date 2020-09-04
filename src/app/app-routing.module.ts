@@ -21,7 +21,12 @@ import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
 import { SaleComponent } from './sale/sale.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './product/product.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { EAstroLearnComponent } from './e-astro-learn/e-astro-learn.component';
+import { PremiumServicesQueryComponent } from './premium-services-query/premium-services-query.component';
+import { GiftPoojaComponent } from './gift-pooja/gift-pooja.component';
+import { VastuConsultantComponent } from './vastu-consultant/vastu-consultant.component';
+import { BookPanditComponent } from './book-pandit/book-pandit.component';
+import { BookYatraComponent } from './book-yatra/book-yatra.component';
 
 
 const routes: Routes = [
@@ -45,8 +50,13 @@ const routes: Routes = [
   { path: 'sale', component: SaleComponent},
   { path: 'shoppingFAQs', component: ShoppingFaqComponent},
   { path: 'shop', component: ShopComponent},
-  { path: 'user-profile', component: UserProfileComponent},
   { path: 'shop/product', component: ProductComponent},
+  { path: 'eastrolearn', component: EAstroLearnComponent},
+  { path: 'premium-service-query', component: PremiumServicesQueryComponent},
+  { path: 'giftpooja', component: GiftPoojaComponent},
+  { path: 'vastu-consultant', component: VastuConsultantComponent},
+  { path: 'book-pandit', component: BookPanditComponent},
+  { path: 'book-yatra', component: BookYatraComponent},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

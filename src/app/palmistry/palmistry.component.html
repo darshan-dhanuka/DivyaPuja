@@ -161,19 +161,20 @@
                     <div class="row">
                         <div class="col-lg-8 align-middle">
                             <div class="divider-30"></div>
-                            <p class="breadcrumb-item align-middle" style="margin-top:15%;">
-                                <b>PALMISTRY</b> - Palmistry is an ancient science and its popular today. . A good palmist can guide you towards your life purpose and path to achieve it. With your personalized Palm Reading we can help & guide you about your Destiny and Future.
+                            <h2>PALMISTRY</h2>
+                            <p class="breadcrumb-item align-middle" style="color:white;">
+                                - Palmistry is an ancient science and its popular today. . A good palmist can guide you towards your life purpose and path to achieve it. With your personalized Palm Reading we can help & guide you about your Destiny and Future.
                             </p>
                         </div>
                         <div class="col-lg-4">
-                            <img width="100%" src="assets/images/astro/palm2.jpg" alt="">
+                            <img width="100%" style="border-radius: 20px;" src="assets/images/astro/palm.webp" alt="">
                             <div class="divider-60"></div>
                         </div>
                         <div class="col-lg-8 ">
                             <div class="divider-60 divider-lg-0"></div>
                             <div class="vertical-item content-padding padding-big corner-box text-md-left text-center">
                                 <div class="item-content">
-                                    <img src="assets/images/astro/palm1.jpg" alt="">
+                                    <img style="border-radius: 20px;" src="assets/images/astro/palm1.jpg" alt="">
                                 </div>
                             </div>
                             <br>
@@ -192,7 +193,7 @@
                         <div class="col-lg-4">
                             <ul class="list-menu">
                                 <div>
-                                    <h5> &nbsp; Detail for Palmistry</h5>
+                                    <h5> &nbsp; DetailS for Palmistry</h5>
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Enter Your Name<span class="required">*</span></label>
@@ -201,6 +202,15 @@
                                         [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
                                     <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
                                         <div *ngIf="f.name.errors.required">Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Enter Your Email<span class="required">*</span></label>
+                                    <input type="email" formControlName="email" class="form-control"
+                                        placeholder="Enter Your Email*"
+                                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                        <div *ngIf="f.email.errors.required">Email is required</div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -215,6 +225,34 @@
                                     </select>
                                     <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
                                         <div *ngIf="f.gender.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <select id="state" [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+                                        <option value="" disabled selected>State</option>
+                                        <option value="Yes" style="z-index: 90000;">
+                                            Madhya Pradesh
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            ......
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                                        <div *ngIf="f.state.errors.required">Field is required</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <select id="city" [ngClass]="{ 'is-invalid': submitted && f.city.errors }">
+                                        <option value="" disabled selected>city</option>
+                                        <option value="Yes" style="z-index: 90000;">
+                                            Madhya Pradesh
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            ......
+                                        </option>
+                                    </select>
+                                    <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                        <div *ngIf="f.city.errors.required">Field is required</div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -246,24 +284,30 @@
                                         <div *ngIf="f.location.errors.required">Location is required</div>
                                     </div>
                                 </div>
-    
                                 <div class="form-group">
-                                    <select id="charttype" [ngClass]="{ 'is-invalid': submitted && f.charttype.errors }">
-                                        <option value="" disabled selected>Chart Type</option>
-                                        <option value="Yes" style="z-index: 90000;">
-                                            North Indian
-                                        </option>
-                                        <option value="No" style="z-index: 90000;">
-                                            South Indian
-                                        </option>
-                                        <option value="No" style="z-index: 90000;">
-                                            East Indian
-                                        </option>
-                                    </select>
-                                    <div *ngIf="submitted && f.charttype.errors" class="invalid-feedback">
-                                        <div *ngIf="f.charttype.errors.required">Field is required</div>
+                                    <label>Left Hand Image<span class="required">*</span></label>
+                                    <input type="file" formControlName="imageLeft" class="form-control"
+                                        placeholder="Left Hand Image*"
+                                        [ngClass]="{ 'is-invalid': submitted && f.imageLeft.errors }">
+    
+    
+                                    <div *ngIf="submitted && f.imageLeft.errors" class="invalid-feedback">
+                                        <div *ngIf="f.imageLeft.errors.required">imageLeft is required</div>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label>Right Hand Image<span class="required">*</span></label>
+                                    <input type="file" formControlName="imageRight" class="form-control"
+                                        placeholder="Right Hand Image*"
+                                        [ngClass]="{ 'is-invalid': submitted && f.imageRight.errors }">
+    
+    
+                                    <div *ngIf="submitted && f.imageRight.errors" class="invalid-feedback">
+                                        <div *ngIf="f.imageRight.errors.required">imageRight is required</div>
+                                    </div>
+                                </div>
+    
+                                
     
                                 <div class="form-group">
                                     <button type="submit" id="contact_form_submit" name="contact_submit"

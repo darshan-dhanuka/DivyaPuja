@@ -169,26 +169,21 @@
                             </h5>
                             <p style="color: #219bf1;">
                                 - Reiki is alleged to aid relaxation, assist in the body's natural healing processes, and develop emotional, mental, and spiritual well-being. It is also said to induce deep relaxation, help people cope with difficulties, relieve emotional stress, and improve overall wellbeing.
+                                Healing is done to stabilize and avert problems of emergency and serious nature. The patient is instantly provided Reiki Healing to control the emergency nature of the problem so that it doesn’t turn into a bigger and much serious problem. It is highly recommended for serious cases such as accidents, operations, hospitalization, legal problems, relationships problems, etc.
                             </p>
                             
                         </div>
                         <div class="col-lg-4">
-                            <img width="100%" src="assets/images/map.jpg" alt="">
+                            <div class="divider-60"></div>
+                            <img width="100%" style="border-radius: 20px;" src="assets/images/astro/healing.jpg" alt="">
                             <div class="divider-60"></div>
                         </div>
                         <div class="col-lg-8 ">
                             <div class="divider-60 divider-lg-0"></div>
                             <div class="vertical-item content-padding padding-big corner-box text-md-left text-center">
                                 <div class="item-content">
-                                    <img src="assets/images/map.jpg" alt="">
+                                    <img style="border-radius: 20px;" src="assets/images/astro/healing.jpg" alt="">
                                 </div>
-                            </div>
-                            <br>
-                            <div class="form-group" style="text-align: center;">
-                                <button type="submit" id="contact_form_submit" name="contact_submit"
-                                    class="btn btnn btn-maincolor btn-medium" disabled>Save as PDF
-                                    <span class="spinner-border spinner-border-sm mr-1"></span>
-                                </button>
                             </div>
     
                         </div><!-- .col-* -->
@@ -225,52 +220,35 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Date of Birth<span class="required">*</span></label>
-                                    <input type="date" formControlName="dob" class="form-control"
-                                        placeholder="Date of Birth in DD/MM/YYYY *"
-                                        [ngClass]="{ 'is-invalid': submitted && f.dob.errors }">
-                                    <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
-                                        <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Birth Time<span class="required">*</span></label>
-                                    <input type="time" formControlName="birthtime" class="form-control"
-                                        placeholder="Birth Time*"
-                                        [ngClass]="{ 'is-invalid': submitted && f.birthtime.errors }">
-                                    <div *ngIf="submitted && f.birthtime.errors" class="invalid-feedback">
-                                        <div *ngIf="f.birthtime.errors.required">time is required</div>
-                                    </div>
-                                </div>
-                                <div class="form-group has-placeholder">
-                                    <label for="location">Birth Location<span class="required">*</span></label>
-                                    <input type="text" formControlName="location" class="form-control"
-                                        placeholder="Birth Location*"
-                                        [ngClass]="{ 'is-invalid': submitted && f.location.errors }">
-    
-    
-                                    <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
-                                        <div *ngIf="f.location.errors.required">Location is required</div>
-                                    </div>
-                                </div>
-    
-                                <div class="form-group">
-                                    <select id="charttype" [ngClass]="{ 'is-invalid': submitted && f.charttype.errors }">
-                                        <option value="" disabled selected>Chart Type</option>
+                                    <select id="reiki" [ngClass]="{ 'is-invalid': submitted && f.reiki.errors }">
+                                        <option value="" disabled selected>Reiki Services</option>
                                         <option value="Yes" style="z-index: 90000;">
-                                            North Indian
+                                            Usui Reiki
                                         </option>
                                         <option value="No" style="z-index: 90000;">
-                                            South Indian
+                                            Jikiden Reiki
                                         </option>
                                         <option value="No" style="z-index: 90000;">
-                                            East Indian
+                                            Karuna Reiki
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            Lightarian Reiki
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            Sekehem or Seichim Reiki
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            Rainbow Reiki
+                                        </option>
+                                        <option value="No" style="z-index: 90000;">
+                                            Kundalini Reiki
                                         </option>
                                     </select>
-                                    <div *ngIf="submitted && f.charttype.errors" class="invalid-feedback">
-                                        <div *ngIf="f.charttype.errors.required">Field is required</div>
+                                    <div *ngIf="submitted && f.reiki.errors" class="invalid-feedback">
+                                        <div *ngIf="f.reiki.errors.required">Field is required</div>
                                     </div>
                                 </div>
+                                
     
                                 <div class="form-group">
                                     <button type="submit" id="contact_form_submit" name="contact_submit"

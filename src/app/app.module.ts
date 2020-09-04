@@ -39,7 +39,12 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { ShoppingFaqComponent } from './shopping-faq/shopping-faq.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './product/product.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { EAstroLearnComponent } from './e-astro-learn/e-astro-learn.component';
+import { PremiumServicesQueryComponent } from './premium-services-query/premium-services-query.component';
+import { GiftPoojaComponent } from './gift-pooja/gift-pooja.component';
+import { VastuConsultantComponent } from './vastu-consultant/vastu-consultant.component';
+import { BookPanditComponent } from './book-pandit/book-pandit.component';
+import { BookYatraComponent } from './book-yatra/book-yatra.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +84,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     ShoppingFaqComponent,
     ShopComponent,
     ProductComponent,
-    UserProfileComponent
+    EAstroLearnComponent,
+    PremiumServicesQueryComponent,
+    GiftPoojaComponent,
+    VastuConsultantComponent,
+    BookPanditComponent,
+    BookYatraComponent,
   ],
   imports: [
     BrowserModule,

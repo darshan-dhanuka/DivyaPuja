@@ -15,3 +15,40 @@
 .btn{
     text-align: left;
 }
+
+.backSec{
+    background: url('/assets/images/astro/astro-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card{
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+}
+
+.card-body:first-child{
+    padding-right: 0;
+    margin-right: -2%;
+}
+
+.card-body:last-child{
+    padding-left: 0;
+    border-radius: 20px;
+    margin-left:-2%;
+    z-index: 2;
+}
+
+.card-group{
+    padding: 20% 10% 10% 10%;
+}
+
+.bordered{
+    border-radius: 2%;
+}
+.bordered:first-child{
+    box-shadow: -6px -6px 6px black;
+}
+.bordered:last-child{
+    box-shadow: -4px -4px 6px black;
+}
