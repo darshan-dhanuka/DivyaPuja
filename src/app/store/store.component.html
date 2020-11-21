@@ -50,6 +50,7 @@
                       </div>
               
                 <div class="col-12">
+                    <!--run loop here by calling backend api -->
                     <div class="divider-55"></div>
                     <div class="owl-carousel products" data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-margin="10" data-loop="true" data-autoplay="true">
                         <div class="product">
@@ -75,8 +76,8 @@
                                                 <span>₹</span>58,99
                                             </span>
                                         </span>
-                                        <a rel="nofollow" href="shop-cart.html" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
+                                        <!-- product_id should be dynamic -->
+                                        <span (click)="addToCart('product_id')" class="button product_type_simple add_to_cart_button">Add to cart</span>
                                     </div>
                                 </div>
                             </div>
