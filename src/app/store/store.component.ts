@@ -8,9 +8,17 @@ import {  DataService } from '../service/data.service';
 })
 export class StoreComponent implements OnInit {
 
+  productList : any [];
+
   constructor(private dataService :DataService) { }
 
   ngOnInit(): void {
+
+    this.dataService.get_products().then(res => {
+      this.productList = res.data;
+      console.log(this.productList);
+    });
+
   }
   addToCart(product_id){
     //fetch user details

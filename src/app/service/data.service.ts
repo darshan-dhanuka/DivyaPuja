@@ -17,6 +17,9 @@ export class DataService {
   public currentUserSubject: BehaviorSubject<Pandit>;
   public currentUser: Observable<Pandit>;
   public pCat: Observable<pandit_catagory[]>;
+
+  apiURL = "https://service.divyapuja.com:3000";
+
 public : any;
   constructor(private http: HttpClient) {
       this.currentUserSubject = new BehaviorSubject<Pandit>(JSON.parse(localStorage.getItem('currentUser')));
@@ -33,5 +36,19 @@ public : any;
   public addToCart(user,product_id){
     //backend api call // parameters are passed after comma (if more than one param then send as object like below)
     return this.http.post(`http://service.divyapuja.com:3000/add_to_cart`,{user:user,product_id:product_id});
+  }
+
+    // handler for error in URL 
+    private handleError(error: any): Promise<any> { 
+      return Promise.reject(error.message || error); 
+    } 
+
+    get_products(): Promise<any> { 
+    return this.http 
+      .post(this.apiURL + "/get_products", { 
+
+      }) 
+      .toPromise() 
+      .catch(this.handleError); 
   }
 }
