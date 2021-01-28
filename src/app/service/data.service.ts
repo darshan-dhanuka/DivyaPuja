@@ -33,9 +33,9 @@ public : any;
     return this.http.get(`https://service.divyapuja.com:3000/pandit_cat`);
   }
 
-  public addToCart(user,product_id){
+  public addToCart(user_id,product_id){
     //backend api call // parameters are passed after comma (if more than one param then send as object like below)
-    return this.http.post(`http://service.divyapuja.com:3000/add_to_cart`,{user:user,product_id:product_id});
+    return this.http.post(`http://service.divyapuja.com:3000/add_to_cart`,{user_id:user_id,product_id:product_id});
   }
 
     // handler for error in URL 
