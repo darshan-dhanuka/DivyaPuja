@@ -45,6 +45,8 @@ import { GiftPoojaComponent } from './gift-pooja/gift-pooja.component';
 import { VastuConsultantComponent } from './vastu-consultant/vastu-consultant.component';
 import { BookPanditComponent } from './book-pandit/book-pandit.component';
 import { BookYatraComponent } from './book-yatra/book-yatra.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +92,8 @@ import { BookYatraComponent } from './book-yatra/book-yatra.component';
     VastuConsultantComponent,
     BookPanditComponent,
     BookYatraComponent,
+    ProfileComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

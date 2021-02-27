@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+
+</head>
+
+<body>
+
+	<div class="preloader">
+		<div class="preloader_image pulse"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form" action="/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls p-normal">
+		</div>
+	</div>
+
+	<div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content ds bs box-shadow bordered overflow-visible s-overlay s-mobile-overlay">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="color-main2 mb-3">Log in</h4>
+								<form class="form-registration c-mb-20 c-gutter-20" action="/">
+									<div class="row mb-4">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
+											</div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
+											</div>
+										</div>
+									</div>
+									<a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr" data-toggle="modal" href="#">Not a member? Register!</a>
+									<button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<section class="page_title ds s-overlay s-parallax s-pt-130 s-pt-xl-150 s-pb-65">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12">
+							<h1>Account Details</h1>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="./">Home</a>
+								</li>
+								<li class="breadcrumb-item">
+									<a href="#">Shop</a>
+								</li>
+								<li class="breadcrumb-item active">
+									Account Details
+								</li>
+							</ol>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+			<section class="ds s-py-90 s-py-xl-150 c-gutter-60">
+				<div class="container">
+					<div class="row">
+
+						<main class="col-lg-12">
+							<article>
+								<header class="entry-header">
+									<h1 class="entry-title">Account details</h1>
+									<span class="edit-link">
+										<a class="post-edit-link" href="#">Edit
+											<span class="screen-reader-text"> "My account"
+											</span>
+										</a>
+									</span>
+								</header>
+								<!-- .entry-header -->
+								<div class="entry-content">
+									<div class="woocommerce">
+										<nav class="woocommerce-MyAccount-navigation">
+											<ul>
+												<li>
+													<a href="shop-account-dashboard.html">Dashboard</a>
+												</li>
+												<li>
+													<a href="shop-account-orders.html">Orders</a>
+												</li>
+												<li>
+													<a href="shop-account-downloads.html">Downloads</a>
+												</li>
+												<li>
+													<a href="shop-account-addresses.html">Addresses</a>
+												</li>
+												<li class="is-active">
+													<a href="shop-account-details.html">Account details</a>
+												</li>
+												<li>
+													<a href="shop-account-login.html">Logout</a>
+												</li>
+											</ul>
+										</nav>
+
+
+										<div class="woocommerce-MyAccount-content">
+
+											<form class="woocommerce-EditAccountForm edit-account" action="/" method="post">
+
+
+												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+													<label for="account_first_name">First name <span class="required">*</span>
+													</label>
+													<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="first_name" id="first_name" [(ngModel)]="first_name">
+												</p>
+												<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_last_name">Last name <span class="required">*</span>
+													</label>
+													<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="last_name" id="last_name" [(ngModel)]="last_name">
+												</p>
+												<div class="clear">
+
+												</div>
+
+												<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+													<label for="account_email">Email address <span class="required">*</span>
+													</label>
+													<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="email" id="email" [(ngModel)]="email">
+												</p>
+
+												<fieldset>
+													<legend>Password change</legend>
+
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_current">Current password (leave blank to leave unchanged)</label>
+														<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current">
+													</p>
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_1">New password (leave blank to leave unchanged)</label>
+														<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1">
+													</p>
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_2">Confirm new password</label>
+														<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2">
+													</p>
+												</fieldset>
+												<div class="clear"></div>
+												<p>
+													<input type="submit" class="woocommerce-Button button" name="save_account_details" value="Save changes">
+												</p>
+											</form>
+
+										</div>
+									</div>
+								</div>
+								<!-- .entry-content -->
+							</article>
+
+						</main>
+
+					</div>
+
+				</div>
+			</section>
+
+            <app-footer></app-footer>
+
+
+		</div><!-- eof #box_wrapper -->
+	</div><!-- eof #canvas -->
+</body>
+
+</html>

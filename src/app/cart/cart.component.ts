@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {  DataService } from '../service/data.service'; 
+import { DataService } from '../service/data.service';
 
 @Component({
-  selector: 'app-store',
-  templateUrl: './store.component.html',
-  styleUrls: ['./store.component.css']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.css']
 })
-export class StoreComponent implements OnInit {
+export class CartComponent implements OnInit {
 
   productList : any [];
 
@@ -14,8 +14,12 @@ export class StoreComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.dataService.get_products().then(res => {
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+    let user_id = user.user.id;
+
+    this.dataService.get_products_from_cart(user_id).then(res => {
       this.productList = res.data;
+      console.log(this.productList);
     });
 
   }
@@ -40,5 +44,6 @@ export class StoreComponent implements OnInit {
                         alert(error['message']);
                       }
                });
-  }
+    }
+
 }
