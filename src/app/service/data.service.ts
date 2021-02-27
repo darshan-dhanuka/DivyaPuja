@@ -26,16 +26,16 @@ public : any;
       this.currentUser = this.currentUserSubject.asObservable();
   }
   panditRegister(user: Pandit) {
-    return this.http.post(`https://service.divyapuja.com:3000/pandit_register`, user);
+    return this.http.post(this.apiURL +`/pandit_register`, user);
   }
 
   public getPanditCat(){
-    return this.http.get(`https://service.divyapuja.com:3000/pandit_cat`);
+    return this.http.get(this.apiURL +`/pandit_cat`);
   }
 
   public addToCart(user_id,product_id){
     //backend api call // parameters are passed after comma (if more than one param then send as object like below)
-    return this.http.post(`http://service.divyapuja.com:3000/add_to_cart`,{user_id:user_id,product_id:product_id});
+    return this.http.post(this.apiURL +`/add_to_cart`,{user_id:user_id,product_id:product_id});
   }
 
     // handler for error in URL 
@@ -51,4 +51,14 @@ public : any;
       .toPromise() 
       .catch(this.handleError); 
   }
+
+  get_products_from_cart(user_id): Promise<any> { 
+    return this.http 
+      .post(this.apiURL + "/show_cart", { 
+        user_id: user_id
+      }) 
+      .toPromise() 
+      .catch(this.handleError); 
+  }
+
 }

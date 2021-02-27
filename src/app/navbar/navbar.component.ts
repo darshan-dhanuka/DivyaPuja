@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../service/authentication.service';
 import { UserService } from '../service/user.service';
 import { first } from 'rxjs/operators';
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-navbar',
@@ -18,11 +20,11 @@ export class NavbarComponent implements OnInit {
 
   constructor(
       private authenticationService: AuthenticationService,
-      private userService: UserService
+      private userService: UserService,
+      private router: Router
   ) {
       this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
           this.currentUser = user;
-          console.log(this.currentUser);
       });
   }
 
@@ -41,6 +43,14 @@ export class NavbarComponent implements OnInit {
   }
   logout() {
     this.authenticationService.logout();
+  }
+
+  goToCart(){
+    this.router.navigate(["cart"]);
+  }
+
+  goToProfile(){
+    this.router.navigate(["profile"]);
   }
   
 }

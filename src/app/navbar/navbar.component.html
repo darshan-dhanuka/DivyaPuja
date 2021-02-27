@@ -24,8 +24,12 @@
                 </div>
             </div>
         </div>
+
+
         <div *ngIf="currentUser as user" class="head_username">
             <div class="psl_login">
+                <a *ngIf="currentUser" (click)="goToCart()" class="fa fa-shopping-cart " title="shopping-cart"></a>
+                <a *ngIf="currentUser" (click)="goToProfile()" class="fa fa-user" title="user"></a>
                 Hi {{(user.user.name) ? user.user.name : 'User'}}&nbsp;&nbsp;
             </div>
         </div>

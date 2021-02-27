@@ -27,10 +27,14 @@ import { GiftPoojaComponent } from './gift-pooja/gift-pooja.component';
 import { VastuConsultantComponent } from './vastu-consultant/vastu-consultant.component';
 import { BookPanditComponent } from './book-pandit/book-pandit.component';
 import { BookYatraComponent } from './book-yatra/book-yatra.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
