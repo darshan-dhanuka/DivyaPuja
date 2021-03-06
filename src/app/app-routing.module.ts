@@ -27,6 +27,7 @@ import { GiftPoojaComponent } from './gift-pooja/gift-pooja.component';
 import { VastuConsultantComponent } from './vastu-consultant/vastu-consultant.component';
 import { BookPanditComponent } from './book-pandit/book-pandit.component';
 import { BookYatraComponent } from './book-yatra/book-yatra.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'vastu-consultant', component: VastuConsultantComponent},
   { path: 'book-pandit', component: BookPanditComponent},
   { path: 'book-yatra', component: BookYatraComponent},
+  { path: 'cart', component: CartComponent},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
