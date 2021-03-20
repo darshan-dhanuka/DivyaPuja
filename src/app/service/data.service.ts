@@ -44,6 +44,6 @@ public : any;
     if(sign < 10){
       sign = '0'+sign;
     }
-    return this.http.get(`https://api.clickastro.com/horoscope-apis/get_moonsign_prediction.php?apiKey=00ce8783-9d6a-4ca4-a509-6d5e64adbaba&reqData={"date":"20210319","moonsign":"01","lan":"ENG","scope":"D"}`);
+    return this.http.get(`http://service.divyapuja.com:3000/get_moonsign?reqData={"date":"`+date+`","moonsign":"`+sign+`","lan":"ENG","scope":"D"}`);
   }
 }

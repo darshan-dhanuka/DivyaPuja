@@ -25,8 +25,9 @@ export class AstroSignComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.sign = params.get('sign');
+      this.getMoonSign();
       });
-    this.getMoonSign();
+    
   }
 
   getMoonSign(){
@@ -35,9 +36,11 @@ export class AstroSignComponent implements OnInit {
     this.dataService.getMoonSignData(index,this.date)
       .subscribe(
           data => {
-              console.log(data);
+              data['data'] = data['data'].replaceAll('<br>',' ');
+              this.signData = data['data'];
           },
           error => {
+              alert(error);
               console.log(error);
           });
   }
