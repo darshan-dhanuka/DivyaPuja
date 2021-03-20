@@ -175,7 +175,7 @@
 												Aries
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -192,7 +192,7 @@
 												Taurus
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -209,7 +209,7 @@
 												Gemini
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -226,7 +226,7 @@
 												Cancer
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -243,7 +243,7 @@
 												Leo
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -260,7 +260,7 @@
 												Virgo
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -278,7 +278,7 @@
 												Libra
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -295,7 +295,7 @@
 												Scorpio
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -312,7 +312,7 @@
 												Sagittarius
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -329,7 +329,7 @@
 												Capricornius
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -346,7 +346,7 @@
 												Aquarius
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -363,7 +363,7 @@
 												Pisces
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -437,14 +437,14 @@
 										</h6>
 										
 										<p class="fs-20">
-											05-Aug-2020
+											{{currentDate | date:'yyyy-MM-dd'}}
 										</p>
 									</div>
 								</div>
 								<div class="divider-30 divider-xl-50"></div>
 
 								<div [ngSwitch]="sign">
-								<p *ngSwitchCase="'aries'">A foreign person could have a very positive influence in your life today, especially if they're from your past. What they have to say could surprise you, but you should give them the benefit of any doubt. They're reaching out to you, and it's a good idea for you to reach right back. Exploring a different culture will be fun when they're your guide, and they're eager to show you things that are familiar to them. Take them up on any invitation.</p>
+								<p *ngSwitchCase="'aries'">{{signData}}</p>
 
 								<p *ngSwitchCase="'taurus'">Today brings you a chance to stir up your normal routine. If you want a real adrenaline rush, you're in luck! The only catch is that in order to feel this rush, you have to be prepared to take a risk, not a big one, but one you might not be comfortable with. Put yourself in an uncertain situation where you could be rejected or come out with less than you put in. Trust yourself and just see what happens. No matter what the outcome, you'll be better off.</p>
 

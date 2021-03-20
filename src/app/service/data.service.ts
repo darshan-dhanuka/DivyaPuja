@@ -8,6 +8,7 @@ import { catchError } from 'rxjs/operators';
 import { Pandit } from 'src/app/model/pandit-user';
 import { stringify } from 'querystring';
 import { pandit_catagory } from '../model/pandit_cat';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -22,16 +23,27 @@ public : any;
       this.currentUserSubject = new BehaviorSubject<Pandit>(JSON.parse(localStorage.getItem('currentUser')));
       this.currentUser = this.currentUserSubject.asObservable();
   }
+
+  
   panditRegister(user: Pandit) {
-    return this.http.post(`https://service.divyapuja.com:3000/pandit_register`, user);
+    return this.http.post(`http://service.divyapuja.com:3000/pandit_register`, user);
   }
 
   public getPanditCat(){
-    return this.http.get(`https://service.divyapuja.com:3000/pandit_cat`);
+    return this.http.get(`http://service.divyapuja.com:3000/pandit_cat`);
   }
 
   public addToCart(user,product_id){
     //backend api call // parameters are passed after comma (if more than one param then send as object like below)
     return this.http.post(`http://service.divyapuja.com:3000/add_to_cart`,{user:user,product_id:product_id});
+  }
+
+  public getMoonSignData(sign,date){
+    let headers = new HttpHeaders();
+    headers = headers.append('Access-Control-Allow-Origin', `*`);
+    if(sign < 10){
+      sign = '0'+sign;
+    }
+    return this.http.get(`https://api.clickastro.com/horoscope-apis/get_moonsign_prediction.php?apiKey=00ce8783-9d6a-4ca4-a509-6d5e64adbaba&reqData={"date":"20210319","moonsign":"01","lan":"ENG","scope":"D"}`);
   }
 }
