@@ -44,6 +44,6 @@ public : any;
     if(sign < 10){
       sign = '0'+sign;
     }
-    return this.http.get(`https://service.divyapuja.com:3000/get_moonsign?reqData={"date":"`+date+`","moonsign":"`+sign+`","lan":"ENG","scope":"D"}`);
+    return this.http.get(`https://service.divyapuja.com:3000/get_moonsign?reqData={"date":"`+date+`","moonsign":"`+sign+`","lan":"HIN","scope":"D"}`);
   }
 }
