@@ -174,7 +174,7 @@
 												Aries
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -191,7 +191,7 @@
 												Taurus
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -208,7 +208,7 @@
 												Gemini
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -225,7 +225,7 @@
 												Cancer
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -242,7 +242,7 @@
 												Leo
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -259,7 +259,7 @@
 												Virgo
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -277,7 +277,7 @@
 												Libra
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -294,7 +294,7 @@
 												Scorpio
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -311,7 +311,7 @@
 												Sagittarius
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -328,7 +328,7 @@
 												Capricornius
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -345,7 +345,7 @@
 												Aquarius
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -362,7 +362,7 @@
 												Pisces
 											</h6>
 											<p>
-												05 - August - 2020
+												{{currentDate | date:'yyyy-MM-dd'}}
 											</p>
 										</div>
 									</div>
@@ -436,39 +436,38 @@
 										</h6>
 										
 										<p class="fs-20">
-											05-Aug-2020
+											{{currentDate | date:'yyyy-MM-dd'}}
 										</p>
 									</div>
 								</div>
 								<div class="divider-30 divider-xl-50"></div>
 
 								<div [ngSwitch]="sign">
-								<p *ngSwitchCase="'aries'">A foreign person could have a very positive influence in your life today, especially if they're from your past. What they have to say could surprise you, but you should give them the benefit of any doubt. They're reaching out to you, and it's a good idea for you to reach right back. Exploring a different culture will be fun when they're your guide, and they're eager to show you things that are familiar to them. Take them up on any invitation.</p>
+								<p *ngSwitchCase="'aries'">{{signData}}</p>
 
-								<p *ngSwitchCase="'taurus'">Today brings you a chance to stir up your normal routine. If you want a real adrenaline rush, you're in luck! The only catch is that in order to feel this rush, you have to be prepared to take a risk, not a big one, but one you might not be comfortable with. Put yourself in an uncertain situation where you could be rejected or come out with less than you put in. Trust yourself and just see what happens. No matter what the outcome, you'll be better off.</p>
+								<p *ngSwitchCase="'taurus'">{{signData}}</p>
 
-								<p *ngSwitchCase="'gemini'">Are you feeling overwhelmed by someone or something new in your life? Whether you're overwhelmed in a good way or a bad way, today brings you a chance to get the control you so desperately need. Once you put one last clue into place, things will start to click. You'll be able to steer the situation where you want it to go. Overall, your life is becoming a lot less erratic, and you're experiencing a lot more calm and quiet. Make the most of your free time by relaxing by yourself tonight.</p>
+								<p *ngSwitchCase="'gemini'">{{signData}}</p>
 
-								<p *ngSwitchCase="'cancer'">At work, you have to remind yourself that not everything rest completely on your shoulders. Stop putting so much pressure on yourself, because no one else is. Co-workers are there for a reason. They're there to do their job and fulfill their roles on the team. If you need them to step it up a bit, then you should ask them to. Just do it face-to-face. An e-mail won't convey the right tone and could ruffle some feathers.</p>
+								<p *ngSwitchCase="'cancer'">{{signData}}</p>
 
-								<p *ngSwitchCase="'leo'">If you've been trying to start a new romance, or you're just looking to amp up the romance level in your current relationship, today could give you a wonderful opportunity to do just that! You can create the perfect environment for some sizzling moments and show a certain someone how much you value them in your life. After all, isn't romance all about making someone realize how special they are? It's one thing to flirt and flatter and quite another to be open and vulnerable about how you feel.</p>
+								<p *ngSwitchCase="'leo'">{{signData}}</p>
 
-								<p *ngSwitchCase="'virgo'">You've been waiting for the right time to go out on a limb and take that chance, and that time could be today! When you see that the right people are finally opening up their minds and coming around to your way of thinking, you should take that as your green light to move full steam ahead. It's going to feel a bit scary at first, but it's also going to feel very invigorating. Don't be surprised if a friend asks to come along on the adventure. The more the merrier!</p>
+								<p *ngSwitchCase="'virgo'">{{signData}}</p>
 
-								<p *ngSwitchCase="'libra'">Ugly emotions are burbling up inside you today, and it doesn't matter why. You're feeling out of sorts, and you need to deal with these feelings by sharing them. Be more expressive about your emotions than you typically are. For example, if you're upset with someone, don't suppress it. Don't underestimate other people by assuming they'll react negatively. They have a lot more empathy than you think, and they're ready to listen. Be vulnerable and tell them how you feel.</p>
+								<p *ngSwitchCase="'libra'">{{signData}}</p>
 
-								<p *ngSwitchCase="'scorpio'">Don't rein in your instincts. If something doesn't seem right, it isn't right. Even if you're in the middle of a business deal, you should listen to your gut if it tells you to walk away at the last minute. Your mind is tuned into the energies of other people today, and you'll be able to sense when someone is lying through their teeth when they smile right at you and tell you that they're trying to help. This suspicious phase will be very brief.</p>
+								<p *ngSwitchCase="'scorpio'">{{signData}}</p>
 
-								<p *ngSwitchCase="'sagittarius'">It could feel like an adventure when a distractingly fascinating person moves into your orbit. Before you engage in conversation, observe them for a while. Listen to what they say, how they say it, and how people react to it. This is a person who likes to be taken seriously, so you shouldn't send out any messages that you don't really stand behind. Go slowly with this one, and don't get caught up in the excitement.</p>
+								<p *ngSwitchCase="'sagittarius'">{{signData}}</p>
 
-								<p *ngSwitchCase="'capricornius'">You're moved more by facts and figures than by tears or treacle today. You're hungry for analytical thinking right now, and your mind wants to see things in black-and-white terms. You're willing to see the other side of an argument, but you're not going to give people credit for sob stories. Therefore, you'll get along best with people who aren't interested in making small talk or being charming all day long. You're in the mood to get things done, and you will.</p>
+								<p *ngSwitchCase="'capricornius'">{{signData}}</p>
 
-								<p *ngSwitchCase="'aquarius'">Keep in mind that your friends have their own lives, and be careful not to be too needy right now. Yes, they've always been there to listen to your problems and encourage you, but try to handle some of your stuff on your own for a while. Not only is it good to learn to be more independent, but they'll appreciate a little break. Blurring the line between friendship and therapy is never a wise idea. Avoid it at all costs to keep your friendships healthy.</p>
+								<p *ngSwitchCase="'aquarius'">{{signData}}</p>
 
-								<p *ngSwitchCase="'pisces'">Thanks to a recent accomplishment, you should be feeling much more confident! You could get a great opportunity to gain more authority over your life and put some new ideas into play. Your independence is something you should savor. Treat yourself like royalty (or as much like royalty as you can comfortably afford). Luck is on your side. Kiss your worries goodbye, at least for a few hours!</p>
+								<p *ngSwitchCase="'pisces'">{{signData}}</p>
 
-
-								<p *ngSwitchDefault="'aries'">A foreign person could have a very positive influence in your life today, especially if they're from your past. What they have to say could surprise you, but you should give them the benefit of any doubt. They're reaching out to you, and it's a good idea for you to reach right back. Exploring a different culture will be fun when they're your guide, and they're eager to show you things that are familiar to them. Take them up on any invitation.</p>
+								<p *ngSwitchDefault="'aries'">{{signData}}</p>
 								</div>
 							</div>
 						</div>

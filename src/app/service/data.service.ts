@@ -8,6 +8,7 @@ import { catchError } from 'rxjs/operators';
 import { Pandit } from 'src/app/model/pandit-user';
 import { stringify } from 'querystring';
 import { pandit_catagory } from '../model/pandit_cat';
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -25,12 +26,22 @@ public : any;
       this.currentUserSubject = new BehaviorSubject<Pandit>(JSON.parse(localStorage.getItem('currentUser')));
       this.currentUser = this.currentUserSubject.asObservable();
   }
+
+  
   panditRegister(user: Pandit) {
+<<<<<<< HEAD
     return this.http.post(this.apiURL +`/pandit_register`, user);
   }
 
   public getPanditCat(){
     return this.http.get(this.apiURL +`/pandit_cat`);
+=======
+    return this.http.post(`http://service.divyapuja.com:3000/pandit_register`, user);
+  }
+
+  public getPanditCat(){
+    return this.http.get(`http://service.divyapuja.com:3000/pandit_cat`);
+>>>>>>> d0ce158e1754b56371aa0ccb70e03117d3b9fbab
   }
 
   public addToCart(user_id,product_id){
@@ -59,5 +70,14 @@ public : any;
       }) 
       .toPromise() 
       .catch(this.handleError); 
+  }
+
+  public getMoonSignData(sign,date){
+    let headers = new HttpHeaders();
+    headers = headers.append('Access-Control-Allow-Origin', `*`);
+    if(sign < 10){
+      sign = '0'+sign;
+    }
+    return this.http.get(`https://service.divyapuja.com:3000/get_moonsign?reqData={"date":"`+date+`","moonsign":"`+sign+`","lan":"HIN","scope":"D"}`);
   }
 }
