@@ -29,19 +29,11 @@ public : any;
 
   
   panditRegister(user: Pandit) {
-<<<<<<< HEAD
     return this.http.post(this.apiURL +`/pandit_register`, user);
   }
 
   public getPanditCat(){
     return this.http.get(this.apiURL +`/pandit_cat`);
-=======
-    return this.http.post(`http://service.divyapuja.com:3000/pandit_register`, user);
-  }
-
-  public getPanditCat(){
-    return this.http.get(`http://service.divyapuja.com:3000/pandit_cat`);
->>>>>>> d0ce158e1754b56371aa0ccb70e03117d3b9fbab
   }
 
   public addToCart(user_id,product_id){
