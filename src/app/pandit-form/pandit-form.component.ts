@@ -87,7 +87,7 @@ private onError() {
 }
 
 
-processFile(imageInput: any,type:string) {
+processFile(imageInput: any) {
   const file: File = imageInput.files[0];
   const reader = new FileReader();
 
@@ -98,20 +98,12 @@ processFile(imageInput: any,type:string) {
     this.imageService.uploadImage(this.selectedFile.file).subscribe(
       (res) => {
         console.log(res)
-        if(type == 'certificate'){
-          this.onSuccessCertificate(res.data.id);
-        }else{
-          this.onSuccess(res.data.id);
-        }
+        this.onSuccess(res.data.id);
       //  this.photo_url = res.id
       
       },
       (err) => {
-        if(type == 'certificate'){
-          this.onErrorCertificate();
-        }else{
-          this.onError();
-        }
+        this.onError();
       })
   });
 

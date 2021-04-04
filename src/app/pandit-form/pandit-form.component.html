@@ -145,7 +145,7 @@
                                 <label style="padding: 0;" class="image-upload-container btn btn-bwm">
                                     <label class="label">Upload Photo</label>
                                     <input #imageInput type="file" class="form-control" accept="image/*"
-                                        (change)="processFile(imageInput,'photo')">
+                                        (change)="processFile(imageInput)">
                                 </label>
 
 
@@ -307,7 +307,7 @@
                                 <label style="padding: 0;" class="image-upload-container btn btn-bwm">
                                     <label class="label">Upload Certificate Photo</label>
                                     <input #imageInputCert type="file" class="form-control" accept="image/*"
-                                        (change)="processFile(imageInputCert,'certificate')">
+                                        (change)="processFileCertificate(imageInputCert)">
                                 </label>
 
 
