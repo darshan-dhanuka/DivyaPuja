@@ -110,12 +110,12 @@ processFile(imageInput: any) {
   reader.readAsDataURL(file);
 }
 processFileCertificate(imageInput: any) {
-  const file: File = imageInput.files[0];
-  const reader = new FileReader();
+  const fileCert: File = imageInput.files[0];
+  const readerCert = new FileReader();
 
-  reader.addEventListener('load', (event: any) => {
+  readerCert.addEventListener('load', (event: any) => {
 
-    this.selectedFileCertificate = new ImageSnippet(event.target.result, file);
+    this.selectedFileCertificate = new ImageSnippet(event.target.result, fileCert);
 
     this.imageService.uploadImage(this.selectedFileCertificate.file).subscribe(
       (res) => {
@@ -129,7 +129,7 @@ processFileCertificate(imageInput: any) {
       })
   });
 
-  reader.readAsDataURL(file);
+  readerCert.readAsDataURL(fileCert);
 }
 
 private onSuccessCertificate(id) {
