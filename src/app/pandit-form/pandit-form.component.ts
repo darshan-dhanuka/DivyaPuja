@@ -27,7 +27,9 @@ export class PanditFormComponent implements OnInit {
   loading = false;
   submitted = false;
   selectedFile: ImageSnippet;
+  selectedFileCertificate : ImageSnippet;
   photo_url : any = "";
+  certificate_url : any = "";
   
   constructor(
     private formBuilder: FormBuilder,
@@ -63,6 +65,7 @@ export class PanditFormComponent implements OnInit {
       reseller:['', Validators.required],
       retailer:['', Validators.required],
       seller:['', Validators.required],
+      certificate_url:[''],
     });
     this.dataService.getPanditCat().subscribe((data)=>{
       console.log(data);
@@ -105,6 +108,40 @@ processFile(imageInput: any) {
   });
 
   reader.readAsDataURL(file);
+}
+processFileCertificate(imageInput: any) {
+  const file: File = imageInput.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', (event: any) => {
+
+    this.selectedFileCertificate = new ImageSnippet(event.target.result, file);
+
+    this.imageService.uploadImage(this.selectedFileCertificate.file).subscribe(
+      (res) => {
+        console.log(res)
+        this.onSuccessCertificate(res.data.id);
+      //  this.photo_url = res.id
+      
+      },
+      (err) => {
+        this.onErrorCertificate();
+      })
+  });
+
+  reader.readAsDataURL(file);
+}
+
+private onSuccessCertificate(id) {
+  this.selectedFileCertificate.pending = false;
+  this.selectedFileCertificate.status = 'ok';
+  this.certificate_url = id;
+}
+
+private onErrorCertificate() {
+  this.selectedFileCertificate.pending = false;
+  this.selectedFileCertificate.status = 'fail';
+  this.selectedFileCertificate.src = '';
 }
 
 
