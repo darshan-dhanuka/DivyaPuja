@@ -26,7 +26,9 @@ export class AstroFormComponent implements OnInit {
   loading = false;
   submitted = false;
   selectedFile: ImageSnippet;
+  selectedFileCertificate : ImageSnippet;
   photo_url : any = "";
+  certificate_url : any = "";
   
   constructor(
     private formBuilder: FormBuilder,
@@ -62,6 +64,7 @@ export class AstroFormComponent implements OnInit {
       reseller:['', Validators.required],
       retailer:['', Validators.required],
       seller:['', Validators.required],
+      certificate_url:[''],
     });
    
 }
@@ -146,6 +149,41 @@ processFile(imageInput: any) {
               //this.alertService.error(error);
               this.loading = false;
           });
+}
+
+processFileCertificate(imageInput: any) {
+  const fileCert: File = imageInput.files[0];
+  const readerCert = new FileReader();
+
+  readerCert.addEventListener('load', (event: any) => {
+
+    this.selectedFileCertificate = new ImageSnippet(event.target.result, fileCert);
+
+    this.imageService.uploadImage(this.selectedFileCertificate.file).subscribe(
+      (res) => {
+        console.log(res)
+        this.onSuccessCertificate(res.data.id);
+      //  this.photo_url = res.id
+      
+      },
+      (err) => {
+        this.onErrorCertificate();
+      })
+  });
+
+  readerCert.readAsDataURL(fileCert);
+}
+
+private onSuccessCertificate(id) {
+  this.selectedFileCertificate.pending = false;
+  this.selectedFileCertificate.status = 'ok';
+  this.certificate_url = id;
+}
+
+private onErrorCertificate() {
+  this.selectedFileCertificate.pending = false;
+  this.selectedFileCertificate.status = 'fail';
+  this.selectedFileCertificate.src = '';
 }
 
 

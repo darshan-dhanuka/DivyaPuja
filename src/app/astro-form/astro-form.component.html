@@ -308,6 +308,32 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <label style="padding: 0;" class="image-upload-container btn btn-bwm">
+                                    <label class="label">Select Image</label>
+                                    <input #imageInputCert type="file" class="form-control" accept="image/*"
+                                        (change)="processFile(imageInputCert)">
+                                </label>
+
+
+                                <div *ngIf="selectedFileCertificate" class="img-preview-container">
+
+                                    <div class="img-preview{{selectedFileCertificate.status === 'fail' ? '-error' : ''}}"
+                                        [ngStyle]="{'background-image': 'url('+ selectedFileCertificate.src + ')'}">
+                                    </div>
+
+                                    <div *ngIf="selectedFileCertificate.pending" class="img-loading-overlay">
+                                        <div class="img-spinning-circle"></div>
+                                    </div>
+
+                                    <div *ngIf="selectedFileCertificate.status === 'ok'" class="alert alert-success"> Image
+                                        Uploaded Succesfully!</div>
+                                    <div *ngIf="selectedFileCertificate.status === 'fail'" class="alert alert-danger"> Image Upload
+                                        Failed!</div>
+                                </div>
+                                <input type="hidden" formControlName="certificate_url" class="form-control"
+                                    [ngModel]="certificate_url">
+                            </div>
 
                             <div class="col-sm-12">
                                 <div class="form-group has-placeholder">
