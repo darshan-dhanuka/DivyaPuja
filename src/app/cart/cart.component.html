@@ -174,32 +174,32 @@
                                 </thead>
                                 <tbody>
 
-                                    <tr class="cart_item">
+                                    <tr class="cart_item" *ngFor="let item of cartList">
 
                                         <td class="product-remove">
-                                            <a href="#" class="remove" aria-label="Remove this item"
-                                                data-product_id="73" data-product_sku="">×</a>
+                                            <a class="remove" aria-label="Remove this item"
+                                                 (click)="removeProduct(item.product_id)">×</a>
                                         </td>
 
                                         <td class="product-thumbnail">
                                             <a href="shop-product-right.html">
-                                                <img width="180" height="180" src="assets/images/shop/01.jpg" class=""
+                                                <img width="180" height="180" src="{{item.product_image_url}}" class=""
                                                     alt="img">
                                             </a>
                                         </td>
 
                                         <td class="product-name" data-title="Product">
-                                            <a href="shop-product-right.html">Premium Quality</a>
+                                            <a href="shop-product-right.html">{{item.product_name}}</a>
                                         </td>
 
                                         <td class="product-price" data-title="Price">
-                                            <span class="amount"><span>$</span>12</span>
+                                            <span class="amount"><span>INR</span>{{item.product_price}}</span>
                                         </td>
 
                                         <td class="product-quantity" data-title="Quantity">
                                             <div class="quantity">
                                                 <input type="number" class="input-text qty text" step="1" min="1"
-                                                    max="1000" name="cart[qty]" value="1" title="Qty" size="4">
+                                                    max="1000" name="cart[qty]" value="{{item.product_quantity}}" title="Qty" size="4">
                                             </div>
                                         </td>
 
@@ -207,72 +207,7 @@
                                             <span class="amount"><span>$</span>12</span>
                                         </td>
                                     </tr>
-                                    <tr class="cart_item">
-
-                                        <td class="product-remove">
-                                            <a href="#" class="remove" aria-label="Remove this item"
-                                                data-product_id="76" data-product_sku="">×</a>
-                                        </td>
-
-                                        <td class="product-thumbnail">
-                                            <a href="shop-product-right.html">
-                                                <img width="180" height="180" src="assets/images/shop/02.jpg" class=""
-                                                    alt="img">
-                                            </a>
-                                        </td>
-
-                                        <td class="product-name" data-title="Product">
-                                            <a href="shop-product-right.html">Woo Ninja</a>
-                                        </td>
-
-                                        <td class="product-price" data-title="Price">
-                                            <span class="amount"><span>$</span>15</span>
-                                        </td>
-
-                                        <td class="product-quantity" data-title="Quantity">
-                                            <div class="quantity">
-                                                <input type="number" class="input-text qty text" step="1" min="1"
-                                                    max="1000" name="cart[qty]" value="1" title="Qty" size="4">
-                                            </div>
-                                        </td>
-
-                                        <td class="product-subtotal" data-title="Total">
-                                            <span class="amount"><span>$</span>15</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="cart_item">
-
-                                        <td class="product-remove">
-                                            <a href="#" class="remove" aria-label="Remove this item"
-                                                data-product_id="90" data-product_sku="">×</a>
-                                        </td>
-
-                                        <td class="product-thumbnail">
-                                            <a href="shop-product-right.html">
-                                                <img width="180" height="180" src="assets/images/shop/03.jpg" class=""
-                                                    alt="img">
-                                            </a>
-                                        </td>
-
-                                        <td class="product-name" data-title="Product">
-                                            <a href="shop-product-right.html">Woo Album #3</a>
-                                        </td>
-
-                                        <td class="product-price" data-title="Price">
-                                            <span class="amount"><span>$</span>9</span>
-                                        </td>
-
-                                        <td class="product-quantity" data-title="Quantity">
-                                            <div class="quantity">
-                                                <input type="number" class="input-text qty text" step="1" min="1"
-                                                    max="1000" name="cart[qty]" value="2" title="Qty" size="4">
-                                            </div>
-                                        </td>
-
-                                        <td class="product-subtotal" data-title="Total">
-                                            <span class="amount"><span>$</span>18</span>
-                                        </td>
-                                    </tr>
+                                   
 
 
                                     <tr>

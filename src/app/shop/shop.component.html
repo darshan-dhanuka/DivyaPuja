@@ -41,16 +41,16 @@
 
                     <ul class="products columns-3">
 
-                        <li class="product">
+                        <li class="product" *ngFor="let item of productList">
                             <div class="product-inner">
                                 <span class="onsale">Sale!</span>
                                 <a href="./shop/product">
-                                    <img src="assets/images/shop/34.jpg" alt="img">
+                                    <img src="{{item.product_image_url}}" alt="img">
                                 </a>
 
                                 <div class="product-wrap">
                                     <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
+                                        <a href="./shop/product">{{item.product_name}} </a>
                                     </h2>
                                     <div class="product_meta">
                                         <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
@@ -61,247 +61,17 @@
                                     <div class="price-wrap">
                                         <span class="price">
                                             <span>
-                                                <span>$</span>58,99
+                                                <span>INR</span>{{item.product_price}}
                                             </span>
                                         </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
+                                        <a rel="nofollow" class="button product_type_simple add_to_cart_button" (click)="addToCart(item)">Add to
+                                            cart </a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/35.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/36.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/37.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/38.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/39.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/34.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/35.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product">
-                            <div class="product-inner">
-
-                                <a href="./shop/product">
-                                    <img src="assets/images/shop/36.jpg" alt="img">
-                                </a>
-
-                                <div class="product-wrap">
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a href="./shop/product">Treasure Yellow </a>
-                                    </h2>
-                                    <div class="product_meta">
-                                        <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
-                                    </div>
-                                    <div class="star-rating">
-                                        <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                                    </div>
-                                    <div class="price-wrap">
-                                        <span class="price">
-                                            <span>
-                                                <span>$</span>58,99
-                                            </span>
-                                        </span>
-                                        <a rel="nofollow" href="" class="button product_type_simple add_to_cart_button">Add to
-                                            cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        
+                        
 
                     </ul>
                 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../service/product.service';
+
 
 @Component({
   selector: 'app-shop',
@@ -6,10 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
+  public productList: any[];
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.getAllProducts();
   }
 
+  getAllProducts() {
+    this.productService.getProductDetails().subscribe((data) => {
+      console.log(data);
+      this.productList = data['data'];
+
+    });
+  }
+  addToCart(product){
+    this.productService.addCartDetails(product).subscribe((res)=>{
+      console.log(res);
+    });
+  }
+  cartDetails(user_id) {
+    this.productService.getCartDetails(user_id).subscribe((data) => {
+
+    });
+  }
 }

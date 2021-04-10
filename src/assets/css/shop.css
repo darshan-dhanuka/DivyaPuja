@@ -479,6 +479,7 @@
 	padding-right: 50px;
 	position: relative;
 	text-align: left;
+	cursor: pointer;
 }
 
 .button.add_to_cart_button::before,
