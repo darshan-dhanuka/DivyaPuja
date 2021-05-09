@@ -1368,7 +1368,7 @@ input[type="radio"]:disabled + label:before {
 
 .select_container select {
 	border-radius: 30px;
-	color: #fff !important;
+	color: #766a6a !important;
 	font-weight: 300;
 	height: 50px;
 	padding-bottom: 12px;

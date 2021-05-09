@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from '../service/alert.service';
 import {  DataService } from '../service/data.service'; 
+import { ProductService } from '../service/product.service';
 
 @Component({
   selector: 'app-store',
@@ -7,10 +9,16 @@ import {  DataService } from '../service/data.service';
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
+  productList: any[];
 
-  constructor(private dataService :DataService) { }
+  constructor(
+          private dataService :DataService,
+          private productService: ProductService,
+          private alertService: AlertService) 
+          { }
 
   ngOnInit(): void {
+    this.getAllProducts();
   }
   addToCart(product_id){
     //fetch user details
@@ -31,5 +39,17 @@ export class StoreComponent implements OnInit {
                         alert(error['message']);
                       }
                });
+  }
+  getAllProducts() {
+    this.productService.getProductDetails().subscribe((data) => {
+      console.log(data);
+      this.productList = data['data'];
+
+    });
+  }
+  addToCartProduct(product){
+    this.productService.addCartDetails(product).subscribe((res)=>{
+      console.log(res);
+    });
   }
 }
