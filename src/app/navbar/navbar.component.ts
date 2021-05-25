@@ -5,6 +5,7 @@ import { AuthenticationService } from '../service/authentication.service';
 import { UserService } from '../service/user.service';
 import { first } from 'rxjs/operators';
 import { ProductService } from '../service/product.service';
+import { BehavioralSubjectService } from '../service/behavioral-subject.service';
 
 @Component({
   selector: 'app-navbar',
@@ -21,7 +22,9 @@ export class NavbarComponent implements OnInit {
   constructor(
     private authenticationService: AuthenticationService,
     private userService: UserService,
-    private productService: ProductService
+    private productService: ProductService,
+    private behavioralSubjectService: BehavioralSubjectService,
+    
   ) {
     this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
       this.currentUser = user;
@@ -30,7 +33,16 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cartDetails(1);
+    this.behavioralSubjectService.isClickEvent.subscribe(res => {
+      if (res === 'addCart') {
+        this.cartDetails('11');
+        this.behavioralSubjectService.isEvent.next('');
+      }
+      else{
+        this.cartDetails('11');
+      }
+    });
+
   }
 
   ngOnDestroy() {
@@ -44,7 +56,7 @@ export class NavbarComponent implements OnInit {
     this.authenticationService.logout();
   }
   cartDetails(user_id) {
-    const userId = { user_id: "1" }
+    const userId = { user_id: '11' }
     this.productService.getCartDetails(userId).subscribe((data) => {
       this.cartLength = data["data"].length;
       console.log(data);

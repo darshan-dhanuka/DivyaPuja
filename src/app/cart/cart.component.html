@@ -152,10 +152,10 @@
 
                     <main class="col-lg-12">
                         <div class="woocommerce-notices-wrapper">
-                            <div class="woocommerce-message">
+                            <!-- <div class="woocommerce-message">
                                 <a href="#" tabindex="1" class="button wc-forward">View cart</a>
                                 "Premium quality" has been added to your cart.
-                            </div>
+                            </div> -->
                         </div>
 
 
@@ -174,11 +174,11 @@
                                 </thead>
                                 <tbody>
 
-                                    <tr class="cart_item" *ngFor="let item of cartList">
+                                    <tr class="cart_item" *ngFor="let item of cartList; let i = index">
 
                                         <td class="product-remove">
                                             <a class="remove" aria-label="Remove this item"
-                                                 (click)="removeProduct(item.product_id)">×</a>
+                                                 (click)="removeProduct(item, i)">×</a>
                                         </td>
 
                                         <td class="product-thumbnail">
@@ -406,7 +406,7 @@
 
                                 <div class="wc-proceed-to-checkout">
 
-                                    <a href="shop-checkout.html" class="checkout-button button alt wc-forward">
+                                    <a href="checkout" class="checkout-button button alt wc-forward">
                                         Proceed to checkout</a>
                                 </div>
 

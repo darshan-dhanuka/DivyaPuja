@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-const avHoroClientId = 'CATP_DIVYAPUJA_ENG_1920x1080';
-const url = 'https://widgets.clickastro.com/tp_double_widget_part_english1920x1080.js';
+const avHoroClientId = 'CATP_DIVYAPUJA_ENG_300x400';
+const url = 'https://widgets.clickastro.com/tp_double_widget_part_english_300x400-angular.js';
 const avWidgetWrapperDivId = 'astro_widget';
 
 @Component({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from '../service/alert.service';
+import { BehavioralSubjectService } from '../service/behavioral-subject.service';
 import { ProductService } from '../service/product.service';
 
 @Component({
@@ -12,23 +13,31 @@ export class CartComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private alertService: AlertService)
-     { }
+    private alertService: AlertService,
+    private behavioralSubjectService: BehavioralSubjectService) { }
 
   ngOnInit(): void {
-    this.cartDetails(1);
+    // this.behavioralSubjectService.isClickEvent.subscribe(res => {
+    //   if (res === 'addCart') {
+        this.cartDetails('11');
+    //     this.behavioralSubjectService.isEvent.next('');
+    //   }
+    // });
+
   }
   cartDetails(user_id) {
-    const userId = { user_id: "1" }
+    const userId = { user_id: '11' }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      this.cartList =data["data"];
+      // this.behavioralSubjectService.isEvent.next('addCart');
+      this.cartList = data["data"];
       console.log(data);
     });
   }
-  removeProduct(productId){
-    const product = {product_id : productId,user_id:"1"};
-    this.productService.removeProduct(product).subscribe((data) => {
-      
+  removeProduct(product, index) {
+    const prodToRemove = { product_id: product.product_id, user_id: product.user_id };
+    this.productService.removeProduct(prodToRemove).subscribe((data) => {
+      // this.cartList.splice(index, 1);
+      this.behavioralSubjectService.isEvent.next('addCart');
       console.log(data);
 
     });

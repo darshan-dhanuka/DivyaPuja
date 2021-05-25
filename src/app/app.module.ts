@@ -48,6 +48,7 @@ import { BookPanditComponent } from './book-pandit/book-pandit.component';
 import { BookYatraComponent } from './book-yatra/book-yatra.component';
 import { CartComponent } from './cart/cart.component';
 import { WidgetComponent } from './widget/widget.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { WidgetComponent } from './widget/widget.component';
     BookYatraComponent,
     CartComponent,
     WidgetComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

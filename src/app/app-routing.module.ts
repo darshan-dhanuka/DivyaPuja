@@ -29,7 +29,7 @@ import { BookPanditComponent } from './book-pandit/book-pandit.component';
 import { BookYatraComponent } from './book-yatra/book-yatra.component';
 import { CartComponent } from './cart/cart.component';
 import { WidgetComponent } from './widget/widget.component';
-
+import { CheckoutComponent } from './checkout/checkout.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -60,6 +60,7 @@ const routes: Routes = [
   { path: 'book-yatra', component: BookYatraComponent},
   { path: 'cart', component: CartComponent},
   { path: 'widget', component: WidgetComponent},
+  { path: 'checkout', component: CheckoutComponent},
   // canActivate: [AuthGuard]
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
