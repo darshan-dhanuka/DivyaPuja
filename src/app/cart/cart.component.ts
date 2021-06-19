@@ -10,33 +10,26 @@ import { ProductService } from '../service/product.service';
 })
 export class CartComponent implements OnInit {
   cartList: any;
-
+  tempUser_id = '12';
   constructor(
     private productService: ProductService,
     private alertService: AlertService,
     private behavioralSubjectService: BehavioralSubjectService) { }
 
   ngOnInit(): void {
-    // this.behavioralSubjectService.isClickEvent.subscribe(res => {
-    //   if (res === 'addCart') {
-        this.cartDetails('11');
-    //     this.behavioralSubjectService.isEvent.next('');
-    //   }
-    // });
-
+    this.cartDetails(this.tempUser_id);
   }
+
   cartDetails(user_id) {
-    const userId = { user_id: '11' }
+    const userId = { user_id: this.tempUser_id }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      // this.behavioralSubjectService.isEvent.next('addCart');
       this.cartList = data["data"];
       console.log(data);
     });
   }
   removeProduct(product, index) {
-    const prodToRemove = { product_id: product.product_id, user_id: product.user_id };
+    const prodToRemove = { id: product.id };
     this.productService.removeProduct(prodToRemove).subscribe((data) => {
-      // this.cartList.splice(index, 1);
       this.behavioralSubjectService.isEvent.next('addCart');
       console.log(data);
 

@@ -50,14 +50,17 @@ export class StoreComponent implements OnInit {
   getAllProducts() {
     this.productService.getProductDetails().subscribe((data) => {
       console.log(data);
-      this.productList = data['data'];
+      this.productList = data['data']['products'];
 
     });
   }
   addToCartProduct(product){
-    const productDetails   = product;
-    productDetails.user_id = '11';
-    productDetails.product_id = product.id;
+    // const productDetails   = product;
+    // productDetails.user_id = '11';
+    // productDetails.product_id = product.id;
+    const productDetails = {
+      user_id :'11', product_id : product.id, qty : '2'
+    };
     this.productService.addCartDetails(productDetails).subscribe((res)=>{
       this.behavioralSubjectService.isEvent.next('addCart');
       console.log(res);

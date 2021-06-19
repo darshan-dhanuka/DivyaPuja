@@ -7,21 +7,21 @@ import { Pandit } from '../model/pandit-user';
   providedIn: 'root'
 })
 export class ProductService {
-  apiURL = "https://service.divyapuja.com:3000";
+  apiURL = "https://service.divyapuja.com:3000/api/v1";
 
 
   constructor(private http: HttpClient) {}
 
   getProductDetails() {
-    return this.http.post(this.apiURL + "/get_products", {})
+    return this.http.get(this.apiURL + "/products", {})
   }
   addCartDetails(productDetail) {
     return this.http.post(this.apiURL + "/add_to_cart", productDetail);
   }
   getCartDetails(userId) {
-    return this.http.post(this.apiURL + "/show_cart", userId);
+    return this.http.get(this.apiURL + "/cart-items", {params:userId});
   }
   removeProduct(product) {
-    return this.http.post(this.apiURL + "/remove_from_cart", product);
+    return this.http.delete(this.apiURL + "/cart-items", product);
   }
 }
