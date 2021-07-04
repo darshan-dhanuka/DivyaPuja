@@ -1,0 +1,11 @@
+.plan-features ul{text-align:left!important;}
+.pujaDate{padding:15px 0 0;}
+.pujaDate p{margin:0;font-weight:500;font-size:16px;color:#ffffff;}
+.pricing-plan .price-wrap{margin:0 auto!important;}
+.price-layout-1{padding:55px 30px!important;}
+.plan-price,
+.plan-sign{text-decoration:line-through;}
+.plan-price.clrWhite,
+.plan-sign.clrWhite{color:#ffffff!important;text-decoration:none;}
+.price-layout-1 .price-wrap .wrapper + span:not(empty){border-left:0!important;}
+.price-layout-1 .price-wrap .plan-sign{top:1px!important;}

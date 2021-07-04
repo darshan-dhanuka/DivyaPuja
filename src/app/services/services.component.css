@@ -1,0 +1,21 @@
+.formWrap{background-color:#161d3f;border-radius:20px;padding:10px;}
+	.formWrap ul{padding:0;margin:0 auto;display:flex;flex-flow:row wrap;justify-content:space-between;align-items:center;list-style:none;}
+	.formWrap ul li{width:24%;display:flex;flex-flow:row wrap;}
+	.formWrap ul li .fieldLabel{color:#ffffff;margin:0 0 5px;padding:0 0 0 20px;}
+	.formWrap ul li .inputField{width:100%;border:1px solid #ffffff;border-radius:30px;padding:5px 20px;height:44px;display:flex;flex-flow:row wrap;align-items:center;}
+	.formWrap ul li .inputField input,
+	.formWrap ul li .inputField select{outline:0;border:0;box-shadow:none;}
+	.formWrap ul li .inputField.selectWrap{position:relative;padding:0;}
+	/* .formWrap ul li .inputField.selectWrap:after{content:"\f107";font-family:FontAwesome;color:#ffffff;position:absolute;right:15px;} */
+	.formWrap ul li .inputField.selectWrap select{width:100%;height:100%;background-color:transparent;padding:5px 20px;color:#ffffff;appearance:none;-webkit-appearance:none;}
+	.formWrap ul li .inputField.selectWrap select option{color:#161d3f;}
+	.formWrap [type="radio"]:checked,
+	.formWrap [type="radio"]:not(:checked){position:absolute;left:-9999px;}
+	.formWrap [type="radio"]:checked + label,
+	.formWrap [type="radio"]:not(:checked) + label{position:relative;padding-left:28px;cursor:pointer;line-height:20px;display:inline-block;color:#ffffff;}
+	.formWrap [type="radio"]:checked + label:before,
+	.formWrap [type="radio"]:not(:checked) + label:before{content:'';position:absolute;left:0;top:0;width:16px;height:16px;border:1px solid #ddd;border-radius:100%;background:transparent;}
+	.formWrap [type="radio"]:checked + label:after,
+	.formWrap [type="radio"]:not(:checked) + label:after{content:'';width:8px;height:8px;background:#d23436;position:absolute;top:4px;left:4px;border-radius:100%;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;}
+	.formWrap [type="radio"]:not(:checked) + label:after{opacity:0;-webkit-transform:scale(0);transform:scale(0);}
+	.formWrap [type="radio"]:checked + label:after{opacity:1;-webkit-transform:scale(1);transform:scale(1);}
