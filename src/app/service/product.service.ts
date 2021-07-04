@@ -16,7 +16,7 @@ export class ProductService {
     return this.http.get(this.apiURL + "/products", {})
   }
   addCartDetails(productDetail) {
-    return this.http.post(this.apiURL + "/add_to_cart", productDetail);
+    return this.http.post(this.apiURL + "/cart-items", productDetail);
   }
   getCartDetails(userId) {
     return this.http.get(this.apiURL + "/cart-items", {params:userId});

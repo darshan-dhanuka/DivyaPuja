@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
   cartDetails(user_id) {
     const userId = { user_id: this.tempUser_id }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      this.cartList = data["data"];
+      this.cartList = data['data']['cart_items'];
       console.log(data);
     });
   }
