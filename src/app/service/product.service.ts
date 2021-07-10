@@ -12,8 +12,11 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getProductDetails() {
+  getProductList() {
     return this.http.get(this.apiURL + "/products", {})
+  }
+  getProductDetails(productId) {
+    return this.http.get(this.apiURL + "/products", {params:productId})
   }
   addCartDetails(productDetail) {
     return this.http.post(this.apiURL + "/cart-items", productDetail);
@@ -21,7 +24,7 @@ export class ProductService {
   getCartDetails(userId) {
     return this.http.get(this.apiURL + "/cart-items", {params:userId});
   }
-  removeProduct(product) {
-    return this.http.delete(this.apiURL + "/cart-items", product);
+  removeCartItem(removedItem) {
+    return this.http.delete(this.apiURL + "/cart-items", {params:removedItem});
   }
 }

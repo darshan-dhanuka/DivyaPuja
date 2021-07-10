@@ -58,7 +58,7 @@ export class NavbarComponent implements OnInit {
   cartDetails(user_id) {
     const userId = { user_id: '11' }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      this.cartLength = data["data"].length;
+      this.cartLength = data["data"]["cart_items"].length;
       console.log(data);
     });
   }

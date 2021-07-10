@@ -10,7 +10,8 @@ import { ProductService } from '../service/product.service';
 })
 export class CartComponent implements OnInit {
   cartList: any;
-  tempUser_id = '12';
+  grandTotal=0;
+  tempUser_id = '11';
   constructor(
     private productService: ProductService,
     private alertService: AlertService,
@@ -23,13 +24,17 @@ export class CartComponent implements OnInit {
   cartDetails(user_id) {
     const userId = { user_id: this.tempUser_id }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      this.cartList = data['data']['cart_items'];
+      this.cartList = data['data']['cart_items'];  
+      this.cartList.filter(item=>{
+        item['item_Total']=item.qty*parseFloat(item.product_price);
+        this.grandTotal=this.grandTotal+parseFloat(item['item_Total']);
+      })    
       console.log(data);
     });
   }
   removeProduct(product, index) {
     const prodToRemove = { id: product.id };
-    this.productService.removeProduct(prodToRemove).subscribe((data) => {
+    this.productService.removeCartItem(prodToRemove).subscribe((data) => {
       this.behavioralSubjectService.isEvent.next('addCart');
       console.log(data);
 

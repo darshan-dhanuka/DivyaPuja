@@ -51,7 +51,7 @@ const routes: Routes = [
   { path: 'sale', component: SaleComponent},
   { path: 'shoppingFAQs', component: ShoppingFaqComponent},
   { path: 'shop', component: ShopComponent},
-  { path: 'shop/product', component: ProductComponent},
+  { path: 'shop/product/:prod_id', component: ProductComponent},
   { path: 'eastrolearn', component: EAstroLearnComponent},
   { path: 'premium-service-query', component: PremiumServicesQueryComponent},
   { path: 'giftpooja', component: GiftPoojaComponent},
