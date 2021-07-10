@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from '../service/alert.service';
 import { BehavioralSubjectService } from '../service/behavioral-subject.service';
-import {  DataService } from '../service/data.service'; 
+import { DataService } from '../service/data.service';
 import { ProductService } from '../service/product.service';
+import Swal from 'sweetalert2';
+import { ToastrService } from 'ngx-toastr';
+
 interface addCart {
   product_id: string;
   user_id: string;
@@ -18,34 +21,33 @@ export class StoreComponent implements OnInit {
   productList: any[];
 
   constructor(
-          private dataService :DataService,
-          private productService: ProductService,
-          private alertService: AlertService,
-          private behavioralSubjectService: BehavioralSubjectService) 
-          { }
+    private dataService: DataService,
+    private productService: ProductService,
+    private alertService: AlertService,
+    private toastr: ToastrService,
+    private behavioralSubjectService: BehavioralSubjectService) { }
 
   ngOnInit(): void {
     this.getAllProducts();
   }
-  addToCart(product_id){
+  addToCart(product_id) {
     //fetch user details
     let user = JSON.parse(localStorage.getItem("currentUser"));
     console.log(user);
 
     //call api from data service (services are used to call api and fetch data). All services should be made in service folder, you can use data.service for calling apis for now like below
     this.dataService.addToCart(user, product_id)
-          .subscribe(
-              data => {
-                //api data or success codes will come here
-                console.log(data);
-              },
-               error => {
-                    //api error will come here
-                      if(error['message'])
-                      {
-                        alert(error['message']);
-                      }
-               });
+      .subscribe(
+        data => {
+          //api data or success codes will come here
+          console.log(data);
+        },
+        error => {
+          //api error will come here
+          if (error['message']) {
+            alert(error['message']);
+          }
+        });
   }
   getAllProducts() {
     this.productService.getProductList().subscribe((data) => {
@@ -54,15 +56,23 @@ export class StoreComponent implements OnInit {
 
     });
   }
-  addToCartProduct(product){
+  addToCartProduct(product) {
     // const productDetails   = product;
     // productDetails.user_id = '11';
     // productDetails.product_id = product.id;
     const productDetails = {
-      user_id :'11', product_id : product.id, qty : '2'
+      user_id: '11', product_id: product.id, qty: '2'
     };
-    this.productService.addCartDetails(productDetails).subscribe((res)=>{
+    this.productService.addCartDetails(productDetails).subscribe((res) => {
       this.behavioralSubjectService.isEvent.next('addCart');
+      this.toastr.success('Product added successfully!');
+      // Swal.fire({
+      //   position: 'center',
+      //   icon: 'success',
+      //   title: 'Product added successfully!',
+      //   showConfirmButton: false,
+      //   timer: 1500
+      // });
       console.log(res);
     });
   }

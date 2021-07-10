@@ -33,22 +33,34 @@
                         <figure>
                             <div data-thumb="assets/images/shop/34.jpg">
                                 <a href="assets/images/shop/34.jpg">
-                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption="" data-src="assets/images/shop/34.jpg" data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000" data-large_image_height="1000">
+                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption=""
+                                        data-src="assets/images/shop/34.jpg"
+                                        data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000"
+                                        data-large_image_height="1000">
                                 </a>
                             </div>
                             <div data-thumb="assets/images/shop/34.jpg">
                                 <a href="assets/images/shop/34.jpg">
-                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption="" data-src="assets/images/shop/34.jpg" data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000" data-large_image_height="1000">
+                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption=""
+                                        data-src="assets/images/shop/34.jpg"
+                                        data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000"
+                                        data-large_image_height="1000">
                                 </a>
                             </div>
                             <div data-thumb="assets/images/shop/34.jpg">
                                 <a href="assets/images/shop/34.jpg">
-                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption="" data-src="assets/images/shop/34.jpg" data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000" data-large_image_height="1000">
+                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption=""
+                                        data-src="assets/images/shop/34.jpg"
+                                        data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000"
+                                        data-large_image_height="1000">
                                 </a>
                             </div>
                             <div data-thumb="assets/images/shop/34.jpg">
                                 <a href="assets/images/shop/34.jpg">
-                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption="" data-src="assets/images/shop/34.jpg" data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000" data-large_image_height="1000">
+                                    <img src="assets/images/shop/34.jpg" alt="img" data-caption=""
+                                        data-src="assets/images/shop/34.jpg"
+                                        data-large_image="assets/images/shop/34.jpg" data-large_image_width="1000"
+                                        data-large_image_height="1000">
                                 </a>
                             </div>
 
@@ -58,14 +70,15 @@
 
                     <div class="summary entry-summary" *ngFor="let item of productDetails">
 
-                        <h1 class="product_title entry-title">Ship Your Idea</h1>
+                        <!-- <h1 class="product_title entry-title">Ship Your Idea</h1>
                         <div class="woocommerce-product-rating">
                             <div class="star-rating">
-                                <span style="width:72.6%">Rated <strong class="rating">4.33</strong> out of 5 based on <span class="rating">3</span> customer ratings</span>
+                                <span style="width:72.6%">Rated <strong class="rating">4.33</strong> out of 5 based on
+                                    <span class="rating">3</span> customer ratings</span>
                             </div>
-                            <a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span class="count">3</span> customer
-                                reviews)</a>
-                        </div>
+                             <a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<span class="count">3</span> customer
+                                reviews)</a> 
+                        </div> -->
 
                         <p class="price">
                             <span>
@@ -78,7 +91,7 @@
 
                         <form>
 
-                            <table class="variations">
+                            <!-- <table class="variations">
                                 <tbody>
                                     <tr>
                                         <td class="label">
@@ -110,15 +123,17 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
 
 
                             <div class="single_variation_wrap">
                                 <div>
                                     <div class="quantity">
-                                        <input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" title="Qty" size="4">
+                                        <input type="number" class="input-text qty text" step="1" min="1" max="1000"
+                                            name="quantity" value="1" title="Qty" size="4">
                                     </div>
-                                    <button type="submit" class="single_add_to_cart_button button alt" (click)="addToCart(item)">Add to cart</button>
+                                    <button type="submit" class="single_add_to_cart_button button alt"
+                                        (click)="addToCart(item)">Add to cart</button>
                                 </div>
                             </div>
 
@@ -155,198 +170,55 @@ but .active is turns not on A but on LI, not as in bootstrap
                     <div class="woocommerce-tabs wc-tabs-wrapper">
 
                         <ul class="tabs wc-tabs" role="tablist">
-                            <li class="description_tab" id="tab-title-description" role="tab" aria-controls="tab-description">
+                            <li class="description_tab" id="tab-title-description" role="tab"
+                                aria-controls="tab-description">
                                 <a href="#tab-description">Description</a>
                             </li>
-                            <li class="additional_information_tab active" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
-                                <a href="#tab-additional_information">Additional information</a>
+                            <li class="additional_information_tab active" id="tab-title-additional_information"
+                                role="tab" aria-controls="tab-additional_information">
+                                <a href="#tab-additional_information">key_feature</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Reviews (3)</a>
+                                <a href="#tab-reviews">Benefits</a>
+                            </li>
+                            <li class="vedic_tab" id="tab-title-vedic" role="tab" aria-controls="tab-vedic">
+                                <a href="#tab-vedic">vedic_astro_accociations</a>
                             </li>
                         </ul>
 
-                        <div class="panel wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description" *ngFor="let item of productDetails">
+                        <div class="panel wc-tab" id="tab-description" role="tabpanel"
+                            aria-labelledby="tab-title-description" *ngFor="let item of productDetails">
 
                             <h2>Description</h2>
 
                             <p>{{item.description}}</p>
                         </div>
-                        <div class="panel wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
-
-                            <h2>Additional information</h2>
-
-                            <table class="shop_attributes">
-
-
-                                <tbody>
-                                    <tr>
-                                        <th>Color</th>
-                                        <td>
-                                            <p>Blue</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Size</th>
-                                        <td>
-                                            <p>X Small, Small, Medium, Large, X Large, XX Large, XXX Large</p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="panel wc-tab" id="tab-additional_information" role="tabpanel"
+                            aria-labelledby="tab-title-additional_information" *ngFor="let item of productDetails">
+                            <h2>key_feature</h2>
+                           <p>{{item.key_feature}}</p>
                         </div>
-                        <div class="panel wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                        <div class="panel wc-tab" id="tab-reviews" role="tabpanel" 
+                        aria-labelledby="tab-title-reviews" *ngFor="let item of productDetails">
                             <div id="reviews">
                                 <div id="comments">
-                                    <h2>3 reviews for <span>Ship Your Idea</span>
-                                    </h2>
-
-
-                                    <ol class="commentlist">
-                                        <li class="comment even thread-even depth-1" id="li-comment-34">
-
-                                            <div id="comment-34" class="comment_container">
-
-                                                <img alt="img" src="http://2.gravatar.com/avatar/babdd787a9577a0e615246ac79cf2826?s=60&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/babdd787a9577a0e615246ac79cf2826?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">
-                                                <div class="comment-text">
-
-                                                    <div class="star-rating">
-                                                        <span style="width:80%">Rated <strong
-                                class="rating">4</strong> out of 5</span>
-                                                    </div>
-                                                    <p class="meta">
-                                                        <strong>James
-                                Koster</strong> <span>–</span>
-                                                        <time datetime="2013-06-07T11:43:13+00:00">June 7, 2013
-                                                        </time>
-                                                    </p>
-
-                                                    <div class="description">
-                                                        <p>Nice T-shirt, I got one in black. Goes with
-                                                            anything!</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- #comment-## -->
-                                        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-35">
-
-                                            <div id="comment-35" class="comment_container">
-
-                                                <img alt="img" src="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=60&amp;d=mm&amp;r=g" srcset="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">
-                                                <div class="comment-text">
-
-                                                    <div class="star-rating">
-                                                        <span style="width:80%">Rated <strong
-                                class="rating">4</strong> out of 5</span>
-                                                    </div>
-                                                    <p class="meta">
-                                                        <strong >Cobus
-                                Bester</strong> <span>–</span>
-                                                        <time datetime="2013-06-07T11:55:15+00:00">June 7, 2013
-                                                        </time>
-                                                    </p>
-
-                                                    <div class="description">
-                                                        <p>Very comfortable shirt, and I love the graphic!</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- #comment-## -->
-                                        <li class="comment even thread-even depth-1" id="li-comment-36">
-
-                                            <div id="comment-36" class="comment_container">
-
-                                                <img alt="img" src="http://1.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=60&amp;d=mm&amp;r=g" srcset="http://1.gravatar.com/avatar/7a6df00789e50714fcde1b759befcc84?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60">
-                                                <div class="comment-text">
-
-                                                    <div class="star-rating">
-                                                        <span style="width:100%">Rated <strong
-                                class="rating">5</strong> out of 5</span>
-                                                    </div>
-                                                    <p class="meta">
-                                                        <strong>Stuart</strong>
-                                                        <span>–</span>
-                                                        <time datetime="2013-06-07T13:02:14+00:00">June 7, 2013
-                                                        </time>
-                                                    </p>
-
-                                                    <div class="description">
-                                                        <p>Great T-shirt quality, Great Design and Great
-                                                            Service.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- #comment-## -->
-                                    </ol>
-
-
+                                    <h2><span>Benefits</span></h2>
+                                    <p>{{item.benefits}}</p>
                                 </div>
 
-
-                                <div id="review_form_wrapper">
-                                    <div id="review_form">
-                                        <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Add a review <small>
-                                                    <a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;">Cancel reply</a>
-                                                </small>
-                                            </span>
-                                            <form action="/" method="post" id="commentform" class="comment-form" novalidate="">
-                                                <p class="comment-notes">
-                                                    <span id="email-notes">Your email address will not be published.</span>
-                                                    Required fields are marked <span class="required">*</span>
-                                                </p>
-                                                <div class="comment-form-rating">
-                                                    <label>Your rating</label>
-                                                    <p class="stars">
-                                                        <span>
-                                                            <a class="star-1" href="#">1</a>
-                                                            <a class="star-2" href="#">2</a>
-                                                            <a class="star-3" href="#">3</a>
-                                                            <a class="star-4" href="#">4</a>
-                                                            <a class="star-5" href="#">5</a>
-                                                        </span>
-                                                    </p>
-                                                </div>
-                                                <p class="comment-form-comment">
-                                                    <label for="comment">Your review <span class="required">*</span>
-                                                    </label>
-                                                    <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required="">
-
-                        </textarea>
-                                                </p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Name <span class="required">*</span>
-                                                    </label>
-                                                    <input id="author" name="author" type="text" value="" size="30" aria-required="true" required="">
-                                                </p>
-                                                <p class="comment-form-email">
-                                                    <label for="email">Email <span class="required">*</span>
-                                                    </label> <input id="email" name="email" type="email" value="" size="30" aria-required="true" required="">
-                                                </p>
-                                                <p class="form-submit">
-                                                    <input name="submit" type="submit" id="submit" class="submit" value="Submit">
-
-                                                </p>
-                                            </form>
-                                        </div>
-                                        <!-- #respond -->
-                                    </div>
-                                </div>
-
-
-                                <div class="clear">
-
-                                </div>
                             </div>
                         </div>
+                        <div class="panel wc-tab" id="tab-vedic" role="tabpanel"
+                        aria-labelledby="tab-title-vedic" *ngFor="let item of productDetails">
 
+                        <h2>vedic_astro_accociations</h2>
+
+                        <p>{{item.vedic_astro_accociations}}</p>
+                    </div>
                     </div>
 
 
-                    <section class="up-sells upsells products">
+                    <!-- <section class="up-sells upsells products">
 
                         <h2>Other Products</h2>
                         <div class="divider-30"></div>
@@ -472,7 +344,7 @@ but .active is turns not on A but on LI, not as in bootstrap
 
                         </ul>
 
-                    </section>
+                    </section> -->
 
                 </div>
                 <!-- #product-22 -->
@@ -491,7 +363,8 @@ but .active is turns not on A but on LI, not as in bootstrap
                                 Search for:
                             </label>
 
-                            <input type="search" id="woocommerce-product-search-field-widget" class="search-field" placeholder="Search" value="" name="search">
+                            <input type="search" id="woocommerce-product-search-field-widget" class="search-field"
+                                placeholder="Search" value="" name="search">
                             <input type="submit" value="Search">
                         </form>
                     </div>
@@ -530,7 +403,7 @@ but .active is turns not on A but on LI, not as in bootstrap
                 </div>
 
 
-                <div class="widget woocommerce widget_recently_viewed_products">
+                <!-- <div class="widget woocommerce widget_recently_viewed_products">
 
                     <h3 class="widget-title">Viewed Products</h3>
 
@@ -573,7 +446,7 @@ but .active is turns not on A but on LI, not as in bootstrap
                             </ins>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
             </aside>
         </div>

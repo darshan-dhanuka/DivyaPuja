@@ -14,18 +14,19 @@ export class ProductComponent implements OnInit {
      private behavioralSubjectService: BehavioralSubjectService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(productId=>{
-        if(productId){
-          this.getProductDetails(productId);
+    this.activatedRoute.params.subscribe(productUrl=>{
+        if(productUrl){
+          this.getProductDetails(productUrl);
         }
     })
   }
 
-  getProductDetails(productId){
-    this.productService.getProductDetails(productId).subscribe(prodDetails=>{
+  getProductDetails(productUrl){
+    this.productService.getProductDetails(productUrl).subscribe(prodDetails=>{
+      console.log('prodDetails ', prodDetails)
       if(prodDetails){
         if(prodDetails['data']['products'].length>0){
-          this.productDetails[0]=prodDetails['data']['products'][0];
+          this.productDetails=prodDetails['data']['products'];
         }else{
           this.productDetails=[];
         }

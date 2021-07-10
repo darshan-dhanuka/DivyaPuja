@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { AlertService } from '../service/alert.service';
 import { BehavioralSubjectService } from '../service/behavioral-subject.service';
 import { ProductService } from '../service/product.service';
@@ -15,6 +16,7 @@ export class CartComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private alertService: AlertService,
+    private toastr: ToastrService,
     private behavioralSubjectService: BehavioralSubjectService) { }
 
   ngOnInit(): void {
@@ -36,6 +38,7 @@ export class CartComponent implements OnInit {
     const prodToRemove = { id: product.id };
     this.productService.removeCartItem(prodToRemove).subscribe((data) => {
       this.behavioralSubjectService.isEvent.next('addCart');
+      this.toastr.success('Product removed successfully!');
       console.log(data);
 
     });

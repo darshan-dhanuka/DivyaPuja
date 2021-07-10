@@ -11,6 +11,7 @@
    } */
 
 /*--------Runtime 4/07/2021---------------------*/   
+@import '~ngx-toastr/toastr';
 #astro_widget #avFreeHoroHolder{margin:0 auto!important;}
 .formWrap ul li .inputField.selectWrap .select-wrap{width:100%;}
 .formWrap ul li .inputField.selectWrap .select-wrap select{margin:0 auto!important;}

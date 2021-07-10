@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -49,6 +51,7 @@ import { BookYatraComponent } from './book-yatra/book-yatra.component';
 import { CartComponent } from './cart/cart.component';
 import { WidgetComponent } from './widget/widget.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -100,10 +103,17 @@ import { CheckoutComponent } from './checkout/checkout.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      maxOpened: 1,
+    }),
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
