@@ -13,6 +13,8 @@ export class CartComponent implements OnInit {
   cartList: any;
   grandTotal=0;
   tempUser_id = '11';
+  quantity;
+  totalPrice=0;
   constructor(
     private productService: ProductService,
     private alertService: AlertService,
@@ -26,14 +28,25 @@ export class CartComponent implements OnInit {
   cartDetails(user_id) {
     const userId = { user_id: this.tempUser_id }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      this.cartList = data['data']['cart_items'];  
-      this.cartList.filter(item=>{
-        item['item_Total']=item.qty*parseFloat(item.product_price);
-        this.grandTotal=this.grandTotal+parseFloat(item['item_Total']);
-      })    
+      this.cartList = data['data']['cart_items'];   
+      this.calculateTotal();  
       console.log(data);
     });
   }
+
+  calculateTotal(){   
+    this.grandTotal=0;
+     this.cartList.filter(item=>{
+      item['item_Total']=parseInt(item.qty)*parseFloat(item.product_price);
+      this.grandTotal=this.grandTotal+parseFloat(item['item_Total']);
+    })    
+  } 
+  priceTotalFun(item,event){
+    item.qty=event.target.value;    
+    item['item_Total']=parseInt(item.qty)*parseFloat(item.product_price);
+    this.calculateTotal();
+  }
+
   removeProduct(product, index) {
     const prodToRemove = { id: product.id };
     this.productService.removeCartItem(prodToRemove).subscribe((data) => {

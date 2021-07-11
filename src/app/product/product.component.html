@@ -176,13 +176,13 @@ but .active is turns not on A but on LI, not as in bootstrap
                             </li>
                             <li class="additional_information_tab active" id="tab-title-additional_information"
                                 role="tab" aria-controls="tab-additional_information">
-                                <a href="#tab-additional_information">key_feature</a>
+                                <a href="#tab-additional_information">Key Features</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
                                 <a href="#tab-reviews">Benefits</a>
                             </li>
                             <li class="vedic_tab" id="tab-title-vedic" role="tab" aria-controls="tab-vedic">
-                                <a href="#tab-vedic">vedic_astro_accociations</a>
+                                <a href="#tab-vedic">Vedic Astro Accociations</a>
                             </li>
                         </ul>
 
@@ -195,7 +195,7 @@ but .active is turns not on A but on LI, not as in bootstrap
                         </div>
                         <div class="panel wc-tab" id="tab-additional_information" role="tabpanel"
                             aria-labelledby="tab-title-additional_information" *ngFor="let item of productDetails">
-                            <h2>key_feature</h2>
+                            <h2>Key Features</h2>
                            <p>{{item.key_feature}}</p>
                         </div>
                         <div class="panel wc-tab" id="tab-reviews" role="tabpanel" 
@@ -211,7 +211,7 @@ but .active is turns not on A but on LI, not as in bootstrap
                         <div class="panel wc-tab" id="tab-vedic" role="tabpanel"
                         aria-labelledby="tab-title-vedic" *ngFor="let item of productDetails">
 
-                        <h2>vedic_astro_accociations</h2>
+                        <h2>Vedic Astro Accociations</h2>
 
                         <p>{{item.vedic_astro_accociations}}</p>
                     </div>

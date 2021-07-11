@@ -150,7 +150,7 @@
             <div class="container">
                 <div class="row">
 
-                    <main class="col-lg-12">
+                    <main class="col-lg-12" *ngIf="cartList && cartList.length>0">
                         <div class="woocommerce-notices-wrapper">
                             <!-- <div class="woocommerce-message">
                                 <a href="#" tabindex="1" class="button wc-forward">View cart</a>
@@ -199,12 +199,13 @@
                                         <td class="product-quantity" data-title="Quantity">
                                             <div class="quantity">
                                                 <input type="number" class="input-text qty text" step="1" min="1"
-                                                    max="1000" name="cart[qty]" value="{{item.qty}}" title="Qty" size="4">
+                                                    max="1000" maxlength="4" name="cart[qty]" value="{{item.qty}}" title="Qty" size="4"
+                                                     (change)="priceTotalFun(item,$event)">
                                             </div>
                                         </td>
 
                                         <td class="product-subtotal" data-title="Total">
-                                            <span class="amount"><span>INR </span>{{item.item_Total}}</span>
+                                            <span class="amount"><span>INR </span>{{item['item_Total']}}</span>
                                         </td>
                                     </tr>
                                    
@@ -416,6 +417,7 @@
 
 
                     </main>
+                    <h3 *ngIf="cartList && cartList.length==0" style="margin: auto;">YOUR CART IS EMPTY</h3>
                 </div>
 
             </div>

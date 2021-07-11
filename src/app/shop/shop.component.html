@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <main class="col-lg-8 order-lg-2">
-                <div class="">
+                <div class="" *ngIf="productList && productList.length>0">
                     <div class="products-selection">
                         <p class="woocommerce-result-count">
                             Showing all {{productList?.length}} results</p>
@@ -78,7 +78,7 @@
                 </div>
                 <!-- columns 2 -->
 
-                <nav class="woocommerce-pagination">
+                <nav class="woocommerce-pagination" *ngIf="productList && productList.length>0">
                     <ul class="page-numbers">
                         <li>
                             <span class="page-numbers current">1</span>
@@ -92,6 +92,7 @@
                     </ul>
                 </nav>
             </main>
+            <h3 *ngIf="productList && productList.length==0" style="margin: 0px auto;">NO PRODUCTS AVAILBLE</h3>
             <aside class="col-lg-4 order-lg-1">
                 <div class="ds bs bordered box-shadow">
                     <div class="widget widget_product_search">
