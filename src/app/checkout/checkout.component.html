@@ -46,23 +46,21 @@
             <div class="container">
                 <div class="row">
                     <main class="col-lg-12">
-                        <form name="checkout" method="post" class="checkout woocommerce-checkout" action="/"
-                            enctype="multipart/form-data" novalidate="novalidate">
+                        <form name="checkout"  [formGroup]="checkOutForm"  class="checkout woocommerce-checkout">
                             <div class="col2-set" id="customer_details">
                                 <div class="col-1">
                                     <div class="woocommerce-billing-fields">
 
                                         <h3>Shipping Address</h3>
 
-
                                         <div class="woocommerce-billing-fields__field-wrapper">
                                             <p class="form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field"
                                                 id="billing_first_name_field" data-priority="10">
-                                                <label for="billing_first_name" class="">First name <abbr
-                                                        class="required" title="required">*</abbr>
+                                                <label for="billing_first_name" class="">First name 
+                                                    <abbr class="required" title="required">*</abbr>
                                                 </label>
                                                 <input type="text" class="input-text " name="billing_first_name"
-                                                    id="billing_first_name" placeholder="" value=""
+                                                    id="billing_first_name" placeholder="" value="" formControlName="name"
                                                     autocomplete="given-name" autofocus="autofocus">
                                             </p>
                                             <p class="form-row form-row-last validate-required"
@@ -71,13 +69,13 @@
                                                         title="required">*</abbr>
                                                 </label>
                                                 <input type="text" class="input-text " name="billing_last_name"
-                                                    id="billing_last_name" placeholder="" value=""
+                                                    id="billing_last_name" placeholder="" value="" formControlName="last_name"
                                                     autocomplete="family-name">
                                             </p>
                                             <p class="form-row form-row-wide" id="billing_company_field"
                                                 data-priority="30">
                                                 <label for="billing_company" class="">Company name</label>
-                                                <input type="text" class="input-text " name="billing_company"
+                                                <input type="text" class="input-text " name="billing_company" formControlName="company"
                                                     id="billing_company" placeholder="" value=""
                                                     autocomplete="organization">
                                             </p>
@@ -86,7 +84,7 @@
                                                 <label for="billing_country" class="">Country
                                                     <abbr class="required" title="required">*</abbr>
                                                 </label>
-                                                <select name="billing_country" id="billing_country"
+                                                <select name="billing_country" id="billing_country" formControlName="user_country"
                                                     class="country_to_state country_select  select2-hidden-accessible"
                                                     autocomplete="country" tabindex="-1" aria-hidden="true">
                                                     <option value="">Select a country…</option>
@@ -348,12 +346,12 @@
                                                     address <abbr class="required" title="required">*</abbr>
                                                 </label>
                                                 <input type="text" class="input-text " name="billing_address_1"
-                                                    id="billing_address_1" placeholder="House number and street name"
+                                                    id="billing_address_1" placeholder="House number and street name" formControlName="user_street"
                                                     value="" autocomplete="address-line1">
                                             </p>
                                             <p class="form-row form-row-wide address-field" id="billing_address_2_field"
                                                 data-priority="60">
-                                                <input type="text" class="input-text " name="billing_address_2"
+                                                <input type="text" class="input-text " name="billing_address_2" formControlName="user_appartment"
                                                     id="billing_address_2"
                                                     placeholder="Apartment, suite, unit etc. (optional)" value=""
                                                     autocomplete="address-line2">
@@ -365,7 +363,7 @@
                                                         title="required">*</abbr>
                                                 </label>
                                                 <input type="text" class="input-text " name="billing_city"
-                                                    id="billing_city" placeholder="" value=""
+                                                    id="billing_city" placeholder="" value="" formControlName="user_city"
                                                     autocomplete="address-level2">
                                             </p>
                                             <p class="form-row form-row-wide address-field validate-state validate-required"
@@ -374,7 +372,7 @@
                                                 <label for="billing_state" class="">State / County <abbr
                                                         class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" class="input-text " value="" placeholder=""
+                                                <input type="text" class="input-text " value="" placeholder="" formControlName="user_state"
                                                     name="billing_state" id="billing_state"
                                                     autocomplete="address-level1">
                                             </p>
@@ -384,7 +382,7 @@
                                                 <label for="billing_postcode" class="">Postcode / ZIP <abbr
                                                         class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" class="input-text " name="billing_postcode"
+                                                <input type="text" class="input-text " name="billing_postcode" formControlName="user_postcode"
                                                     id="billing_postcode" placeholder="" value=""
                                                     autocomplete="postal-code">
                                             </p>
@@ -393,7 +391,7 @@
                                                 <label for="billing_phone" class="">Phone <abbr class="required"
                                                         title="required">*</abbr>
                                                 </label>
-                                                <input type="tel" class="input-text " name="billing_phone"
+                                                <input type="tel" class="input-text " name="billing_phone" formControlName="mobile_num"
                                                     id="billing_phone" placeholder="" value="" autocomplete="tel">
                                             </p>
                                             <p class="form-row form-row-last validate-required validate-email"
@@ -401,7 +399,7 @@
                                                 <label for="billing_email" class="">Email address <abbr class="required"
                                                         title="required">*</abbr>
                                                 </label>
-                                                <input type="email" class="input-text " name="billing_email"
+                                                <input type="email" class="input-text " name="billing_email" formControlName="email"
                                                     id="billing_email" placeholder="" value="admin@test.com">
                                             </p>
                                         </div>
@@ -536,33 +534,16 @@
 
 
                                         <input type="submit" class="button alt" name="woocommerce_checkout_place_order"
-                                            id="place_order" value="Place order" data-value="Place order">
-
+                                            id="place_order" value="Place order" data-value="Place order" (click)="placeOrder()">
                                     </div>
                                 </div>
-
                             </div>
-
-
                         </form>
-
-
                     </main>
                 </div>
-
             </div>
         </section>
-
-
-
-
     </div><!-- eof #box_wrapper -->
 </div><!-- eof #canvas -->
-
-
-
-
-
-
 
 <app-footer></app-footer>
