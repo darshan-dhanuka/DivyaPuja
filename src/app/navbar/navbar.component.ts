@@ -13,7 +13,7 @@ import { BehavioralSubjectService } from '../service/behavioral-subject.service'
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  @Input() loader:boolean;
   currentUser: User;
   currentUserSubscription: Subscription;
   users: User[] = [];

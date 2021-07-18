@@ -42,8 +42,9 @@ export class CartComponent implements OnInit {
     })    
   } 
   priceTotalFun(item,event){
-    item.qty=event.target.value;    
-    item['item_Total']=parseInt(item.qty)*parseFloat(item.product_price);
+    let qty=event.target.value;
+    qty=qty&& qty!=""?qty:0;    
+    item['item_Total']=parseInt(qty)*parseFloat(item.product_price);
     this.calculateTotal();
   }
 

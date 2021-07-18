@@ -10,12 +10,10 @@ import { ProductService } from '../service/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  productDetails: any = [];
-  constructor(
-    private toastr: ToastrService,
-    public activatedRoute: ActivatedRoute,
-    public productService: ProductService,
-    private behavioralSubjectService: BehavioralSubjectService) { }
+  productDetails:any=[];
+  loading=false;
+  constructor(public activatedRoute:ActivatedRoute,public productService:ProductService,
+     private behavioralSubjectService: BehavioralSubjectService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(productUrl => {
@@ -25,8 +23,9 @@ export class ProductComponent implements OnInit {
     })
   }
 
-  getProductDetails(productUrl) {
-    this.productService.getProductDetails(productUrl).subscribe(prodDetails => {
+  getProductDetails(productUrl){
+    this.loading=true;
+    this.productService.getProductDetails(productUrl).subscribe(prodDetails=>{
       console.log('prodDetails ', prodDetails)
       if (prodDetails) {
         if (prodDetails['data']['products'].length > 0) {
@@ -34,6 +33,7 @@ export class ProductComponent implements OnInit {
         } else {
           this.productDetails = [];
         }
+        this.loading=false;
       }
     })
   }
