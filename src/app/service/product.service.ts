@@ -27,4 +27,7 @@ export class ProductService {
   removeCartItem(removedItem) {
     return this.http.delete(this.apiURL + "/cart-items", {params:removedItem});
   }
+  checkoutDetails(details){
+    return this.http.post(this.apiURL+"/orders",details);
+  }
 }

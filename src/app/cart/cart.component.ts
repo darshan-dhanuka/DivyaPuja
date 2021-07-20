@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AlertService } from '../service/alert.service';
 import { BehavioralSubjectService } from '../service/behavioral-subject.service';
@@ -19,7 +20,7 @@ export class CartComponent implements OnInit {
     private productService: ProductService,
     private alertService: AlertService,
     private toastr: ToastrService,
-    private behavioralSubjectService: BehavioralSubjectService) { }
+    private behavioralSubjectService: BehavioralSubjectService,private router:Router) { }
 
   ngOnInit(): void {
     this.cartDetails(this.tempUser_id);
@@ -56,5 +57,10 @@ export class CartComponent implements OnInit {
       console.log(data);
 
     });
+  }
+
+  placeOrder(){   
+    localStorage.setItem('cartItems',JSON.stringify({cartItems:this.cartList,grandTotal:this.grandTotal}));
+    this.router.navigate(['/checkout']);
   }
 }

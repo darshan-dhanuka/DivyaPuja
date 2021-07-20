@@ -405,9 +405,9 @@
                                     </tbody>
                                 </table>
 
-                                <div class="wc-proceed-to-checkout">
+                                <div class="wc-proceed-to-checkout" *ngIf="cartList.length>0">
 
-                                    <a href="checkout" class="checkout-button button alt wc-forward">
+                                    <a (click)="placeOrder()" class="checkout-button button alt wc-forward">
                                         Proceed to checkout</a>
                                 </div>
 
