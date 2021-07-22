@@ -12,6 +12,7 @@ import { ProductService } from '../service/product.service';
 export class ProductComponent implements OnInit {
   productDetails:any=[];
   loading=false;
+  quantity=1;
   constructor(public activatedRoute:ActivatedRoute,public productService:ProductService,
      private behavioralSubjectService: BehavioralSubjectService,private toastr:ToastrService) { }
 
@@ -29,7 +30,7 @@ export class ProductComponent implements OnInit {
       console.log('prodDetails ', prodDetails)
       if (prodDetails) {
         if (prodDetails['data']['products'].length > 0) {
-          this.productDetails = prodDetails['data']['products'];
+          this.productDetails = prodDetails['data']['products'][0];
         } else {
           this.productDetails = [];
         }
@@ -40,7 +41,7 @@ export class ProductComponent implements OnInit {
 
   addToCart(product) {
     const productDetails = {
-      user_id: '11', product_id: product.id, qty: '2'
+      user_id: '11', product_id: product.id, qty: this.quantity
     };
     this.productService.addCartDetails(productDetails).subscribe((res) => {
       this.toastr.success('Product added successfully!');

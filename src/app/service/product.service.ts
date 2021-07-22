@@ -30,4 +30,7 @@ export class ProductService {
   checkoutDetails(details){
     return this.http.post(this.apiURL+"/orders",details);
   }
+  addPaymentToServer(pay_details){
+    return this.http.put(this.apiURL+"/orders",pay_details);
+  }
 }
