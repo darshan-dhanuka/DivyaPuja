@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Pandit } from '../model/pandit-user';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -27,10 +26,16 @@ export class ProductService {
   removeCartItem(removedItem) {
     return this.http.delete(this.apiURL + "/cart-items", {params:removedItem});
   }
-  checkoutDetails(details){
+  placeOrderDetails(details){
     return this.http.post(this.apiURL+"/orders",details);
   }
-  addPaymentToServer(pay_details){
-    return this.http.put(this.apiURL+"/orders",pay_details);
+  addPaymentToServer(razor_reponse){
+    const responseDetails={
+      "payment_id": razor_reponse.razorpay_payment_id,
+      "order_id": razor_reponse.razorpay_order_id,
+      "signature": razor_reponse.razorpay_signature,
+      "status": 1
+    }
+    return this.http.put(this.apiURL + '/orders', {payment_details:responseDetails});
   }
 }

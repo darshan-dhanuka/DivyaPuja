@@ -1,3 +1,4 @@
+import {environment} from '../../environments/environment';
 export class checkout_user {
     user_id: number;
     grand_total: number;
@@ -16,4 +17,21 @@ export class checkout_user {
     order_note: string;
     user_address_id: string;
     delivery_date: string;
+}
+export class razor_options{
+    "key"= environment.key_id;
+    "amount": number;
+    "currency": "INR";
+    "name": "DivyaPuja";
+    "order_id": string;    
+    "prefill": {
+      "name": string,
+      "email": string,
+      "contact": string
+    }
+    "handler": (response: any) => {};
+    "modal": {
+      escape: false
+     
+    };
 }
