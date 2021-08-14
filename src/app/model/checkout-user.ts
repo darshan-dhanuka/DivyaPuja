@@ -19,7 +19,7 @@ export class checkout_user {
     delivery_date: string;
 }
 export class razor_options{
-    "key"= environment.key_id;
+    "key"= 'rzp_test_MR7UimzbaGMepN';
     "amount": number;
     "currency": "INR";
     "name": "DivyaPuja";
