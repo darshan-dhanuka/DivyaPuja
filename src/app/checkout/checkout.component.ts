@@ -15,7 +15,7 @@ export class CheckoutComponent implements OnInit {
   loading = true;
   cartList;
   pay_options: razor_options = new razor_options;
-  constructor(private fb: FormBuilder, private productService: ProductService, private toastr: ToastrService,) {
+  constructor(private fb: FormBuilder, private productService: ProductService, private toastr: ToastrService) {
     this.checkOutForm = this.fb.group({
       user_id: ['11'],
       grand_total: [''],

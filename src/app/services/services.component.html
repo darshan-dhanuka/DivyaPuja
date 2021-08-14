@@ -1,382 +1,275 @@
-
-			<!--Section Service-->
-			<section id="services" class="ds section-service s-overlay mobile-overlay s-py-90 s-py-xl-150 container-px-xl-0">
-				<div class="container-fluid">
-					<div class="row justify-content-center">
-						<div class="col-lg-8 col-md-10">
-							<div class="formWrap">
-								<form>
-									<ul>
-										<li>
-											<label class="fieldLabel">Select Puja Mode*</label>
-											<div class="inputField">
-												<input type="radio" id="test1" name="radio-group">
-												<label for="test1">Online</label>
-											</div>
-										</li>
-										<li>
-											<label class="fieldLabel">Select Puja Mode*</label>
-											<div class="inputField">
-												<input type="radio" id="test2" name="radio-group">
-												<label for="test2">In-Person</label>
-											</div>
-										</li>
-										<li>
-											<label class="fieldLabel">Select Tirth for the Puja*</label>
-											<div class="inputField selectWrap">
-												<select>
-													<option>Select</option>
-													<option>Ujjain</option>
-													<option>Gaya</option>
-													<option>Haridwar</option>
-													<option>Trimbakeshwar</option>
-													<option>...coming more Tirth places soon</option>
+<!--Section Service-->
+<section id="services" class="ds section-service s-overlay mobile-overlay s-py-90 s-py-xl-150 container-px-xl-0">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="formWrap">
+                    <form [formGroup]="serviceForm">
+                        <ul>
+                            <li>
+                                <label class="fieldLabel">Select Puja Mode<span class="redasterik">*</span></label>
+                                <div class="inputField">
+                                    <input type="radio" id="test1" name="pujaMode" value="epuja" formControlName="pujaMode">
+                                    <label for="test1">Online</label>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fieldLabel">Select Puja Mode<span class="redasterik">*</span></label>
+                                <div class="inputField">
+                                    <input type="radio" id="test2" name="pujaMode" value="inperson" formControlName="pujaMode">
+                                    <label for="test2">In-Person</label>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fieldLabel">Select Tirth for the Puja<span class="redasterik">*</span></label>
+                                <div class="inputField selectWrap">
+                                    <select (change)="onSelectTirth($any($event.target).value)" formControlName="tirth"> 
+													<option value="" selected>Select</option>
+													<option value="Ujjain">Ujjain</option>
+													<option value="Gaya">Gaya</option>
+													<option value="Haridwar">Haridwar</option>
+													<option value="Trimbakeshwar">Trimbakeshwar</option>
+													<option disabled="disabled">...coming more Tirth places soon</option>
 												</select>
-											</div>
-										</li>
-										<li>
-											<label class="fieldLabel">Select Desired Puja/Jaap*</label>
-											<div class="inputField selectWrap">
-												<select>
-													<option>Start Typing or Select...</option>
-													<option>Special Pujan on Aashadh Amavasya</option>
-													<option>Kundli Consultation</option>
-													<option>Angarak Dosh Nivaran Bhat Puja</option>
-													<option>Mangal Dosh Nivaran Puja</option>
-													<option>Kaal Sarp Dosh Nivaran</option>
-													<option>Mahamrityunjay Jaap</option>
-													<option>Pitru Dosh Nivaran Puja</option>
-													<option>Navgrah Shanti</option>
-													<option>Rudra Abhishek</option>
-													<option>Ark Vivah</option>
-													<option>Ati Rudra Mahayagya</option>
-													<option>Avantika Tirtha Shraddha</option>
-													<option>Baglamukhi Mataji Havan</option>
-													<option>Bhagwat Katha</option>
-													<option>Bhoomi Pujan</option>
-													<option>Brahmin Bhojan</option>
-													<option>Budh Jaap</option>
-													<option>Budh Shanti</option>
-													<option>Budharth Yog Shanti Puja</option>
-													<option>Chandal Yog Shanti</option>
-													<option>Chandra Grahan Dosh Shanti</option>
-													<option>Chandra Jaap</option>
-													<option>Chandra Shanti</option>
-													<option>Devi Bhagwat</option>
-													<option>Ekadash and Dwadash</option>
-													<option>Ganesh Sahastranaam</option>
-													<option>Garur (Garud) Puran</option>
-													<option>Gopal Sahastranam</option>
-													<option>Grahan Dosh Shanti</option>
-													<option>Guru Jaap</option>
-													<option>Guru Shanti</option>
-													<option>Hanuman Chalisa</option>
-													<option>Kaal Bhairav Ashtak Paath</option>
-													<option>Kaal Bhairav Havan</option>
-													<option>Kaal Sarp And Angarak Dosh Nivaran</option>
-													<option>Kanya Bhojan</option>
-													<option>Kendram Yog</option>
-													<option>Ketu Jaap</option>
-													<option>Ketu Shanti</option>
-													<option>Krishna Katha</option>
-													<option>Kuber Puja</option>
-													<option>Kumbh Vivah</option>
-													<option>Laghu Rudra Abhishek / Ekadashni</option>
-													<option>Lakshya Chandi Mahayagya</option>
-													<option>Laxmi Puja</option>
-													<option>Maha Kaal Sarp</option>
-													<option>Maha Rudra Abhishek</option>
-													<option>Mahalay Shraddha</option>
-													<option>Mahimna Stotra</option>
-													<option>Mangal Jaap</option>
-													<option>Mangal Shanti</option>
-													<option>Manglik Shradhdh karma</option>
-													<option>Mundan Sanskar</option>
-													<option>Nag Bali Narayan Bali</option>
-													<option>Nakshatra Shanti</option>
-													<option>Nani bai ka mayra</option>
-													<option>Narayan Bali Pitru Shanti</option>
-													<option>Narmada Puran</option>
-													<option>Navchandi Paath and Havan</option>
-													<option>Navratri Special Pujan</option>
-													<option>Palm Reading and Consultation</option>
-													<option>Parthiv Shivling Nirman and Abhishek</option>
-													<option>Shraddha Pind Daan</option>
-													<option>Post Death Rituals</option>
-													<option>Rahu Jaap</option>
-													<option>Rahu Shanti</option>
-													<option>Ram Raksha Stotra</option>
-													<option>Santan Gopal Jaap</option>
-													<option>Satyanarayan Katha</option>
-													<option>Shani Jaap</option>
-													<option>Shani Rahu Shrapit Dosh Nivaran</option>
-													<option>Shani Shanti</option>
-													<option>Shiv Mahimna Abhishek</option>
-													<option>Shiv Mahimna stotra Paath</option>
-													<option>Shiv Puran</option>
-													<option>Shiv Shakti Maha Yagya</option>
-													<option>Shiva Sahasranamavali Saharsrarchan</option>
-													<option>Shri Devi Sahastranamavali Devi Archan</option>
-													<option>Shri Ganapati (Ganesh) Atharva Shirsh Paath</option>
-													<option>Shri Ganesh Durwa Archan</option>
-													<option>Shri Ganesh Modaka Archan</option>
-													<option>Shri Ganesh Puran</option>
-													<option>Shri Ganesh Yagya</option>
-													<option>Shri Ram Yagya</option>
-													<option>Shri Ramcharitmanas (Ram Katha)</option>
-													<option>Shri Vishnu Yagya</option>
-													<option>Shukra Jaap</option>
-													<option>Shukra Shanti</option>
-													<option>Solah (16) Somvar Udhyapan</option>
-													<option>Sundar Kand</option>
-													<option>Sundar Kand Katha</option>
-													<option>Surya Grahan Dosh Shanti</option>
-													<option>Surya Jaap</option>
-													<option>Surya Shanti</option>
-													<option>Tarpan</option>
-													<option>TriPindi Sukh Pindi Shraddha</option>
-													<option>Tula Daan</option>
-													<option>Varshik Shraddha (Barsi)</option>
-													<option>Vastu Shanti Puja</option>
-													<option>Vish Dosh and Ardh Kaal Sarp</option>
-													<option>Vish Yog</option>
-													<option>Vishnu Charitra</option>
-													<option>Vishnu Puran</option>
-													<option>Vishnu Sahastranam</option>
-													<option>Vivah</option>
-													<option>Vrashosarg (Keda-Kedi Shadi)</option>
-													<option>Yagyopavit Sanskar (Janoi Upnayan)</option>
-												</select>
-											</div>
-										</li>
-									</ul>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xl-5"></div>
-						<div class="col-xl-3 col-lg-6">
-							<h3 class="special-heading mt-2 fs-60 text-center text-md-left">
-								<span>Pujas </span>
-							</h3>
-							<p class="text-white text-center text-md-left fs-20 line-right mb-0">
-								<span>Book Your Puja</span>
-							</p>
-						
-						</div>
-						<div class="col-xl-3 col-lg-6 text-center text-md-left">
-							<p class="text-center text-md-left  mt-4 mt-lg-0">
-							
-							</p>
-							<div class="divider-35"></div>
-							<a href="./poojan" class="btn btn-outline-maincolor btn-medium">Show Packages</a>
-						</div>
-						
-						<div class="col-xl-1"></div>
-						<div class="col-xl-3"></div>
-						<div class="col-xl-9">
-							<div class="big-width">
-								<div class="divider-55"></div>
-								<div class="owl-carousel " data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-margin="30" data-loop="true" data-autoplay="true">
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/kalaSarpaPooja.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">kala Sarpa Dosh Puja</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fieldLabel">Select Desired Puja/Jaap <span class="redasterik">*</span></label>
+                                <div class="inputField selectWrap">
+                                    <select formControlName="desiredPuja">
+													<option value="" selected>Start Typing or Select...</option>
+                                                    <option *ngFor="let puja of desiredPujaName;let i=index" value="{{i+1}}">{{puja.puja_name}}</option>
+									</select>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-5"></div>
+            <div class="col-xl-3 col-lg-6">
+                <h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+                    <span>Pujas </span>
+                </h3>
+                <p class="text-white text-center text-md-left fs-20 line-right mb-0">
+                    <span>Book Your Puja</span>
+                </p>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/sathanayanap-vratham.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Sri Satyanarayan Vratham</a>
-												</h5>
-												<a class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+            </div>
+            <div class="col-xl-3 col-lg-6 text-center text-md-left">
+                <p class="text-center text-md-left  mt-4 mt-lg-0">
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/bhoomi.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Bhumi Puja </a>
-												</h5>
-												<a routerLink="/pandit-form" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                </p>
+                <div class="divider-35"></div>
+                <a class="btn btn-outline-maincolor btn-medium" (click)="showPackages($event)">Show Packages</a>
+            </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/ganeshPooja.png " alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Ganpathi Puja</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-3"></div>
+            <div class="col-xl-9">
+                <div class="big-width">
+                    <div class="divider-55"></div>
+                    <div class="owl-carousel " data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-margin="30" data-loop="true" data-autoplay="true">
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/kalaSarpaPooja.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">kala Sarpa Dosh Puja</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/vahanPooja.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Vahan Puja</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/sathanayanap-vratham.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Sri Satyanarayan Vratham</a>
+                                    </h5>
+                                    <a class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/devakalyanamPooja.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Deva Kalyanam</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now  <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/bhoomi.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Bhumi Puja </a>
+                                    </h5>
+                                    <a routerLink="/pandit-form" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/marriage.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Marriage / Vivaham Puja</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now  <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/ganeshPooja.png " alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Ganpathi Puja</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/grahaPooja.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Gruha Pravesham</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now  <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/vahanPooja.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Vahan Puja</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/mahaPooja.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Mruthyunjaya Maha Puja</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/devakalyanamPooja.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Deva Kalyanam</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now  <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-									<div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
-										<div class="item-media">
-											<img src="assets/images/pooja/navgraha.png" alt="img">
-											<div class="media-links">
-												<a class="abs-link" title="" href="poojan"></a>
-											</div>
-										</div>
-										<div class="item-content overflow-hidden">
-											<div class="d-flex align-center flex-wrap">
-												<h5 class="my-0 links-maincolor2 mr-auto pr-2">
-													<a href="poojan">Navagraha Dosh Nivarana</a>
-												</h5>
-												<a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
-											</div>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/marriage.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Marriage / Vivaham Puja</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now  <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
 
-											<p>
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="divider-35"></div>
-								<div class="owl-custom-nav romb">
-									<a href="#" class="owl-prev"><i class="ico ico-right-arrow"></i></a>
-									<a href="#" class="owl-next"><i class="ico ico-right-arrow"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/grahaPooja.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Gruha Pravesham</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now  <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
+
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/mahaPooja.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Mruthyunjaya Maha Puja</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
+
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="vertical-item service-layout-2 content-absolute box-shadow  content-padding">
+                            <div class="item-media">
+                                <img src="assets/images/pooja/navgraha.png" alt="img">
+                                <div class="media-links">
+                                    <a class="abs-link" title="" href="poojan"></a>
+                                </div>
+                            </div>
+                            <div class="item-content overflow-hidden">
+                                <div class="d-flex align-center flex-wrap">
+                                    <h5 class="my-0 links-maincolor2 mr-auto pr-2">
+                                        <a href="poojan">Navagraha Dosh Nivarana</a>
+                                    </h5>
+                                    <a href="poojan" class="font-2">Book Pandit Now <i class="fa fa-caret-right color-main ml-2"></i></a>
+                                </div>
+
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider-35"></div>
+                    <div class="owl-custom-nav romb">
+                        <a href="#" class="owl-prev"><i class="ico ico-right-arrow"></i></a>
+                        <a href="#" class="owl-next"><i class="ico ico-right-arrow"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

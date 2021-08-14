@@ -72,4 +72,7 @@ public : any;
     }
     return this.http.get(`https://service.divyapuja.com:3000/get_moonsign?reqData={"date":"`+date+`","moonsign":"`+sign+`","lan":"HIN","scope":"D"}`);
   }
+  getDesiredPuja() {
+    return this.http.get('assets/json/desired_puja.json');
+  }
 }
