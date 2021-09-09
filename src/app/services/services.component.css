@@ -15,7 +15,7 @@
 }
 
 .formWrap ul li {
-    width: 24%;
+    width: 30%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -30,7 +30,7 @@
     width: 100%;
     border: 1px solid #ffffff;
     border-radius: 30px;
-    padding: 5px 20px;
+    padding: 0px 15px;
     height: 44px;
     display: flex;
     flex-flow: row wrap;
@@ -75,7 +75,8 @@
 .formWrap [type="radio"]:checked+label,
 .formWrap [type="radio"]:not(:checked)+label {
     position: relative;
-    padding-left: 28px;
+    padding-left: 25px;
+    padding-right: 30px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
