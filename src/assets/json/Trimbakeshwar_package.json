@@ -1,192 +1,164 @@
-[
-    {
-        "place": "Trimbakeshwar",
-        "puja": "",
-        "package": [
-            {
-                "price": "₹65100",
+{
+    "tirth": "Gaya",
+    "package_details": [{
+
+            "puja": "",
+            "package": [{
+                "price": "65100",
                 "pujaName": "1,25,000 Jaap",
-                "Duration": "11 days",
+                "duration": "11 days",
                 "pujaDesc": "5 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Vyas/n 1,25,000 Jaap/n Rudra Abhishek/n Dashansh/n Hawan/n Aarti/n Brahmin Bhojan on the final day/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Rudra Abhishek",
-        "package": []
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Kaal Sarp Dosh Nivaran",
-        "package": [
-            {
-                "price": "₹2500",
+            }]
+        },
+        {
+
+            "puja": "Rudra Abhishek",
+            "package": []
+        },
+        {
+
+            "puja": "Kaal Sarp Dosh Nivaran",
+            "package": [{
+                "price": "2500",
                 "pujaName": "Standard Pujan and Abhishek",
-                "Duration": "3 hrs",
+                "duration": "3 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent /n Sharir Shuddhi /n Mukhya Sankalp, Prayschit Sankalp /n Ganesh Pujan, Punyavachan Matrika Pujan /n Naandi Sharaddh /n Bhumi Karma Anant Pujan /n Rahu Kaal Sarp Pratima Pujan (Rahu Chandi, Kaal Chandi, 1-Suwarna Sarp, and 8-Chandi Sarp)/n Navgrah Pujan, RudraKalash Pujan /n Aavahit Devta Havan, Kashetrapal Balidan/n Poorna Aahuti Pujan/n Samapti Sankalp, Shreya Dan, Aashirwad/n Please be fasting for the Puja/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Navgrah Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Navgrah Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call /n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan /n Grah Shanti Havan and Nav Grah Pujan/n Matrika Pujan and Nandi Shraddha/n Nav Grah Pujan/n Rudra Kalash Pujan /n Havan, Balidan/n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Narayan-Nag Bali",
-        "package": [
-            {
-                "price": "₹13350",
+            }]
+        },
+        {
+
+            "puja": "Narayan-Nag Bali",
+            "package": [{
+                "price": "13350",
                 "pujaName": "Online Puja",
-                "Duration": "3 days",
+                "duration": "3 days",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Day 1 - Ganga Poojan, Prayaschit Pujan, Kshour/n Day 1 - Narayan Bali, Mukhya Sankalp/n Day 1 - Brahma Vishnu, Mahesh, Yam, Pret, Pratima Pujan/n Day 1 - Hawan, Ekadash Vishnu Shraddh, Pach-Devta Shraddh, Balidaan /n Day 1 - Paalash Bali Dahan, Apyav Shraddha (9va and 10va Shraddha)/n Day 2 - 11ve se 1 Year Ka Shraddha (Pret Aaatma ka)/n Day 2 - Nag Bali /n Day 3 - Punyah Vachan/n Rates Applicable for one couple/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Amawasya Dosh",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Amawasya Dosh",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n Amawasya Pujan/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Aslesha Shanti",
-        "package": [
-            {
-                "price": "₹2500",
+            }]
+        },
+        {
+
+            "puja": "Aslesha Shanti",
+            "package": [{
+                "price": "2500",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n Aslesha Shanti/n Matrika Pujan and Nandi Shraddha/n Havan, Balidan/n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Chandal Yog Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Chandal Yog Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n  Grah Shanti Havan and Nav Grah Pujan/n Matrika Pujan and Nandi Shraddha/n Nav Grah Pujan/n Rudra Kalash Pujan/n Havan, Balidan/n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Grahan Dosh Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Grahan Dosh Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Grahan Dosh Shanti",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punyah Vaachan/n Matrika Pujan/n Nandi Shraddha/n Mukhya Devta/n Navgrah Pujan/n Havan/n Balidan/n Purnahuti/n All Samagri Included/n Prasad will be sent by post (wherever allowed during the lockdown)"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Mool Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Mool Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n Mool Shanti/n Matrika Pujan and Nandi Shraddha/n Havan, Balidan/n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": " Nakshatra Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": " Nakshatra Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call /n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n Nakshatra Shanti/n Matrika Pujan and Nandi Shraddha/n Havan, Balidan/n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Navchandi Yagya",
-        "package": [
-            {
-                "price": "₹36000",
+            }]
+        },
+        {
+
+            "puja": "Navchandi Yagya",
+            "package": [{
+                "price": "36000",
                 "pujaName": "Online Puja",
-                "Duration": "6 hrs",
+                "duration": "6 hrs",
                 "pujaDesc": "11 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan, Nav Grah Pujan/n Punya Vachan, Matrika Pujan/n Nandi Shraddha/n Nav Paath/n Rudra Mandal Pujan/n Devika Peeth/n Havan/n Dashansh/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Panchamrit Abhishek",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Panchamrit Abhishek",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Trimbak Panchamrit Abhishek",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n  Vyas/n Panchamrit Abhishek/n Jal Abhishek/n  Bhasma Lepan/n Sapt Dhanya/n 108 Bilvarchan/n Aarti/n All Samagri Included/n Abhishek Performed on Pandit ji's Shivling"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Tirth Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Tirth Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n Tirth Shanti/n Matrika Pujan and Nandi Shraddha/n Havan, Balidan/n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "TriPindi Shraddha Karma",
-        "package": []
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Vish Dosh",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "TriPindi Shraddha Karma",
+            "package": []
+        },
+        {
+
+            "puja": "Vish Dosh",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Nav Grah Pujan/n Punya Vachan/n Matrika Pujan/n Nandi Shraddha/n Rudra Kalash Pujan/n Havan/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Trimbakeshwar",
-        "puja": "Yog Shanti",
-        "package": [
-            {
-                "price": "₹2100",
+            }]
+        },
+        {
+
+            "puja": "Yog Shanti",
+            "package": [{
+                "price": "2100",
                 "pujaName": "Online Puja",
-                "Duration": "2 hrs",
+                "duration": "2 hrs",
                 "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Ganapati Pujan/n Punya Vachan/n Grah Shanti Havan and Nav Grah Pujan/n Matrika Pujan and Nandi Shraddha/n Nav Grah Pujan/n Rudra Kalash Pujan/n Havan, Balidan /n Poorna Aahuti, Aashirwad/n All Samagri Included"
-            }
-        ]
-    }
-]
+            }]
+        }
+    ]
+}

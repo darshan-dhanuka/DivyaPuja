@@ -9,8 +9,7 @@
     <div class="widget widget_search">
         <form method="get" class="searchform search-form" action="/">
             <div class="form-group">
-                <input type="text" value="" name="search" class="form-control" placeholder="Search keyword"
-                    id="modal-search-input">
+                <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
             </div>
             <button type="submit" class="btn">Search</button>
         </form>
@@ -28,7 +27,8 @@
 		-->
 
     </div>
-</div><!-- eof .modal -->
+</div>
+<!-- eof .modal -->
 
 <div class="modal fade popupLogin" id="popupLogin" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -45,19 +45,16 @@
                                 <div class="row mb-4">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" required
-                                                placeholder="login" aria-required="true">
+                                            <input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control"
-                                                placeholder="password" aria-required="true" required>
+                                            <input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr"
-                                    data-toggle="modal" href="#">Not a member? Register!</a>
+                                <a class="registerRedirect " data-dismiss="modal" data-target="#popupRegistr" data-toggle="modal" href="#">Not a member? Register!</a>
                                 <button type="submit" class="btn btn-maincolor mt-30 d-block">Sign In</button>
                             </form>
 
@@ -84,32 +81,27 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" required
-                                                placeholder="login" aria-required="true">
+                                            <input type="text" name="name" class="form-control" required placeholder="login" aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control"
-                                                placeholder="password" aria-required="true" required>
+                                            <input type="password" name="password" class="form-control" placeholder="password" aria-required="true" required>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="email"
-                                                required aria-required="true">
+                                            <input type="email" name="email" class="form-control" placeholder="email" required aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="password" name="confirmPassword" class="form-control"
-                                                placeholder="password" required aria-required="true">
+                                            <input type="password" name="confirmPassword" class="form-control" placeholder="password" required aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="checkbox" id="agreed" name="agreed" value="agreed" required
-                                                aria-required="true"><label for="agreed">I agree to the rules</label>
+                                            <input type="checkbox" id="agreed" name="agreed" value="agreed" required aria-required="true"><label for="agreed">I agree to the rules</label>
                                         </div>
                                     </div>
                                 </div>
@@ -177,14 +169,12 @@
                                     <tr class="cart_item" *ngFor="let item of cartList; let i = index">
 
                                         <td class="product-remove">
-                                            <a class="remove" aria-label="Remove this item"
-                                                 (click)="removeProduct(item, i)">×</a>
+                                            <a class="remove" aria-label="Remove this item" (click)="removeProduct(item, i)">×</a>
                                         </td>
 
                                         <td class="product-thumbnail">
                                             <a href="shop-product-right.html">
-                                                <img width="180" height="180" src="assets/images/shop/34.jpg" class=""
-                                                    alt="img">
+                                                <img width="180" height="180" src="assets/images/shop/34.jpg" class="" alt="img">
                                             </a>
                                         </td>
 
@@ -198,9 +188,7 @@
 
                                         <td class="product-quantity" data-title="Quantity">
                                             <div class="quantity">
-                                                <input type="number" class="input-text qty text" step="1" min="1"
-                                                    max="1000" maxlength="4" name="cart[qty]" value="{{item.qty}}" title="Qty" size="4"
-                                                     (keyup)="priceTotalFun(item,$event)">
+                                                <input type="number" class="input-text qty text" step="1" min="1" max="1000" maxlength="4" name="cart[qty]" value="{{item.qty}}" title="Quantity" size="4" (change)="priceTotalFun(item,$event)">
                                             </div>
                                         </td>
 
@@ -208,7 +196,7 @@
                                             <span class="amount"><span>INR </span>{{item['item_Total']}}</span>
                                         </td>
                                     </tr>
-                                   
+
 
 
                                     <!-- <tr>
@@ -424,5 +412,7 @@
         </section>
         <app-footer></app-footer>
 
-    </div><!-- eof #box_wrapper -->
-</div><!-- eof #canvas -->
+    </div>
+    <!-- eof #box_wrapper -->
+</div>
+<!-- eof #canvas -->

@@ -1,187 +1,172 @@
-[
-    {
-        "place": "Gaya",
-        "puja": "Pitru Dosh Nivaran Puja",
-        "package": [
-            {
-                "price": "₹5100",
+{
+    "tirth": "Gaya",
+    "package_details": [{
+
+            "puja": "Pitru Dosh Nivaran Puja",
+            "package": [{
+                "price": "5100",
                 "pujaName": "Pitru Dosh Nivaran",
-                "Duration": "2:30 hrs",
+                "duration": "2:30 hrs",
                 "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent Tarpan Shraddha Pujan/n Visarjan Pitru Dosh Pujan/n Vastr Daan All Samagri and Daan Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Brahmin Bhojan",
-        "package": []
-    },
-    {
-        "place": "Gaya",
-        "puja": "Daan",
-        "package": [
-            {
-                "price": "₹1100",
-                "pujaName": "Clothes and Utensils Donation to One Brahmin",
-                "Duration": "15 mins",
-                "pujaDesc": "1 Brahmin/n Donations (Daan) hold special significance during Adhik Maas./n It is believed that Donations made during this month give multifold benefits./n Daan will be given to one Brahmin in Gaya Ji /n Take Sankalp via Live Video Call /n  Video of the Daan being given will be sent /n  Copper Utensils to be donated - 1 Pot (Lota), 1 Plate (Thali), 1 Bowl (Katori), 1 Glass and 1 Spoon (Chammach) /n  Clothes to be donated - 1 Dhoti, 1 Sari and 1 Bed Sheet"
-            },
-            {
-                "price": "₹2100",
-                "pujaName": "Clothes and Utensils Donation to Three Brahmins",
-                "Duration": "15 mins",
-                "pujaDesc": "3 Brahmins/n Donations (Daan) hold special significance during Adhik Maas./n It is believed that Donations made during this month give multifold benefits./n Daan will be given to one Brahmin in Gaya Ji /n Take Sankalp via Live Video Call /n  Video of the Daan being given will be sent /n  Copper Utensils to be donated - 1 Pot (Lota), 1 Plate (Thali), 1 Bowl (Katori), 1 Glass and 1 Spoon (Chammach) /n  Clothes to be donated - 1 Dhoti, 1 Sari and 1 Bed Sheet"
-            },
-            {
-                "price": "₹5100",
-                "pujaName": "Gau Daan (Cow Donation)",
-                "Duration": "15 mins",
-                "pujaDesc": "1 Brahmin/n Donations (Daan) hold special significance during Adhik Maas./n It is believed that Donations made during this month give multifold benefits. /n One Cow will be donated to a Brahmin in Gaya Ji /n Take Sankalp via Live Video Call /n Video of the Daan being given will be sent"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Ekodishta (Pitru) Shraddha",
-        "package": [
-            {
-                "price": "₹3100",
-                "pujaName": "Ekodishta Shraddha",
-                "Duration": "4 hrs",
-                "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call /n Video Excerpts from the Pujan will be sent /n Tarpan at Falgu River, Vishnu Pad and Akshay Vat /n Preparation of Rajas and Tamas Kalash /n Pind Daan /n Pitru Shodashi Shraddha /n Sankalp and Shanti /n All Poojan Samagri Included"
-            },
-            {
-                "price": "₹5100",
-                "pujaName": "With Daan and Brahmin Bhojan",
-                "Duration": "4 hrs",
-                "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan at Falgu River, Vishnu Pad and Akshay Vat/n Preparation of Rajas and Tamas Kalash/n Pind Daan/n Pitru Shodashi Shraddha/n Sankalp and Shanti/n Silver gau dan/n Vastr Daan/n Brahmin Bhojan/n All Poojan Samagri Included"
-            },
-            {
-                "price": "₹11000",
-                "pujaName": "With Anna Daan and Brahmin Bhojan",
-                "Duration": "4 hrs",
-                "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan at Falgu River, Vishnu Pad and Akshay Vat/n Preparation of Rajas and Tamas Kalash/n Pind Daan/n Pitru Shodashi Shraddha/n Sankalp and Shanti/n Silver gau dan/n Vastr Daan and Panch Vastr Paatr Daan/n Anna daan/n Phal daan/n Brahmin Bhojan/n All Poojan Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Gita Path and Vishnu Sahastranam Havan",
-        "package": [
-            {
-                "price": "₹8100",
+            }]
+        },
+        {
+
+            "puja": "Brahmin Bhojan",
+            "package": []
+        },
+        {
+
+            "puja": "Daan",
+            "package": [{
+                    "price": "1100",
+                    "pujaName": "Clothes and Utensils Donation to One Brahmin",
+                    "duration": "15 mins",
+                    "pujaDesc": "1 Brahmin/n Donations (Daan) hold special significance during Adhik Maas./n It is believed that Donations made during this month give multifold benefits./n Daan will be given to one Brahmin in Gaya Ji /n Take Sankalp via Live Video Call /n  Video of the Daan being given will be sent /n  Copper Utensils to be donated - 1 Pot (Lota), 1 Plate (Thali), 1 Bowl (Katori), 1 Glass and 1 Spoon (Chammach) /n  Clothes to be donated - 1 Dhoti, 1 Sari and 1 Bed Sheet"
+                },
+                {
+                    "price": "2100",
+                    "pujaName": "Clothes and Utensils Donation to Three Brahmins",
+                    "duration": "15 mins",
+                    "pujaDesc": "3 Brahmins/n Donations (Daan) hold special significance during Adhik Maas./n It is believed that Donations made during this month give multifold benefits./n Daan will be given to one Brahmin in Gaya Ji /n Take Sankalp via Live Video Call /n  Video of the Daan being given will be sent /n  Copper Utensils to be donated - 1 Pot (Lota), 1 Plate (Thali), 1 Bowl (Katori), 1 Glass and 1 Spoon (Chammach) /n  Clothes to be donated - 1 Dhoti, 1 Sari and 1 Bed Sheet"
+                },
+                {
+                    "price": "5100",
+                    "pujaName": "Gau Daan (Cow Donation)",
+                    "duration": "15 mins",
+                    "pujaDesc": "1 Brahmin/n Donations (Daan) hold special significance during Adhik Maas./n It is believed that Donations made during this month give multifold benefits. /n One Cow will be donated to a Brahmin in Gaya Ji /n Take Sankalp via Live Video Call /n Video of the Daan being given will be sent"
+                }
+            ]
+        },
+        {
+
+            "puja": "Ekodishta (Pitru) Shraddha",
+            "package": [{
+                    "price": "3100",
+                    "pujaName": "Ekodishta Shraddha",
+                    "duration": "4 hrs",
+                    "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call /n Video Excerpts from the Pujan will be sent /n Tarpan at Falgu River, Vishnu Pad and Akshay Vat /n Preparation of Rajas and Tamas Kalash /n Pind Daan /n Pitru Shodashi Shraddha /n Sankalp and Shanti /n All Poojan Samagri Included"
+                },
+                {
+                    "price": "5100",
+                    "pujaName": "With Daan and Brahmin Bhojan",
+                    "duration": "4 hrs",
+                    "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan at Falgu River, Vishnu Pad and Akshay Vat/n Preparation of Rajas and Tamas Kalash/n Pind Daan/n Pitru Shodashi Shraddha/n Sankalp and Shanti/n Silver gau dan/n Vastr Daan/n Brahmin Bhojan/n All Poojan Samagri Included"
+                },
+                {
+                    "price": "11000",
+                    "pujaName": "With Anna Daan and Brahmin Bhojan",
+                    "duration": "4 hrs",
+                    "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan at Falgu River, Vishnu Pad and Akshay Vat/n Preparation of Rajas and Tamas Kalash/n Pind Daan/n Pitru Shodashi Shraddha/n Sankalp and Shanti/n Silver gau dan/n Vastr Daan and Panch Vastr Paatr Daan/n Anna daan/n Phal daan/n Brahmin Bhojan/n All Poojan Samagri Included"
+                }
+            ]
+        },
+        {
+
+            "puja": "Gita Path and Vishnu Sahastranam Havan",
+            "package": [{
+                "price": "8100",
                 "pujaName": "Private Pujan",
-                "Duration": "5 hrs",
+                "duration": "5 hrs",
                 "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Paath and Havan will be sent/n 1 Gita ji Path/n Vishnu Sahastranam Havan while chanting 1000 names of Lord Vishnu/n Path and Havan will be done in Gaya ji/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Narayan Bali Pitru Shanti",
-        "package": [
-            {
-                "price": "₹11000",
+            }]
+        },
+        {
+
+            "puja": "Narayan Bali Pitru Shanti",
+            "package": [{
+                "price": "11000",
                 "pujaName": "Narayan Bali",
-                "Duration": "5 hrs",
+                "duration": "5 hrs",
                 "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Six Kalash Sthapna/n Devi Sthapana/n Pind Daan at Gaya Ji/n Narayan Bali Havan/n Pitru Dosh Poojan/n astr daan/n Gau Daan Sankalp/n Brahmin Bhojan/n All Poojan and Daan Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Pitru Gayatri Mantra Havan",
-        "package": [
-            {
-                "price": "₹5100",
+            }]
+        },
+        {
+
+            "puja": "Pitru Gayatri Mantra Havan",
+            "package": [{
+                "price": "5100",
                 "pujaName": "With 308 Aahutis",
-                "Duration": "2:30 hrs",
+                "duration": "2:30 hrs",
                 "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Havan will be sent/n Pitru Gayatri Mantra Havan with 308 Aahutis/n It is believed that performing this Havan provides peace to the souls of your ancestors/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Sankshipt Pind Daan (Shraddha)",
-        "package": [
-            {
-                "price": "₹3100",
-                "pujaName": "Sankshipt Pind Daan (Shraddha)",
-                "Duration": "2 hrs",
-                "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Pind Daan at Vishnu Pad/n Pind Visarjan at Falgu River, Vishnu Pad and Akshay Vat/n All Poojan and Daan Samagri Included"
-            },
-            {
-                "price": "₹5100",
-                "pujaName": "With Silver Gau Daan",
-                "Duration": "2 hrs",
-                "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Pind Daan at Vishnu Pad/n Pind Visarjan at Falgu River, Vishnu Pad and Akshay Vat/n All Poojan and Daan Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Solah (16) Shraddha (Parvan)",
-        "package": [
-            {
-                "price": "₹21000",
-                "pujaName": "3 Day Shraddha",
-                "Duration": "3 Days",
-                "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Poojan will be performed on 54 vedis (3-4 vedis per day)/n 7 Pidhis of Pitru Shraddha/n Tarpan/n Pind Daan/n Gau Daan/n Metal Shaiya (Bed) Daan with Bedding, Fiber Chair & Table, Aasan Daan/n 3 Steel Utensils, Vastr Daan/n Sweets, Anna and Phal Daan/n Brahmin Bhojan/n All Poojan Samagri Included/n Yajman should be fasting during the day"
-            },
-            {
-                "price": "₹31000",
-                "pujaName": "5 Day Shraddha",
-                "Duration": "5 Days",
-                "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Poojan will be performed on 54 vedis (3-4 vedis per day)/n 7 Pidhis of Pitru Shraddha/n Tarpan/n Pind Daan/n Gau Daan/n Metal Shaiya (Bed) Daan with Bedding, Fiber Chair & Table, Aasan Daan/n 3 Steel Utensils, Vastr Daan/n Sweets, Anna and Phal Daan/n Brahmin Bhojan/n All Poojan Samagri Included/n Yajman should be fasting during the day"
-            },
-            {
-                "price": "₹55000",
-                "pujaName": "16 Day Shraddha",
-                "Duration": "16 Days",
-                "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Poojan will be performed on 54 vedis (3-4 vedis per day)/n 7 Pidhis of Pitru Shraddha/n Tarpan/n Pind Daan/n Gau Daan/n Metal Shaiya (Bed) Daan with Bedding, Fiber Chair & Table, Aasan Daan/n 3 Steel Utensils, Vastr Daan/n Sweets, Anna and Phal Daan/n Brahmin Bhojan/n All Poojan Samagri Included/n Yajman should be fasting during the day"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "TriPindi Shraddha Karma",
-        "package": [
-            {
-                "price": "₹7100",
+            }]
+        },
+        {
+
+            "puja": "Sankshipt Pind Daan (Shraddha)",
+            "package": [{
+                    "price": "3100",
+                    "pujaName": "Sankshipt Pind Daan (Shraddha)",
+                    "duration": "2 hrs",
+                    "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Pind Daan at Vishnu Pad/n Pind Visarjan at Falgu River, Vishnu Pad and Akshay Vat/n All Poojan and Daan Samagri Included"
+                },
+                {
+                    "price": "5100",
+                    "pujaName": "With Silver Gau Daan",
+                    "duration": "2 hrs",
+                    "pujaDesc": "1 Brahmin/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Pind Daan at Vishnu Pad/n Pind Visarjan at Falgu River, Vishnu Pad and Akshay Vat/n All Poojan and Daan Samagri Included"
+                }
+            ]
+        },
+        {
+
+            "puja": "Solah (16) Shraddha (Parvan)",
+            "package": [{
+                    "price": "21000",
+                    "pujaName": "3 Day Shraddha",
+                    "duration": "3 Days",
+                    "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Poojan will be performed on 54 vedis (3-4 vedis per day)/n 7 Pidhis of Pitru Shraddha/n Tarpan/n Pind Daan/n Gau Daan/n Metal Shaiya (Bed) Daan with Bedding, Fiber Chair & Table, Aasan Daan/n 3 Steel Utensils, Vastr Daan/n Sweets, Anna and Phal Daan/n Brahmin Bhojan/n All Poojan Samagri Included/n Yajman should be fasting during the day"
+                },
+                {
+                    "price": "31000",
+                    "pujaName": "5 Day Shraddha",
+                    "duration": "5 Days",
+                    "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Poojan will be performed on 54 vedis (3-4 vedis per day)/n 7 Pidhis of Pitru Shraddha/n Tarpan/n Pind Daan/n Gau Daan/n Metal Shaiya (Bed) Daan with Bedding, Fiber Chair & Table, Aasan Daan/n 3 Steel Utensils, Vastr Daan/n Sweets, Anna and Phal Daan/n Brahmin Bhojan/n All Poojan Samagri Included/n Yajman should be fasting during the day"
+                },
+                {
+                    "price": "55000",
+                    "pujaName": "16 Day Shraddha",
+                    "duration": "16 Days",
+                    "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Poojan will be performed on 54 vedis (3-4 vedis per day)/n 7 Pidhis of Pitru Shraddha/n Tarpan/n Pind Daan/n Gau Daan/n Metal Shaiya (Bed) Daan with Bedding, Fiber Chair & Table, Aasan Daan/n 3 Steel Utensils, Vastr Daan/n Sweets, Anna and Phal Daan/n Brahmin Bhojan/n All Poojan Samagri Included/n Yajman should be fasting during the day"
+                }
+            ]
+        },
+        {
+
+            "puja": "TriPindi Shraddha Karma",
+            "package": [{
+                "price": "7100",
                 "pujaName": "Tripindi Shraddha",
-                "Duration": "4 hrs",
+                "duration": "4 hrs",
                 "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Rajas, Tamas, Satvik Teen Preton ki Poojan/n Teen Preton ka Pind Poojan/n Pind Daan at Gaya Ji/n Vastr Daan/n Gau Daan Sankalp/n All Samagri and Daan Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Vishnu Sahastranam",
-        "package": [
-            {
-                "price": "₹8100",
+            }]
+        },
+        {
+
+            "puja": "Vishnu Sahastranam",
+            "package": [{
+                "price": "8100",
                 "pujaName": "Private Pujan",
-                "Duration": "5 hrs",
+                "duration": "5 hrs",
                 "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Paath and Havan will be sent/n 1 Gita ji Path/n Vishnu Sahastranam Havan while chanting 1000 names of Lord Vishnu/n Path and Havan will be done in Gaya ji/n All Samagri Included"
-            }
-        ]
-    },
-    {
-        "place": "Gaya",
-        "puja": "Vrihad Gaya Shraddha",
-        "package": [
-            {
-                "price": "₹11000",
-                "pujaName": "With Silver Gau Daan",
-                "Duration": "2 days",
-                "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Shraddha will be Performed at 54 Different Locations/n Pind Daan/n Silver Gau Daan/n Vastr Daan/n Anna Daan/n Phal daan/n Brahmin Bhojan/n All Poojan Samagri Included"
-            },
-            {
-                "price": "₹21000",
-                "pujaName": "With Gau Daan",
-                "Duration": "3 days",
-                "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan /n Shraddha will be Performed at 54 Different Locations /n Pind Daan /n Gau Daan/n Vastr Daan and Panch Vastr Paatr Daan/n Anna Daan/n Phal daan/n Brahmin Bhojan/n All Poojan Samagri Included/n This Puja can be performed over two days if needed"
-            }
-        ]
-    }
-]
+            }]
+        },
+        {
+
+            "puja": "Vrihad Gaya Shraddha",
+            "package": [{
+                    "price": "11000",
+                    "pujaName": "With Silver Gau Daan",
+                    "duration": "2 days",
+                    "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan/n Shraddha will be Performed at 54 Different Locations/n Pind Daan/n Silver Gau Daan/n Vastr Daan/n Anna Daan/n Phal daan/n Brahmin Bhojan/n All Poojan Samagri Included"
+                },
+                {
+                    "price": "21000",
+                    "pujaName": "With Gau Daan",
+                    "duration": "3 days",
+                    "pujaDesc": "2 Brahmins/n Take Sankalp via Live Video Call/n Video Excerpts from the Pujan will be sent/n Tarpan /n Shraddha will be Performed at 54 Different Locations /n Pind Daan /n Gau Daan/n Vastr Daan and Panch Vastr Paatr Daan/n Anna Daan/n Phal daan/n Brahmin Bhojan/n All Poojan Samagri Included/n This Puja can be performed over two days if needed"
+                }
+            ]
+        }
+    ]
+}

@@ -27,10 +27,10 @@
                                 <div class="inputField selectWrap">
                                     <select (change)="onSelectTirth($any($event.target).value)" formControlName="tirth"> 
 													<option value="" selected>Select</option>
-													<option value="Ujjain">Ujjain</option>
-													<option value="Gaya">Gaya</option>
-													<option value="Haridwar">Haridwar</option>
-													<option value="Trimbakeshwar">Trimbakeshwar</option>
+													<option value="ujjain">Ujjain</option>
+													<option value="gaya">Gaya</option>
+													<option value="haridwar">Haridwar</option>
+													<option value="trimbakeshwar">Trimbakeshwar</option>
 													<option disabled="disabled">...coming more Tirth places soon</option>
 												</select>
                                 </div>
@@ -40,7 +40,7 @@
                                 <div class="inputField selectWrap">
                                     <select formControlName="desiredPuja">
 													<option value="" selected>Start Typing or Select...</option>
-                                                    <option *ngFor="let puja of desiredPujaName;let i=index" value="{{i+1}}">{{puja.puja_name}}</option>
+                                                    <option *ngFor="let item of desiredPujaName;let i=index" value="{{item.puja}}">{{item.puja}}</option>
 									</select>
                                 </div>
                             </li>

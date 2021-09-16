@@ -76,7 +76,6 @@
 .formWrap [type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 25px;
-    padding-right: 30px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;

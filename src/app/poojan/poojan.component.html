@@ -7,37 +7,40 @@
         <section class="ds s-pt-90 s-pb-30 s-pt-xl-150 s-pb-xl-90 c-mb-60 c-gutter-60">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="plan-description">
+                        {{packageDetails.puja}}
+                    </div>
+                    <div class="col-lg-4" *ngFor="let item of packageDetails">
                         <div class="pricing-plan price-layout-1 bg-darkgrey">
                             <!-- <div class="icon-styled fs-50">
 								<i class="color-darkgrey ico ico-diamond"></i>
 							</div> -->
                             <div class="price-wrap">
-                                <div class="wrapper">
+                                <!-- <div class="wrapper">
                                     <span class="plan-price">751</span>
                                     <span class="plan-sign">₹</span>
-                                </div>
-                                <span class="plan-price clrWhite">501</span>
+                                </div> -->
+                                <span class="plan-price clrWhite">{{item.price}}</span>
                                 <span class="plan-sign clrWhite">₹</span>
                             </div>
                             <div class="plan-name">
                                 <div class="divider-25"></div>
-                                <!-- <h3 class="mt-0">
-									Starter
-								</h3> -->
+                                <h3 class="mt-0">
+                                    {{item.pujaName}}
+                                </h3>
                                 <div class="plan-description">
-                                    Tarpan Duration - 30 mins 1 Brahmin
+                                    Tarpan Duration - {{item.duration}}
                                 </div>
                             </div>
                             <div class="plan-features">
                                 <ul class="list-bordered">
-                                    <li>Take Sankalp via Live Video Call</li>
-                                    <li>Video Excerpts from the Tarpan will be sent</li>
+                                    <li *ngFor="let desc of item.pujaDesc">{{desc}}</li>
+                                    <!-- <li>Video Excerpts from the Tarpan will be sent</li>
                                     <li>Tarpan</li>
                                     <li>Dev, Hrishi, Yam, Pitra and Bhishma Tarpan</li>
                                     <li>Vastra Nishpodgatam (Garbhavastha wale bacchcho ke liye)</li>
                                     <li>Vishnu Pujan</li>
-                                    <li>All Samagri Included</li>
+                                    <li>All Samagri Included</li> -->
                                 </ul>
                             </div>
                             <!-- <div class="pujaDate">
@@ -49,12 +52,8 @@
                         </div>
                         <div class="divider-60 divider-lg-0"></div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="pricing-plan price-layout-1 cs plan-featured">
-                            <!-- <div class="icon-styled fs-50">
-								<i class="text-white ico ico-gem"></i>
-							</div> -->
-                            <!--Price-->
+                    <!-- <div class="col-lg-4">
+                        <div class="pricing-plan price-layout-1 cs plan-featured">                            
                             <div class="price-wrap">
                                 <div class="wrapper">
                                     <span class="plan-price">2100</span>
@@ -63,12 +62,9 @@
                                 <span class="plan-price clrWhite">1100</span>
                                 <span class="plan-sign clrWhite">₹</span>
                             </div>
-                            <!--Price-->
+                            
                             <div class="plan-name">
-                                <div class="divider-25"></div>
-                                <!-- <h3 class="mt-0">
-									Pro
-								</h3> -->
+                                <div class="divider-25"></div>                                
                                 <div class="plan-description">
                                     Tripindi Shraddha Duration - 1 hr 1 Brahmin
                                 </div>
@@ -93,22 +89,14 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="pricing-plan price-layout-1 bg-darkgrey">
-                            <!-- <div class="icon-styled fs-50">
-								<i class="color-darkgrey ico ico-gems"></i>
-							</div> -->
-                            <!--Price-->
                             <div class="price-wrap">
                                 <div class="wrapper">
                                 </div>
                                 <span class="plan-price clrWhite">7100</span>
                                 <span class="plan-sign clrWhite">₹</span>
-                            </div>
-                            <!--Price-->
+                            </div>                            
                             <div class="plan-name">
-                                <div class="divider-25"></div>
-                                <!-- <h3 class="mt-0">
-									Business
-								</h3> -->
+                                <div class="divider-25"></div>                                
                                 <div class="plan-description">
                                     Narayan Bali Pitru Shanti Duration - 3 hrs 2 Brahmins
                                 </div>
@@ -136,7 +124,7 @@
                                 <a href="pricing.html" class="btn btn-medium btn-shop">Book Now</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>

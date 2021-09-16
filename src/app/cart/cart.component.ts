@@ -12,15 +12,15 @@ import { ProductService } from '../service/product.service';
 })
 export class CartComponent implements OnInit {
   cartList: any;
-  grandTotal=0;
+  grandTotal = 0;
   tempUser_id = '11';
   quantity;
-  totalPrice=0;
+  totalPrice = 0;
   constructor(
     private productService: ProductService,
     private alertService: AlertService,
     private toastr: ToastrService,
-    private behavioralSubjectService: BehavioralSubjectService,private router:Router) { }
+    private behavioralSubjectService: BehavioralSubjectService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartDetails(this.tempUser_id);
@@ -29,23 +29,23 @@ export class CartComponent implements OnInit {
   cartDetails(user_id) {
     const userId = { user_id: this.tempUser_id }
     this.productService.getCartDetails(userId).subscribe((data) => {
-      this.cartList = data['data']['cart_items'];   
-      this.calculateTotal();  
+      this.cartList = data['data']['cart_items'];
+      this.calculateTotal();
       console.log(data);
     });
   }
 
-  calculateTotal(){   
-    this.grandTotal=0;
-     this.cartList.filter(item=>{
-      item['item_Total']=parseInt(item.qty)*parseFloat(item.product_price);
-      this.grandTotal=this.grandTotal+parseFloat(item['item_Total']);
-    })    
-  } 
-  priceTotalFun(item,event){
-    let qty=event.target.value;
-    qty=qty&& qty!=""?qty:0;    
-    item['item_Total']=parseInt(qty)*parseFloat(item.product_price);
+  calculateTotal() {
+    this.grandTotal = 0;
+    this.cartList.filter(item => {
+      item['item_Total'] = parseInt(item.qty) * parseFloat(item.product_price);
+      this.grandTotal = this.grandTotal + parseFloat(item['item_Total']);
+    })
+  }
+  priceTotalFun(item, event) {
+    let qty = event.target.value;
+    item.qty = qty && qty != "" ? parseInt(qty) : 0;
+    item['item_Total'] = item.qty * parseFloat(item.product_price);
     this.calculateTotal();
   }
 
@@ -59,8 +59,8 @@ export class CartComponent implements OnInit {
     });
   }
 
-  placeOrder(){   
-    localStorage.setItem('cartItems',JSON.stringify({cartItems:this.cartList,grandTotal:this.grandTotal}));
+  placeOrder() {
+    localStorage.setItem('cartItems', JSON.stringify({ cartItems: this.cartList, grandTotal: this.grandTotal }));
     this.router.navigate(['/checkout']);
   }
 }
