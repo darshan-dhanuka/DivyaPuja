@@ -151,7 +151,7 @@
                         </div>
 
 
-                        <form class="woocommerce-cart-form" action="/" method="post">
+                        <form class="woocommerce-cart-form">
 
                             <table class="shop_table shop_table_responsive cart">
                                 <thead>
@@ -188,12 +188,14 @@
 
                                         <td class="product-quantity" data-title="Quantity">
                                             <div class="quantity">
-                                                <input type="number" class="input-text qty text" step="1" min="1" max="1000" maxlength="4" name="cart[qty]" value="{{item.qty}}" title="Quantity" size="4" (change)="priceTotalFun(item,$event)">
+                                                <input type="button" value="-" class="minus" (click)="minusQty(item)"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                                <input type="number" class="qty text" step="1" min="1" max="1000" maxlength="4" title="Quantity" value="{{item.qty}}" size="4" (keyup)="priceTotalFun(item,$any($event.target).value)">
+                                                <input type="button" value="+" class="plus" (click)="plusQty(item)"><i class="fa fa-chevron-up" aria-hidden="true"></i>
                                             </div>
                                         </td>
 
                                         <td class="product-subtotal" data-title="Total">
-                                            <span class="amount"><span>INR </span>{{item['item_Total']}}</span>
+                                            <span class="amount"><span>INR </span>{{item.item_Total}}</span>
                                         </td>
                                     </tr>
 

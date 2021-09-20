@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   cartList: any;
   grandTotal = 0;
   tempUser_id = '11';
-  quantity;
+  quantity="";
   totalPrice = 0;
   constructor(
     private productService: ProductService,
@@ -42,8 +42,18 @@ export class CartComponent implements OnInit {
       this.grandTotal = this.grandTotal + parseFloat(item['item_Total']);
     })
   }
+  plusQty(item){
+    item.qty=parseInt(item.qty)+1;
+    this.priceTotalFun(item,item.qty);
+  }
+  minusQty(item){
+    if(item.qty>1){
+    item.qty=parseInt(item.qty)-1;
+    this.priceTotalFun(item,item.qty);
+    }
+  }
   priceTotalFun(item, event) {
-    let qty = event.target.value;
+    let qty = event;
     item.qty = qty && qty != "" ? parseInt(qty) : 0;
     item['item_Total'] = item.qty * parseFloat(item.product_price);
     this.calculateTotal();
@@ -52,10 +62,10 @@ export class CartComponent implements OnInit {
   removeProduct(product, index) {
     const prodToRemove = { id: product.id };
     this.productService.removeCartItem(prodToRemove).subscribe((data) => {
+      this.cartDetails(this.tempUser_id);
       this.behavioralSubjectService.isEvent.next('addCart');
       this.toastr.success('Product removed successfully!');
       console.log(data);
-
     });
   }
 

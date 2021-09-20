@@ -36,7 +36,7 @@ export class ShopComponent implements OnInit {
   }
   addToCart(product) {
     const productDetails = {
-      user_id: '11', product_id: product.id, qty: '2'
+      user_id: '11', product_id: product.id, qty: '1'
     };
     this.productService.addCartDetails(productDetails).subscribe((res) => {
       this.toastr.success('Product added successfully!');
