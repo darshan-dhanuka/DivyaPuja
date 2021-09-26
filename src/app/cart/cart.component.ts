@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AlertService } from '../service/alert.service';
@@ -10,12 +10,13 @@ import { ProductService } from '../service/product.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, AfterViewInit {
   cartList: any;
   grandTotal = 0;
   tempUser_id = '11';
-  quantity="";
+  quantity = "";
   totalPrice = 0;
+  loading = true;
   constructor(
     private productService: ProductService,
     private alertService: AlertService,
@@ -25,7 +26,11 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.cartDetails(this.tempUser_id);
   }
-
+  ngAfterViewInit() {
+    setTimeout(()=>{
+      this.loading = false;
+    },250)    
+  }
   cartDetails(user_id) {
     const userId = { user_id: this.tempUser_id }
     this.productService.getCartDetails(userId).subscribe((data) => {
@@ -42,14 +47,14 @@ export class CartComponent implements OnInit {
       this.grandTotal = this.grandTotal + parseFloat(item['item_Total']);
     })
   }
-  plusQty(item){
-    item.qty=parseInt(item.qty)+1;
-    this.priceTotalFun(item,item.qty);
+  plusQty(item) {
+    item.qty = parseInt(item.qty) + 1;
+    this.priceTotalFun(item, item.qty);
   }
-  minusQty(item){
-    if(item.qty>1){
-    item.qty=parseInt(item.qty)-1;
-    this.priceTotalFun(item,item.qty);
+  minusQty(item) {
+    if (item.qty > 1) {
+      item.qty = parseInt(item.qty) - 1;
+      this.priceTotalFun(item, item.qty);
     }
   }
   priceTotalFun(item, event) {

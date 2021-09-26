@@ -39,14 +39,7 @@ export class ShopComponent implements OnInit {
       user_id: '11', product_id: product.id, qty: '1'
     };
     this.productService.addCartDetails(productDetails).subscribe((res) => {
-      this.toastr.success('Product added successfully!');
-      // Swal.fire({
-      //   position: 'center',
-      //   icon: 'success',
-      //   title: 'Product added successfully!',
-      //   showConfirmButton: false,
-      //   timer: 1500
-      // });
+      this.toastr.success('Product added successfully!');     
       this.behavioralSubjectService.isEvent.next('addCart');
       console.log(res);
     });

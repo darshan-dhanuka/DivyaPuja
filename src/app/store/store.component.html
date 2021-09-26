@@ -1,90 +1,87 @@
-	<!-- Section Shop -->
-    <section id="shop" class="ds section-shop s-pt-85 s-pb-60 s-pt-xl-145 s-pb-xl-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-lg-6">
-                    <h3 class="special-heading mt-2 fs-60 text-center text-md-left">
-                        <span>Our Store </span>
-                    </h3>
-                    <p class="text-white text-center text-md-left fs-20 line-right mb-0">
-                        <span></span>
-                    </p>
-                    
-                </div>
-                <div class="col-xl-7 col-lg-6 text-center text-md-left">
-                    <p class="mt-4 mt-lg-0">
-                        <span>You can explore/buy wide range of religious product at our
+<!-- Section Shop -->
+<section id="shop" class="ds section-shop s-pt-85 s-pb-60 s-pt-xl-145 s-pb-xl-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6">
+                <h3 class="special-heading mt-2 fs-60 text-center text-md-left">
+                    <span>Our Store </span>
+                </h3>
+                <p class="text-white text-center text-md-left fs-20 line-right mb-0">
+                    <span></span>
+                </p>
+
+            </div>
+            <div class="col-xl-7 col-lg-6 text-center text-md-left">
+                <p class="mt-4 mt-lg-0">
+                    <span>You can explore/buy wide range of religious product at our
                             market place as per your requirements. </span>
-                    </p>
+                </p>
+            </div>
+            <div class="divider-35"></div>
+            <div class="card-deck">
+                <div class="card store-card">
+                    <img src="assets/images/store/gem.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">GEMSTONES</h5>
+                        <p class="card-text">Don't be a hard rock when you really are a gem. Choose your lucky gemstone from our products. /p>
+
+                    </div>
                 </div>
-                    <div class="divider-35"></div>
-                    <div class="card-deck">
-                        <div class="card store-card">
-                          <img src="assets/images/store/gem.jpg"  class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">GEMSTONES</h5>
-                            <p class="card-text">Don't be a hard rock when you really are a gem.
-                                Choose your lucky gemstone from our products. /p>
-                        
-                          </div>
-                        </div>
-                        <div class="card store-card">
-                           
-                          <img src="assets/images/store/pooja.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">PUJA-SAMAGRI</h5>
-                            <p class="card-text">All pujan products are now available in one place.
-                                Choose as per your requirements.</p>
-                      
-                          </div>
-                        </div>
-                        <div class="card store-card">
-                          <img src="assets/images/store/vastu.jpg"  class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">VASTU</h5>
-                            <p class="card-text">Select your vastu products according to your needs.
-                                Explore more in our store.</p>
+                <div class="card store-card">
 
-                          </div>
-                        </div>
-                      </div>
-              
-                <div class="col-12">
-                    <!--run loop here by calling backend api -->
-                    <div class="divider-55"></div>
-                    <div class="owl-carousel products" data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-margin="10" data-loop="true" data-autoplay="true">
-                        <div class="product"  *ngFor="let item of productList">
-                            <div class="product-inner">
-                                <!-- <span class="onsale">Sale!</span> -->
-                                <a href="shop-product-right.html">
-                                    <!-- <img src="{{item.product_image_url}}" alt="img"> -->
-                                    <img src="assets/images/shop/34.jpg" alt="img">
-                                </a>
+                    <img src="assets/images/store/pooja.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">PUJA-SAMAGRI</h5>
+                        <p class="card-text">All pujan products are now available in one place. Choose as per your requirements.</p>
 
-                                <div class="product-wrap" >
-                                    <h2 class="woocommerce-loop-product__title">
-                                        <a [routerLink]="['/shop/product',item.url]">{{item.product_name}}</a>
-                                        
-                                    </h2>
-                                    <!-- <div class="product_meta">
+                    </div>
+                </div>
+                <div class="card store-card">
+                    <img src="assets/images/store/vastu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">VASTU</h5>
+                        <p class="card-text">Select your vastu products according to your needs. Explore more in our store.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <!--run loop here by calling backend api -->
+                <div class="divider-55"></div>
+                <div *ngIf="productList && productList.length>0" class="owl-carousel products" data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="false" data-margin="10" data-loop="true" data-autoplay="true">
+                    <div class="product" *ngFor="let item of productList">
+                        <div class="product-inner">
+                            <!-- <span class="onsale">Sale!</span> -->
+                            <a href="shop-product-right.html">
+                                <!-- <img src="{{item.product_image_url}}" alt="img"> -->
+                                <img src="assets/images/shop/34.jpg" alt="img">
+                            </a>
+
+                            <div class="product-wrap">
+                                <h2 class="woocommerce-loop-product__title">
+                                    <a [routerLink]="['/shop/product',item.url]">{{item.product_name}}</a>
+
+                                </h2>
+                                <!-- <div class="product_meta">
                                         <span class="posted_in">Categories: <a href="shop-right.html" rel="tag">Magic </a>, <a href="shop-right.html" rel="tag">Attributes</a></span>
                                     </div>
                                     <div class="star-rating">
                                         <span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span>
                                     </div> -->
-                                    <div class="price-wrap">
-                                        <span class="price">
+                                <div class="price-wrap">
+                                    <span class="price">
                                             <span>
-                                                <span>INR</span>{{item.product_price}}
-                                            </span>
-                                        </span>
-                                        <!-- product_id should be dynamic -->
-                                        <span (click)="addToCartProduct(item)" class="button product_type_simple add_to_cart_button">Add to cart</span>
-                                    </div>
+                                                <span>INR </span>{{item.product_price}}
+                                    </span>
+                                    </span>
+                                    <!-- product_id should be dynamic -->
+                                    <span (click)="addToCartProduct(item)" class="button product_type_simple add_to_cart_button">Add to cart</span>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="product">
+                    </div>
+                    <!-- <div class="product">
                             <div class="product-inner">
 
                                 <a href="shop-product-right.html">
@@ -258,15 +255,14 @@
                                 </div>
                             </div>
                         </li> -->
-                    </div>
                 </div>
-                <div style="width:93.5%; ">
-                    <a href="/shop" id="btToggle" class="btn btn-outline-maincolor btn-medium pull-right d-md-block" style="width:5%">
+                <h3 *ngIf="productList && productList.length==0" style="margin: 0px auto;text-align: center;">NO PRODUCTS AVAILBLE</h3>
+            </div>
+            <div style="width:93.5%; " *ngIf="productList && productList.length>0">
+                <a href="/shop" id="btToggle" class="btn btn-outline-maincolor btn-medium pull-right d-md-block" style="width:5%">
                         Shop Now
                      </a>
-                </div>
             </div>
         </div>
-    </section>
-    
-    
+    </div>
+</section>

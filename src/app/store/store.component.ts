@@ -56,23 +56,13 @@ export class StoreComponent implements OnInit {
 
     });
   }
-  addToCartProduct(product) {
-    // const productDetails   = product;
-    // productDetails.user_id = '11';
-    // productDetails.product_id = product.id;
+  addToCartProduct(product) {    
     const productDetails = {
-      user_id: '11', product_id: product.id, qty: '2'
+      user_id: '11', product_id: product.id, qty: '1'
     };
     this.productService.addCartDetails(productDetails).subscribe((res) => {
       this.behavioralSubjectService.isEvent.next('addCart');
       this.toastr.success('Product added successfully!');
-      // Swal.fire({
-      //   position: 'center',
-      //   icon: 'success',
-      //   title: 'Product added successfully!',
-      //   showConfirmButton: false,
-      //   timer: 1500
-      // });
       console.log(res);
     });
   }

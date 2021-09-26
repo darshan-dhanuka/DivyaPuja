@@ -9748,6 +9748,7 @@ body.boxed {
 
 .ds a:not(.btn) {
     color: #fff;
+    cursor: pointer;
 }
 
 .ds a:not(.btn):hover {
@@ -22839,4 +22840,6 @@ img.absolute_image {
 
 .horoscope-image:hover {
     animation-play-state: paused;
-}999999999999999999999999
+}
+
+999999999999999999999999
